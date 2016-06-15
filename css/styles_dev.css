@@ -1,0 +1,861 @@
+/* GERAL */
+body,
+html,
+div,
+span,
+a,
+ul,
+li,
+dl,
+dt,
+dd,
+section,
+header,
+p,
+form,
+fieldset,
+button,
+input {
+  border: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+}
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure,
+a,
+img,
+span,
+:after,
+:before {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal !important;
+  margin: 0;
+}
+html object {
+  display: none;
+}
+body {
+  font-size: 100%;
+}
+body * {
+  font-family: 'arquitectaregular';
+}
+/*******************************
+            GLOBAL
+*******************************/
+.f-times {
+  font-family: 'Times New Roman';
+}
+.f-weight-regular {
+  font-family: 'arquitectaregular';
+}
+.f-weight-bold {
+  font-family: 'arquitecta_boldbold';
+}
+.f-weight-light {
+  font-family: 'arquitecta_lightlight';
+}
+.lnks {
+  color: #475047;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.lnks:hover {
+  color: #f6861f;
+}
+/*******************************
+            MAIN
+*******************************/
+main {
+  background: url('../images/base/00_HOME.jpg') no-repeat top center;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #FFF;
+  /*HEADER*/
+  /* SECTIONS CONTENTS */
+  /*FOOTER*/
+}
+main header {
+  text-transform: uppercase;
+  padding: 10px 0 54px 0;
+  /*LOGO*/
+}
+main header ul {
+  float: left;
+}
+main header ul li {
+  margin: 0 12px 0 0;
+  font-size: 1.1em;
+  display: inline-block;
+}
+main header ul li a {
+  color: #475047;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  display: inline-block;
+}
+main header ul li a:hover {
+  color: #f6861f;
+}
+main header nav {
+  float: right;
+}
+main header nav a {
+  color: #475047;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  font-family: 'arquitecta_boldbold';
+  margin: 0 0 0 20px;
+  display: inline-block;
+  font-size: 1.1em;
+}
+main header nav a:hover {
+  color: #f6861f;
+}
+main header h1 {
+  padding: 77px 0 0 0;
+}
+main header h1 a {
+  display: block;
+  margin: 0 auto;
+  width: 408px;
+}
+main header h1 a img {
+  width: 100%;
+  height: 100%;
+}
+main section.carrossel {
+  padding-bottom: 12px;
+}
+main section.carrossel > div {
+  width: 100%;
+  min-height: 606px;
+  overflow: hidden;
+}
+main section.carrossel > div dl {
+  z-index: 2;
+  opacity: 0.5;
+}
+main section.carrossel > div dl dt {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+}
+main section.carrossel > div dl dt h2 {
+  text-transform: uppercase;
+  font-size: 2.0625em;
+  color: #475047;
+  margin: 0;
+  padding: 3.5% 0;
+}
+main section.carrossel > div dl dd img {
+  width: 100%;
+}
+main section.carrossel > div div.owl-controls {
+  margin-top: -36px;
+}
+main section.carrossel > div div.owl-controls .owl-page span {
+  width: 14px;
+  height: 14px;
+  margin: 0 4px;
+  background: #fff;
+  opacity: 1;
+}
+main section.carrossel > div div.owl-controls .owl-page.active span {
+  background: #f6861f;
+}
+main section.carrossel p {
+  font-family: 'arquitecta_lightlight';
+  color: #475047;
+  font-size: 2.6875em;
+  line-height: 1.18em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 35px 15% 0;
+}
+main section.carrossel a {
+  color: #475047;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  font-family: 'arquitecta_boldbold';
+  text-align: center;
+  border: 3px solid #475047;
+  padding: 6px;
+  margin: 43px auto;
+  width: 135px;
+  font-size: 1.0625em;
+  box-sizing: border-box;
+}
+main section.carrossel a:hover {
+  color: #f6861f;
+}
+main section.highlights ul {
+  text-align: center;
+}
+main section.highlights ul li {
+  display: inline-block;
+  width: 240px;
+  min-height: 448px;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 10px 14px 0;
+  overflow: hidden;
+}
+main section.highlights ul li a {
+  color: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+main section.highlights ul li a:hover {
+  color: #FFF !important;
+}
+main section.highlights ul li a:hover img {
+  opacity: 0.7;
+  width: 110%;
+  margin: -8% -5% 0px;
+}
+main section.highlights ul li a img {
+  width: 101%;
+  margin-left: -1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+main section.highlights ul li a h3 {
+  font-size: 1.5em;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 30px 49px 10px;
+}
+main section.highlights ul li a p {
+  font-size: 1.25em;
+  line-height: 22px;
+  padding: 0 24px;
+}
+main section.highlights ul li.hg_01 {
+  background-color: #465047;
+}
+main section.highlights ul li.hg_01 a {
+  color: #adaf97;
+}
+main section.highlights ul li.hg_01 h3 {
+  padding: 30px 55px 10px;
+}
+main section.highlights ul li.hg_01 p {
+  padding: 0 35px;
+}
+main section.highlights ul li.hg_02 {
+  background-color: #a5a88d;
+}
+main section.highlights ul li.hg_02 a {
+  color: #465047;
+}
+main section.highlights ul li.hg_03 {
+  background-color: #8b9079;
+}
+main section.highlights ul li.hg_03 a {
+  color: #e3e3d7;
+}
+main section.highlights ul li.hg_03 h3 {
+  padding: 30px 25px 10px ;
+}
+main section.highlights ul li.hg_03 p {
+  padding: 0 38px;
+}
+main section.highlights ul li.hg_04 {
+  background-color: #a4a095;
+  margin-right: 0;
+}
+main section.highlights ul li.hg_04 a {
+  color: #475148;
+}
+main section.infsSerBrain {
+  background: #7b836f;
+  margin-top: 66px;
+  padding-bottom: 66px;
+}
+main section.infsSerBrain h2 {
+  letter-spacing: -2px;
+  line-height: 60px;
+  font-size: 4.125em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #d9d9cb;
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  padding: 27px 0 0 30px;
+  margin: 0;
+}
+main section.infsSerBrain a {
+  width: 74%;
+  display: inline-block;
+}
+main section.infsSerBrain a p {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  font-size: 1.6875em;
+  word-spacing: 2px;
+  margin: 0;
+  line-height: 36px;
+  color: #FFF;
+  padding: 62px 45px 0 12px;
+  font-family: 'Times New Roman';
+  box-sizing: border-box;
+  letter-spacing: -0.01em;
+}
+main section.infsSerBrain a p strong {
+  font-family: 'arquitecta_boldbold';
+  color: #d9d9cb;
+  font-size: 2.0625rem;
+  font-weight: normal;
+}
+main section.infsSerBrain a p:after,
+main section.comoInvestir article a p:after {
+  content: '';
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+  border: 0;
+  border-top: 13px solid transparent;
+  border-left: 18px solid #f6861f;
+  border-right: 12px solid transparent;
+  border-bottom: 13px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+}
+main section.infsSerBrain a p:hover,
+main section.comoInvestir article a p:hover {
+  opacity: 0.8;
+}
+main section.infsSerBrain a p:hover:after,
+main section.comoInvestir article a p:hover:after {
+  border-left-color: #002f17;
+}
+main section.pilares {
+  padding: 66px 0 0;
+}
+main section.pilares h3 {
+  color: #002f17;
+  text-align: center;
+  font-size: 4em;
+  line-height: 4rem;
+  text-transform: uppercase;
+  padding-bottom: 28px;
+}
+main section.pilares ul {
+  text-align: center;
+}
+main section.pilares ul li {
+  width: 237px;
+  min-height: 315px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 14px 14px 0;
+}
+main section.pilares ul li a strong {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #e4e2d6;
+  text-transform: uppercase;
+  font-size: 2.0625em;
+  font-weight: normal;
+  padding: 23px 0;
+  display: block;
+}
+main section.pilares ul li a img {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+main section.pilares ul li a:hover strong {
+  color: #fff;
+}
+main section.pilares ul li a:hover img {
+  opacity: 0.6;
+}
+main section.pilares ul li.pl_01 {
+  background-color: #8b9079;
+}
+main section.pilares ul li.pl_02 {
+  background-color: #a4a095;
+}
+main section.pilares ul li.pl_03 {
+  background-color: #81897a;
+}
+main section.pilares ul li.pl_04 {
+  background-color: #465047;
+  margin-right: 0;
+}
+main section.pilares ul li.pl_04 a strong {
+  font-size: 1.5em;
+  padding: 18px 30px;
+  line-height: 24px;
+}
+main section.comoInvestir {
+  padding: 69px 0 0 0;
+}
+main section.comoInvestir article {
+  padding-bottom: 67px;
+}
+main section.comoInvestir article h2 {
+  text-transform: uppercase;
+  color: #475047;
+  margin: 0 0 0 28px;
+  text-align: left;
+  line-height: 3.75rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 28%;
+  font-size: 4.1875em;
+  letter-spacing: -2px;
+}
+main section.comoInvestir article a {
+  display: inline-block;
+  margin: -10px 0 0 19px;
+  width: calc(65%);
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+main section.comoInvestir article a p {
+  font-family: 'Times New Roman';
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  font-size: 1.6875em;
+  line-height: 35px;
+  color: #231f20;
+}
+main section.comoInvestir article a p strong {
+  font-family: 'arquitecta_boldbold';
+  color: #8b9178;
+  font-size: 2.1875rem;
+}
+main section.comoInvestir ul {
+  text-align: center;
+}
+main section.comoInvestir ul li {
+  width: 233px;
+  height: 246px;
+  display: inline-block;
+  vertical-align: top;
+  border: 2px solid #7b836f;
+  margin: 0 13px 35px 0;
+}
+main section.comoInvestir ul li p {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+main section.comoInvestir ul li p span {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 52px 0 0 0;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+main section.comoInvestir ul li span.as {
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+main section.comoInvestir ul li.ci_01 p {
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 25px;
+  text-align: center;
+  width: 100%;
+  font-size: 26px;
+  box-sizing: border-box;
+  padding: 51px 45px 0;
+}
+main section.comoInvestir ul li.ci_01 p strong {
+  letter-spacing: -6px;
+  font-size: 91px;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  color: #475047;
+  padding: 0 0 23px 0;
+}
+main section.comoInvestir ul li.ci_02 p {
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 38px 33px 0;
+  font-size: 22px;
+  box-sizing: border-box;
+}
+main section.comoInvestir ul li.ci_02 p strong {
+  letter-spacing: 1px;
+  font-size: 72px;
+  display: block;
+  width: 100%;
+  line-height: 62px;
+  color: #475047;
+}
+main section.comoInvestir ul li.ci_02 p span:nth-child(2) {
+  margin: 0;
+  font-size: 61px;
+  line-height: 43px;
+  font-weight: normal;
+  color: #7b836f;
+  vertical-align: top;
+}
+main section.comoInvestir ul li.ci_02 p span:nth-child(3) {
+  margin: 6px 0 5px 0;
+  font-size: 24px;
+  color: #7b836f;
+}
+main section.comoInvestir ul li.ci_03 p {
+  text-transform: uppercase;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 32px 28px 0px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+main section.comoInvestir ul li.ci_03 p strong {
+  color: #475047;
+  font-size: 92px;
+  line-height: 76px;
+  font-weight: normal;
+  display: block;
+}
+main section.comoInvestir ul li.ci_03 p span {
+  letter-spacing: 2px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 31px;
+  text-transform: uppercase;
+  color: #7b836f;
+  font-weight: bold;
+  padding: 6px 0 4px;
+}
+main section.comoInvestir ul li.ci_04 {
+  margin-right: 0;
+}
+main section.comoInvestir ul li.ci_04 p {
+  text-transform: uppercase;
+  line-height: 19px;
+  text-align: center;
+  width: 100%;
+  padding: 43px 25px;
+  font-size: 21px;
+  box-sizing: border-box;
+  letter-spacing: -0.5px;
+}
+main section.comoInvestir ul li.ci_04 p strong {
+  color: #475047;
+  font-size: 65px;
+  padding: 29px 0 0 0;
+  display: inline-block;
+}
+main section.comoInvestir ul li.ci_04 p span:nth-child(1) {
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #7b836f;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+main section.comoInvestir ul li.ci_04 p span:nth-child(3) {
+  text-align: center;
+  font-size: 21px;
+  text-transform: uppercase;
+  color: #7b836f;
+  font-weight: bold;
+  padding: 15px 0 13px 0;
+  display: inline-block;
+  margin: 0;
+}
+main section.comoInvestir a.passos {
+  font-size: 40px;
+  color: #8b9178;
+  margin: 47px 0 16px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2;
+}
+main section.comoInvestir a.passos:after {
+  content: "";
+  background: url('../images/seta-hover.jpg') no-repeat 0 0;
+  width: 28px;
+  height: 33px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  display: inline-block;
+  position: absolute;
+  margin: 23px 6px 0;
+}
+main section.comoInvestir a.passos:hover:after {
+  content: "";
+  background: url('../images/seta-nohver.jpg') no-repeat 0 0;
+  width: 28px;
+  height: 33px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  display: inline-block;
+  position: absolute;
+  margin: 23px 6px 0;
+}
+main section.comoInvestir.pilares dl {
+  width: 224px;
+  float: left;
+  text-align: center;
+  margin: 0 35px 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+main section.comoInvestir.pilares dl dt {
+  font-size: 1.8em;
+  margin: 0 0 0.7em;
+  padding: 1.4em 0em 1.4em;
+  color: #fffff0;
+  background: #475047;
+  text-transform: uppercase;
+  text-align: center;
+}
+main section.comoInvestir.pilares dl dt strong {
+  display: block;
+  font-weight: normal;
+  line-height: 28px;
+  padding: 0em 0.2em 0em;
+  color: #c5bcb0;
+}
+main section.comoInvestir.pilares dl dd {
+  color: #444;
+  font-size: 1.7em;
+  margin: 0;
+  padding: 0 0.3em;
+  line-height: 1em;
+  box-sizing: border-box;
+}
+main section.comoInvestir.pilares dl:last-child {
+  margin-right: 0;
+}
+main section.time {
+  clear: both;
+  margin: 0 0 0;
+  padding: 50px 0 0;
+}
+main section.time h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 80px;
+  margin: 0 0 15px;
+}
+main section.time div {
+  background: url('../images/bg-time.jpg') no-repeat top center;
+  height: 614px;
+}
+main section.time div h4 {
+  padding: 86px 0 0 80px;
+  font-size: 38px;
+  letter-spacing: -0.3px;
+  line-height: 32px;
+  margin: 0;
+  text-transform: uppercase;
+  width: calc(42%);
+}
+main section.time div h4 span {
+  display: inline-block;
+  margin: 5px 0 0 59px;
+}
+main footer {
+  background: #475047;
+  height: 585px;
+  margin: 104px 0 0 0;
+  clear: both;
+}
+main footer div.logo-footer {
+  background: url('../images/logo-footer.jpg') no-repeat center bottom;
+  width: 100%;
+  height: 168px;
+  padding: 50px 0 0 0;
+  margin: 0 auto;
+}
+main footer div.logo-footer h2 {
+  text-align: center;
+  text-indent: -9000px;
+}
+main footer div.bot-brain-comp {
+  margin: 67px 0 50px 50px;
+  display: inline-block;
+  width: 50%;
+}
+main footer div.bot-brain-comp a {
+  display: inline-block;
+}
+main footer div.bot-brain-comp a.mail {
+  background: url('../images/ico-email.jpg') no-repeat scroll center;
+  width: 70px;
+  height: 65px;
+  margin-right: 20px;
+}
+main footer div.bot-brain-comp a.linkedin {
+  background: url('../images/ico-linkedin.jpg') no-repeat scroll center;
+  width: 69px;
+  height: 65px;
+}
+main footer div.bot-brain-comp a:hover {
+  opacity: 0.5;
+}
+main footer address {
+  font-style: normal;
+  margin: 50px 0 0 50px;
+  display: inline-block;
+}
+main footer address p {
+  width: 281px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FFF;
+  display: inline-block;
+  vertical-align: top;
+}
+main footer nav {
+  float: right;
+  vertical-align: top;
+  margin: 80px 104px 0 146px;
+}
+main footer nav a {
+  color: #aea89d;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+main footer nav a:hover {
+  color: #FFF;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 1260px) {
+  main {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main {
+    /*HEADER*/
+  }
+  main header {
+    padding: 37px 0;
+  }
+  main header ul,
+  main header nav {
+    float: none;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  main header ul li {
+    margin: 0 12px;
+  }
+  main header nav a {
+    margin: 0 19px !important;
+  }
+  main header h1 {
+    padding-top: 17px;
+  }
+}
+@media screen and (max-width: 980px) {
+  main header {
+    text-align: center;
+  }
+  main header > * {
+    float: none !important;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  main article.infsSerBrain h2 {
+    letter-spacing: 3px;
+    line-height: 66px;
+    font-size: 62px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 0;
+  }
+  main article.infsSerBrain p {
+    padding: 25px 40px 80px;
+    width: 100%;
+    word-spacing: 0;
+  }
+  main footer address {
+    font-style: normal;
+    margin: 50px 0 0 50px;
+    display: inline-flex;
+  }
+  main footer address p {
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFF;
+  }
+  main footer div.bot-brain-comp {
+    margin: 67px 0 50px 50px;
+    display: inline-block;
+    width: 100%;
+  }
+  main footer nav {
+    float: right;
+    vertical-align: top;
+    margin: -24px 35px 0px 0;
+  }
+  main footer nav a {
+    color: #aea89d;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 40px;
+  }
+  main footer nav a:hover {
+    color: #FFF;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+  main footer nav:last-child {
+    margin-right: 60px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 340px) {
+  main header nav a {
+    display: block;
+  }
+  main section.carrossel p {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}

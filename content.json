@@ -1,0 +1,106 @@
+var pt_br = {
+   banners : {
+      bn_01: [{
+         id: 0,
+         position: 1,
+         modified: "2016/04/12 18:11:09",
+         title: "As experiências podem ser mais únicas.",
+         resume: "Proteger e preservar o hoje para proporcionar o amanhã.",
+         image: [{
+            src : "src", 
+            alt : "alt"
+         }],
+         link: "link"
+      }],
+      bn_02: [{
+         id: 1,
+         position: 2,
+         modified: "2016/04/12 18:11:09",
+         title: "As experiências podem ser mais únicas.",
+         resume: "Proteger e preservar o hoje para proporcionar o amanhã.",
+         image: [{
+            src : "src", 
+            alt : "alt"
+         }],
+         link: "link"
+      }]
+   },
+   highlights : {
+      hg_01: [{
+         id: 0,
+         position: 1,
+         modified: "2016/04/12 18:11:09",
+         title: "O que é ser brain?",
+         resume: "Somos um Multi Family Office 100% independentes. Temos um único foco: você.",
+         image: [{
+            src : "src", 
+            alt : "alt"
+         }],
+         link: "link"
+      }],
+      hg_02: [{
+         id: 1,
+         position: 2,
+         modified: "2016/04/12 18:11:09",
+         title: "Pilares Brainvest",
+         resume: "A sustentação do que acreditamos. O que nos impulsiona a sermos melhores para você.",
+         image: [{
+            src : "src", 
+            alt : "alt"
+         }],
+         link: "link"
+      }],
+      hg_03: [{
+         id: 2,
+         position: 3,
+         modified: "2016/04/12 18:11:09",
+         title: "Como investir with Brain",
+         resume: "Não é o quê investir ou em quê, é como ivestir. Nós sabemos o caminho.",
+         image: [{
+            src : "src", 
+            alt : "alt"
+         }],
+         link: "link"
+      }],
+      hg_04: [{
+         id: 3,
+         position: 4,
+         modified: "2016/04/12 18:11:09",
+         title: "Time Brainvest",
+         resume: "Conheça aqueles que fazem a Brainvest ser única. O nosso time é o nosso grande diferencial.",
+         image: [{
+            src : "src", 
+            alt : "alt"
+         }],
+         link: "link"
+      }]
+   },
+   whatsbrain : {
+      title: "Steve",
+      description: "Jobs",
+      modified: "(11) 885-953-138",
+      background: [{
+         color:'';
+         image:''
+      }],
+      link: "link"
+   }
+};
+
+ var list = function(obj) {
+   for(var prop in obj) {
+     console.log('Objeto: '+prop);
+   }
+ };
+ 
+ var search = function(name) {
+   for(var prop in pt_br) {
+     if(pt_br[prop].firstName === name) {
+       console.log(pt_br[prop]);
+       return pt_br[prop];
+     }
+   }
+ };
+ 
+ list(pt_br);
+ search("A");
