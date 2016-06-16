@@ -9,13 +9,13 @@
       <meta name="author" content="Focus">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- build:css css/styles.min.css-->
-      <!-- <link href="css/reset.css" rel="stylesheet" media="screen" type='text/css'> -->
-
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
       <!-- Owl Carousel Assets -->
       <link href="css/owl-carousel/owl.carousel.css" rel="stylesheet">
       <link href="css/owl-carousel/owl.theme.css" rel="stylesheet">
 
       <link href="css/styles_dev.css" rel="stylesheet" media="screen" type='text/css'>
+
       <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
       <script src="js/owl.carousel.min.js"></script>
       <script type='text/javascript' src='js/scripts.js'></script>
@@ -26,10 +26,6 @@
       <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     </head>
   <body>    
-    <!-- build:js js/scripts.js -->
-    <script type="text/javascript" src="js/scripts.js"></script>
-    <!-- endbuild -->
-
     <main>
       <header>
         <ul>
@@ -37,13 +33,21 @@
           <li>São Paulo <a href="tel.:+55 11 3030 3120">+55 11 3030 3120</a></li>
         </ul>
         <nav>
-          <a href="javascript:void(0);">Language</a>
+          <a data-menu="s_language" href="javascript:void(0);">Language</a>
+          <a data-menu="s_menu" href="javascript:void(0);">Menu</a>
+        </nav>
+        <nav class="s_menu">
           <a href="javascript:void(0);">Cliente login</a>
           <a href="javascript:void(0);">Downloads</a>
           <a href="javascript:void(0);">News</a>
           <a href="javascript:void(0);">Contatos</a>
         </nav>
-        <h1><a href="javascript:void(0);" title="Brainvest - Multi-Family Office"><img src="images/logo.gif" alt="Brainvest - Multi-Family Office" /></a></h1>
+        <nav class="s_language">
+          <a href="javascript:void(0);">English</a>
+          <a href="javascript:void(0);">Français</a>
+          <a href="javascript:void(0);">German</a>
+        </nav>
+        <h1><a href="javascript:void(0);" title="Brainvest - Multi-Family Office"><img src="images/logo-brainvest-topo.png" alt="Brainvest - Multi-Family Office" /></a></h1>
       </header>      
       <section class="carrossel">
         <div class="carr_container">
@@ -196,8 +200,10 @@
             <span class="as">as of 2/3/16</span>
           </li>
         </ul>
-        <a class="passos" href="#" title="O nosso passo-a-passo do investimento">O nosso passo-a-passo do investimento</a>
-        <div class="passosSerBrain">
+      </section>
+      <section class="passoAPasso">
+        <a href="javascript:void(0);" title="O nosso passo-a-passo do investimento">O nosso passo-a-passo do investimento</a>
+        <div>
           <dl>
             <dt>Passo 1:<strong>Conhecer você.</strong></dt>
             <dd><p>Esta parte é a mais importante. Iremos entender, de forma detalhada, todos os seus objetivos financeiros, pessoais e profissionais.</p></dd>
@@ -222,50 +228,50 @@
         </div>
       </section>
       <section class="time">
-      <h2>Time Brainvest</h2>
-      <div>
-        <h4>Conheça aqueles que fazem <span>a brainvest ser única.</span></h4>
-      </div>
+        <h2>Time Brainvest</h2>
+        <a href="javascript:void(0);">Conheça aqueles que fazem a brainvest ser única.</a>
+        <img src="images/home/time_01.png" width="1000" height="497" />
       </section>
       <footer>
-        <div class="logo-footer">
-          <h2>Brainvest Multi-Family Office</h2>
+        <h2><a href="javascript:void(0);" title="Brainvest - Multi-Family Office"><img src="images/logo-brainvest-footer.png" alt="Brainvest - Multi-Family Office" /></a></h2>
+        <div class="socials">
+          <a class="mail" href="javascript:void(0);" title="Envie-nos um e-mail"><p>Envie-nos um e-mail</p><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a class="linkedin" href="javascript:void(0);" title="Acesse nossa página no LinkedIn"><p>Acesse nossa página no LinkedIn</p><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         </div>
-        <div class="bot-brain-comp">
-          <a href="" title="Envie um e-mail" class="mail">&nbsp;</a>
-          <a href="" title="" class="linkedin">&nbsp;</a>
-        </div>
-      <nav>
-        <a href="">Cliente login</a>
-        <a href="">Downloads</a>
-        <a href="">News</a>
-        <a href="">Contatos</a>
-      </nav>
-        <nav style="margin-right: 0;margin-left: 0;">
-        <a href="">Home</a>
-        <a href="">O que é ser brain</a>
-        <a href="">Pilares</a>
-        <a href="">Como investir</a>
-        <a href="">Time Brainvest</a>
-      </nav>
         <address>
           <p>
-            <span>9, place du molard</span>
-            <span>1204 genève - Switzerland</span>
-            <span>Tel: +41 22 310 7488</span>
-            <span>+41 22 310 7490</span>
-            <span>Fax: +41 27 203 4718</span>
+            9, place du molard<br>
+            1204 genève - Switzerland<br>
+            Tel: +41 22 310 7488<br>
+            <em>+41 22 310 7490</em><br>
+            Fax: +41 27 203 4718
           </p>
           <p>
-            <span>Rua dos pinheiros 870</span>
-            <span>CJ 123/124</span>
-            <span>CEP 05422-001</span>
-            <span>São Paulo - Brasil</span>
-            <span>Tel: +55 11 3030 3120</span>
-            <span>Fax: +55 11 3026 9115</span>
+            Rua dos pinheiros 870<br>
+            CJ 123/124<br>
+            CEP 05422-001<br>
+            São Paulo - Brasil<br>
+            Tel: +55 11 3030 3120<br>
+            Fax: +55 11 3026 9115
           </p>
         </address>
+        <nav>
+          <a href="javascript:void(0);">Home</a>
+          <a href="javascript:void(0);">O que é ser Brain</a>
+          <a href="javascript:void(0);">Pilares</a>
+          <a href="javascript:void(0);">Como investir with Brain</a>
+          <a href="javascript:void(0);">Time Brainvest</a>
+        </nav>
+        <nav>
+          <a href="javascript:void(0);">Cliente Login</a>
+          <a href="javascript:void(0);">Downloads</a>
+          <a href="javascript:void(0);">News</a>
+          <a href="javascript:void(0);">Contatos</a>
+        </nav>
       </footer>
     </main>
   </body>
+  <!-- build:js js/scripts.js -->
+    <script type="text/javascript" src="js/scripts.js"></script>
+  <!-- endbuild -->
 </html>
