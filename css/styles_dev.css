@@ -91,6 +91,8 @@ main {
   /*HEADER*/
   /* SECTIONS CONTENTS */
   /*FOOTER*/
+  /* ---------------------------- Ser Brain ---------------------------- */
+  /* Footer Internals Navigation */
 }
 main header {
   text-transform: uppercase;
@@ -222,7 +224,9 @@ main section.carrossel p {
   text-align: center;
   padding: 35px 15% 0;
 }
-main section.carrossel a {
+main section.carrossel a,
+main#ser-brain section.featured a,
+main#ser-brain section.featured a:hover {
   color: #475047;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
@@ -235,7 +239,8 @@ main section.carrossel a {
   font-size: 1.0625em;
   box-sizing: border-box;
 }
-main section.carrossel a:hover {
+main section.carrossel a:hover,
+main#ser-brain section.featured a:hover {
   color: #f6861f;
 }
 main section.highlights ul {
@@ -802,12 +807,180 @@ main footer nav a {
 main footer nav a:hover {
   color: #FFF;
 }
-/* MEDIA QUERIES */
-@media screen and (max-width: 1260px) {
-  main {
-    width: 100%;
-  }
+main#ser-brain section.featured h2 {
+  font-size: 5em;
+  text-transform: uppercase;
+  padding: 3.4% 0 3.5% 3.2%;
+  line-height: 75px;
+  margin: 6.5% 68% 0 0;
+  color: #e9e8db;
+  position: absolute;
+  background-color: #7B836E;
+  font-family: "arquitectabook";
 }
+main#ser-brain section.featured h3 {
+  margin: 4.2% 0 0;
+  font-size: 2.72em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 3rem;
+  font-family: "arquitecta_lightlight";
+}
+main#ser-brain section.infos-brain article {
+  padding: 5.9% 7.3% 2.5%;
+  background: #7b836f;
+}
+main#ser-brain section.infos-brain article p {
+  color: #FFF;
+  font-family: "Times New Roman";
+  font-size: 1.6em;
+  padding: 0 0 3.3%;
+  line-height: 2.2rem;
+  word-spacing: 3px;
+  letter-spacing: 0.3px;
+}
+main#ser-brain section.infos-brain article p strong {
+  text-transform: uppercase;
+  color: #dfded1;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+main#ser-brain section.infos-brain h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4em;
+  color: #002f17;
+  margin: 6% 0 2.2%;
+}
+main#ser-brain section.infos-brain ul {
+  text-align: center;
+}
+main#ser-brain section.infos-brain ul li {
+  width: 49.8%;
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+}
+main#ser-brain section.infos-brain ul li h4 {
+  color: #eae9de;
+  position: absolute;
+  z-index: 999;
+  padding: 7% 6% 6%;
+  width: 285px;
+  margin: 35% 21% 0;
+  text-transform: uppercase;
+  font-size: 1.69em;
+  background-color: inherit;
+  box-sizing: border-box;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  -webkit-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+main#ser-brain section.infos-brain ul li img {
+  z-index: 99;
+  -webkit-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+main#ser-brain section.infos-brain ul li p {
+  color: #f4f3f2;
+  padding: 20% 18% 19.2%;
+  font-size: 2.4em;
+  line-height: 44px;
+}
+main#ser-brain section.infos-brain ul li:nth-child(1) {
+  background-color: #8b9178;
+}
+main#ser-brain section.infos-brain ul li:nth-child(2) {
+  position: absolute;
+}
+main#ser-brain section.infos-brain ul li:nth-child(2) span {
+  left: -41px;
+  top: 153px;
+  z-index: 999;
+  position: absolute;
+  font-size: 10em;
+  font-family: "arquitecta_blackblack";
+  color: #002f17;
+}
+main#ser-brain section.infos-brain ul li:nth-child(3) {
+  background: #a5a095;
+}
+main#ser-brain section.infos-brain ul li:hover h4,
+main#ser-brain section.infos-brain ul li:hover img {
+  opacity: 0;
+  z-index: 0;
+}
+main#ser-brain section.infos-brain ul li:hover p {
+  opacity: 1;
+  z-index: 99;
+}
+main nav.client-brain {
+  position: relative;
+  text-align: center;
+  margin: 64px 0 64px 0;
+  height: 52px;
+}
+main nav.client-brain a {
+  text-transform: uppercase;
+  margin: 0 0 0 28px;
+  color: #475047;
+  display: inline-block;
+  padding-top: 16px;
+  font-family: "arquitecta_boldbold";
+  font-size: 1.1em;
+  line-height: 20px;
+  /* &:first-child:after {
+          content: '';
+          background: url('../images/seta-left.jpg')no-repeat left top; position: absolute; width: 53px; height: 53px; left: 0; top: 0;
+        } */
+  /* &:last-child:after {
+          content: ''; background: url('../images/seta-right.jpg')no-repeat right top; position: absolute; width: 53px; height: 53px; right: 0; top: 0;
+        } */
+}
+main nav.client-brain a:first-child {
+  float: left;
+  padding: 8px 0 0 6.8%;
+  width: 129px;
+  text-align: left;
+  margin: 0;
+  color: #475047;
+}
+main nav.client-brain a:first-child:hover {
+  color: #475047;
+}
+main nav.client-brain a:first-child img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28.21%;
+}
+main nav.client-brain a:last-child {
+  float: right;
+  padding: 7px 6.8% 0 0;
+  width: 119px;
+  text-align: right;
+  margin: 0;
+  color: #475047;
+}
+main nav.client-brain a:last-child:hover {
+  color: #475047;
+}
+main nav.client-brain a:last-child img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28.21%;
+}
+main nav.client-brain a:hover {
+  color: orange;
+}
+/* MEDIA QUERIES */
 @media screen and (max-width: 1024px) {
   main {
     /*HEADER*/

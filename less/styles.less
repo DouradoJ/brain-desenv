@@ -33,7 +33,7 @@ body{
             MAIN
 *******************************/
 main{
-  /*background: url('../images/base/00_HOME.jpg') no-repeat top center;*/
+  /*background: url('../images/base/00_HOME.jpg') no-repeat top center;*/ 
   width: 1000px; margin: 0 auto; background-color: #FFF;
   /*HEADER*/
   header{
@@ -363,12 +363,115 @@ main{
       }
     }
   }
+  /* ---------------------------- Ser Brain ---------------------------- */
+  &#ser-brain {    
+    section.featured{
+      h2 { font-size: 5em; text-transform: uppercase; padding: 3.4% 0 3.5% 3.2%; line-height: 75px; margin: 6.5% 68% 0 0; color: #e9e8db; position: absolute; background-color: #7B836E; font-family: "arquitectabook"; }
+      h3 { margin: 4.2% 0 0; font-size: 2.72em; text-transform: uppercase; text-align: center; line-height: 3rem; font-family: "arquitecta_lightlight"; }
+      a:extend(main section.carrossel a){
+        &:hover{
+          &:extend(main section.carrossel a:hover);
+        }
+      }
+    }
+    section.infos-brain {
+      
+      article {
+        padding: 5.9% 7.3% 2.5%; background: #7b836f;
+        p{
+          color: #FFF; font-family: "Times New Roman"; font-size: 1.6em; padding: 0 0 3.3%; line-height: 2.2rem; word-spacing: 3px; letter-spacing: 0.3px;
+          strong{
+            text-transform: uppercase; color: #dfded1; font-size: 2rem; letter-spacing: 1px;
+          }
+        }
+      }
+      h3{
+        text-align: center; text-transform: uppercase; font-size: 4em; color: #002f17; margin: 6% 0 2.2%;
+      }
+      ul {
+          text-align: center;
+        li{
+          width: 49.8%; vertical-align: top; display: inline-block; position: relative;
+          h4 { 
+            color: #eae9de; position: absolute; z-index: 999;; padding: 7% 6% 6%; width: 285px; margin: 35% 21% 0; text-transform: uppercase; font-size: 1.69em; background-color: inherit; box-sizing: border-box; line-height: 30px; letter-spacing: -0.5px; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s;
+          }
+          img {
+            z-index: 99; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; position: absolute; left: 0; width: 100%;
+          }            
+          p{
+            color: #f4f3f2; padding: 20% 18% 19.2%; font-size: 2.4em; line-height: 44px;;
+          }
+          &:nth-child(1) {
+            background-color: #8b9178;
+          }
+          &:nth-child(2) {
+            position: absolute;
+              span {
+                left: -41px; top: 153px; z-index: 999; position: absolute; font-size: 10em; font-family: "arquitecta_blackblack"; color: #002f17;
+              }
+          }
+
+          &:nth-child(3) {
+              background: #a5a095;
+          }
+          &:hover  {
+            h4, img {
+              opacity: 0; z-index: 0;
+            }
+            p {
+              opacity: 1; z-index: 99;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* Footer Internals Navigation */
+  nav.client-brain {
+    position: relative; text-align: center; margin: 64px 0 64px 0; height: 52px;
+    a {
+      text-transform: uppercase; margin: 0 0 0 28px; color: #475047; display: inline-block; padding-top: 16px; font-family: "arquitecta_boldbold"; font-size: 1.1em; line-height: 20px;
+        /* &:first-child:after {
+          content: '';
+          background: url('../images/seta-left.jpg')no-repeat left top; position: absolute; width: 53px; height: 53px; left: 0; top: 0;
+        } */
+        /* &:last-child:after {
+          content: ''; background: url('../images/seta-right.jpg')no-repeat right top; position: absolute; width: 53px; height: 53px; right: 0; top: 0;
+        } */
+
+        &:first-child {
+          float: left; padding: 8px 0 0 6.8%; width: 129px; text-align: left; margin: 0; color: #475047;
+          
+          &:hover{
+            color: #475047; 
+          }
+
+          img {
+            position: absolute; left: 0; top: 0; width: 28.21%;
+          }
+        }
+
+        &:last-child {
+          float: right; padding: 7px 6.8% 0 0; width: 119px; text-align: right; margin: 0; color: #475047;
+
+          &:hover{
+            color: #475047; 
+          }
+
+          img {
+            position: absolute; right: 0; top: 0; width: 28.21%;
+          }
+        }
+
+        &:hover {
+          color: orange;
+        }
+    }
+  }
+
 }
 
 /* MEDIA QUERIES */ 
-@media screen and (max-width: 1260px) {
-  main{ width: 100%; }
-}
 @media screen and (max-width: 1024px) {
   main{ 
     /*HEADER*/
@@ -385,7 +488,6 @@ main{
     }
   }
 }
-
 @media screen and (max-width: 980px) {
   main {
     header{
@@ -398,7 +500,6 @@ main{
     }
   }
 }
-
 @media screen and (max-width: 900px) {
   main { 
 
@@ -436,7 +537,6 @@ main{
     }
   }
 }
-
 @media screen and (max-width: 340px) {
   main {
     header {
