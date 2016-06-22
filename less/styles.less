@@ -25,7 +25,7 @@ body{
 
 //Link Hover
 .lnks{
-  color: @gray-1; -webkit-transition: color 0.2s; transition: color 0.2s; 
+  color: @gray-1; -webkit-transition: color 0.3s; transition: color 0.3s; 
   &:hover{ color:@orange; }
 }
 
@@ -35,9 +35,9 @@ body{
 main{
   /*background: url('../images/base/00_HOME.jpg') no-repeat top center;*/ 
   width: 1000px; margin: 0 auto; background-color: #FFF;
-  /*HEADER*/
+  /* HEADER */
   header{
-    text-transform: uppercase; padding: 10px 0 54px 0;
+    text-transform: uppercase; padding: 10px 0 54px 0; -webkit-transition: padding 0.3s; transition: padding 0.3s;
     ul{
       float: left;
       li{
@@ -87,12 +87,16 @@ main{
   section.carrossel {
     padding-bottom:12px;
     > div{
-      width:100%; min-height: 606px; overflow: hidden;
+      width:100%; padding-bottom: 17px; overflow: hidden;
       dl{
         z-index: 2; opacity: 1;
         dt{
           position: absolute; left: 0; top: 0; z-index: 3; width: 100%; text-align: center;
-          h2{ text-transform: uppercase; font-size: 2.0625em; color: @gray-1; margin: 0; padding: 3.5% 0; }
+          h2{ z-index:2; text-transform: uppercase; font-size: 2.0625em; color: @gray-1; margin: 0; padding: 3.5% 0; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; }
+          &:before{
+            position: absolute;
+            &:extend(main section.time a:before);
+          };
         }
         dd{
           img{ width: 100%; }
@@ -110,14 +114,14 @@ main{
         }
       }
     }
-    p{ .f-weight-light; color:@gray-1; font-size: 2.6875em; line-height: 1.18em; text-transform: uppercase; text-align: center; padding: 35px 15% 0; }
+    p{ .f-weight-light; color:@gray-1; font-size: 2.6875em; line-height: 1.18em; text-transform: uppercase; text-align: center; padding: 35px 15% 0; -webkit-transition: font-size 0.3s; transition: font-size 0.3s;  }
     a{ .lnks; .f-weight-bold; text-align: center; border: 3px solid #475047; padding: 6px; margin: 43px auto; width: 135px; font-size: 1.0625em; box-sizing: border-box; }
   } 
   section.highlights{
     ul{
       text-align: center;
       li{
-        display:inline-block; width: 240px; min-height: 448px; vertical-align: top; text-align: center; margin:0 10px 14px 0; overflow: hidden;
+        display:inline-block; width: 240px; min-height: 448px; vertical-align: top; text-align: center; margin:0 4px 14px; overflow: hidden; -webkit-transition: margin 0.3s; transition: margin 0.3s; 
         a{
           color: inherit; -webkit-transition: color 0.3s; transition: color 0.3s;
           &:hover{ 
@@ -132,32 +136,34 @@ main{
       li.hg_01{ 
         background-color: @gray-2;
         a{ color: #adaf97; }
-        h3{ padding: 30px 55px 10px; }
-        p{ padding: 0 35px; }
+        h3{ padding: 30px 55px 10px; background-color: @gray-2; }
+        p{ padding: 0 35px; background-color: @gray-2; }
       }
       li.hg_02{ 
         background-color: #a5a88d; 
         a{ color: @gray-2; }
+        h3, p{ background-color: #a5a88d; }
       }
       li.hg_03{ 
         background-color: #8b9079;
         a{ color: #e3e3d7; }
-        h3{ padding: 30px 25px 10px ;  }
-        p{ padding: 0 38px; }
+        h3{ padding: 30px 25px 10px; background-color: #8b9079; }
+        p{ padding: 0 38px; background-color: #8b9079; }
       }
       li.hg_04{ 
         background-color: #a4a095; margin-right: 0; 
         a{ color: #475148; }
+        h3, p{ background-color: #a4a095; }
       }
     }
   }
   section.infsSerBrain { 
     background: #7b836f; margin-top:66px; padding-bottom: 66px;
-    h2 { letter-spacing: -2px; line-height: 60px; font-size: 4.125em; text-transform: uppercase; text-align: left; color: #d9d9cb; display: inline-block; vertical-align: top; width: 22%; padding: 27px 0 0 30px; margin: 0; }
+    h2 { -webkit-transition: width 0.3s; transition: width 0.3s; letter-spacing: -2px; line-height: 60px; font-size: 4.125em; text-transform: uppercase; text-align: left; color: #d9d9cb; display: inline-block; vertical-align: top; width: calc(~"22% - 30px"); padding: 27px 30px 0; margin: 0; }
     a{
       width: 74%; display: inline-block;
       p{
-        -webkit-transition: opacity 0.3s; transition: opacity 0.3s; font-size: 1.6875em; word-spacing: 2px; margin: 0; line-height: 36px; color: #FFF; padding: 62px 45px 0 12px; .f-times; box-sizing: border-box; letter-spacing: -0.01em; 
+        -webkit-transition: all 0.3s; transition: all 0.3s; font-size: 1.6875em; word-spacing: 2px; margin: 0; line-height: 36px; color: #FFF; padding: 62px 45px 0 12px; .f-times; box-sizing: border-box; letter-spacing: -0.01em; 
         strong { .f-weight-bold; color: #d9d9cb; font-size: 2.0625rem; font-weight: normal; }
         &:after{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-left: 18px solid @orange; border-right: 12px solid transparent; border-bottom: 13px solid transparent; display: inline-block; vertical-align: middle; }
         &:hover{
@@ -173,7 +179,7 @@ main{
     ul{
       text-align: center; 
       li{
-        width: 237px; min-height: 315px; overflow: hidden; display: inline-block; vertical-align: top; margin: 0 14px 14px 0;
+        width: 237px; min-height: 315px; overflow: hidden; display: inline-block; vertical-align: top; margin: 0 6px 14px; -webkit-transition: margin 0.3s; transition: margin 0.3s; 
         a {
           strong{ -webkit-transition: color 0.3s; transition: color 0.3s; color: #e4e2d6; text-transform: uppercase; font-size: 2.0625em; font-weight: normal; padding: 23px 0; display: block; }
           img{ -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
@@ -196,11 +202,11 @@ main{
     padding: 69px 0 0 0;
     article {
       padding-bottom: 67px;
-      h2{ text-transform: uppercase; color: #475047; margin: 0 0 0 28px; text-align: left; line-height: 3.75rem; display: inline-block; vertical-align: top; width: 28%; font-size: 4.1875em; letter-spacing: -2px; }
+      h2{ -webkit-transition: width 0.3s; transition: width 0.3s; text-transform: uppercase; color: #475047; padding: 0 28px; text-align: left; line-height: 3.75rem; display: inline-block; vertical-align: top; width: calc(~"28% - 28px"); font-size: 4.1875em; letter-spacing: -2px; }
       a{
         display: inline-block; margin: -10px 0 0 19px; width: calc(100% - 35%); padding-right: 40px; box-sizing: border-box;
         p{
-          .f-times; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; font-size: 1.6875em; line-height: 35px; color: #231f20; 
+          .f-times; -webkit-transition: all 0.3s; transition: all 0.3s; font-size: 1.6875em; line-height: 35px; color: #231f20; 
           strong{ .f-weight-bold; color: #8b9178; font-size: 2.1875rem; }
           &:after{
             &:extend(main section.infsSerBrain a p:after);
@@ -217,7 +223,7 @@ main{
     ul{
       text-align: center;
       li{
-        width: 233px; height: 246px; display: inline-block; vertical-align: top; border: 2px solid #7b836f; margin: 0 13px 35px 0;
+        width: 233px; height: 246px; display: inline-block; vertical-align: top; border: 2px solid #7b836f; margin: 0 6px 35px; -webkit-transition: margin 0.3s; transition: margin 0.3s; 
         p{
           margin: 0;padding: 0;color: inherit;
           span{ display: inline-block; vertical-align: bottom; margin: 52px 0 0 0; width: 100%; text-align: center; font-size: 18px; text-transform: uppercase; }
@@ -281,13 +287,10 @@ main{
     > div{
       padding: 24px 0 0 0;
       dl{
-        width: 180px; display: inline-block; vertical-align: top; text-align: center; margin: 0 21.5px 21.5px 0; padding: 0 0; box-sizing: border-box;
+        width: 180px; display: inline-block; vertical-align: top; text-align: center; margin: 0 9.5px 21.5px; padding: 0 0; box-sizing: border-box;
         dt{
           font-size: 1.4375em; padding:1.5em 0.5em; color: #fffff0; background: #475047; text-transform: uppercase; text-align: center; line-height: 1.0375em;
-          strong {
-            display: block; color: #c5bcb0; font-weight: normal;
-          }
-
+          strong { display: block; color: #c5bcb0; font-weight: normal; }
           &:after{
             &:extend(main header nav.s_language:before); 
             margin: 0; 
@@ -300,35 +303,40 @@ main{
             left: calc(~"50% - 8px");
           }
         }
-        dd {
-          color:#444;font-size: 1.3em; margin: 0; padding: 0.6em 0.4em; line-height: 22px; box-sizing: border-box;
-        }
-        &:last-child{
-          margin-right: 0;
-        }
+        dd{ color:#444;font-size: 1.3em; margin: 0; padding: 0.6em 0.4em; line-height: 22px; box-sizing: border-box; }
+        &:last-child{ margin-right: 0; }
       }
     }
   }
   section.time {
     padding: 24px 0 0;
-    h2{
-      text-align: center; color: @gray-2; text-transform: uppercase; font-size: 3.9375em; margin: 0 0 11px;
-    }
+    h2{ text-align: center; color: @gray-2; text-transform: uppercase; font-size: 3.9375em; margin: 0 0 11px; }
     a{ 
       position: absolute; top:174px; left: 64px; font-size: 1.875em; letter-spacing: -0.01em; color: @gray-2; margin: 0 0; text-transform: uppercase; width: 420px; line-height: 31px; text-align: center;
-      -webkit-transition: opacity 0.3s; transition: opacity 0.3s;
-      &:after{
-        &:extend(main section.infsSerBrain a p:after); margin: 0 0 8px 14px;
+      -webkit-transition: all 0.3s; transition: all 0.3s;
+      &:before{
+        content:'';
+        width: 100%; height: 100%;
+        background: #fff; opacity: 0; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; position: absolute; z-index: 1;
+      }
+      p{
+        z-index: 2;
+        &:after{
+          &:extend(main section.infsSerBrain a p:after); margin: 0 0 8px 14px;
+        }
       }
       &:hover{
         &:extend(main section.infsSerBrain a p:hover);
-        &:after{ 
-          &:extend(main section.infsSerBrain a p:hover:after) ;
+        p{
+            &:after{ 
+            &:extend(main section.infsSerBrain a p:hover:after) ;
+          }
         }
       }
     }
+    img{ width: 100%; height: 100%; }
   }
-  /*FOOTER*/
+  /* FOOTER */
   footer {
     background: #475047; margin-top: 70px; opacity: 0.7;
     h2 {
@@ -336,9 +344,9 @@ main{
       a img { width: 100%; height: 100%; }
     }
     .socials {
-      padding: 48px 44px 0;
+      padding: 48px 35px 0; -webkit-transition: padding 0.3s; transition: padding 0.3s;
       a{
-        background-color: #687667; display: inline-block; width: 53px; height: 49px; text-align: center; margin-right:15px;
+        background-color: #687667; display: inline-block; width: 53px; height: 49px; text-align: center; margin:0 8px;
         p{ text-indent: -9999em; width: 0; height: 100%; display: inline-block; vertical-align: middle; }
         i{ color: #b0b8a1; font-size: 2em; vertical-align: middle; -webkit-transition: color 0.3s; transition: color 0.3s; }
         &:hover{
@@ -618,41 +626,17 @@ main{
     position: relative; text-align: center; margin: 64px 0 64px 0; height: 52px;
     a {
       text-transform: uppercase; margin: 0 0 0 28px; color: #475047; display: inline-block; padding-top: 16px; font-family: "arquitecta_boldbold"; font-size: 1.1em; line-height: 20px;
-        /* &:first-child:after {
-          content: '';
-          background: url('../images/seta-left.jpg')no-repeat left top; position: absolute; width: 53px; height: 53px; left: 0; top: 0;
-        } */
-        /* &:last-child:after {
-          content: ''; background: url('../images/seta-right.jpg')no-repeat right top; position: absolute; width: 53px; height: 53px; right: 0; top: 0;
-        } */
-
-        &:first-child {
-          float: left; padding: 8px 0 0 6.8%; width: 129px; text-align: left; margin: 0; color: #475047;
-          
-          &:hover{
-            color: #475047; 
-          }
-
-          img {
-            position: absolute; left: 0; top: 0; width: 28.21%;
-          }
-        }
-
-        &:last-child {
-          float: right; padding: 7px 6.8% 0 0; width: 119px; text-align: right; margin: 0; color: #475047;
-
-          &:hover{
-            color: #475047; 
-          }
-
-          img {
-            position: absolute; right: 0; top: 0; width: 28.21%;
-          }
-        }
-
-        &:hover {
-          color: orange;
-        }
+      &:first-child {
+        float: left; padding: 8px 0 0 6.8%; width: 129px; text-align: left; margin: 0; color: #475047;
+        &:hover{ color: #475047; }
+        img { position: absolute; left: 0; top: 0; width: 28.21%; }
+      }
+      &:last-child {
+        float: right; padding: 7px 6.8% 0 0; width: 119px; text-align: right; margin: 0; color: #475047;
+        &:hover{ color: #475047; }
+        img {  position: absolute; right: 0; top: 0; width: 28.21%; }
+      }
+      &:hover { color: orange; }
     }
   }
 
@@ -660,84 +644,129 @@ main{
 
 /* MEDIA QUERIES */ 
 @media screen and (max-width: 1024px) {
-  main{ 
-    /*HEADER*/
+  main{
+    width: 100%;
+    /* HEADER */
     header{
       padding:37px 0; 
-      ul, nav{
-        float: none; text-align: center; padding-bottom: 20px;
-      }
+      ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
       ul li{ margin: 0 12px; }
-      nav a{ margin:0 19px !important; }
-      h1{ 
-        padding-top: 17px;
+      nav{
+        margin-right: 0 !important; text-align: center !important;
+        a{ margin:0 19px !important; }
+        &:before{
+          margin: 0 auto 10px !important;
+        };
+      }
+      h1{ padding-top: 17px; }
+    }
+    /* SECTIONS CONTENTS */
+    section.highlights ul li.hg_04, section.pilares ul li.pl_04, section.comoInvestir ul li.ci_04{ margin-right: 4px; }
+    section.passoAPasso > div dl:last-child{ margin-right: 9.5px; }
+    /* FOOTER */
+    footer{
+      padding-bottom: 33px;
+      .socials{
+        padding: 48px 44px 0; text-align: center;
+      }
+      nav, address{ display: block; text-align: center; }
+      address{ padding: 48px 47px 29px; }
+      nav{
+        margin-top: 0;
+        a{
+          display: inline-block; margin:0 10px; 
+        }
       }
     }
   }
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 890px) {
+  main{
+    /* SECTIONS CONTENTS */
+    section.infsSerBrain{
+      h2, a{ width: auto; }
+      a p{ padding: 35px 30px 0; }
+    }
+    section.comoInvestir{
+      article{
+      h2, a{ width: auto; }
+      a p{ padding: 35px 12px 0; }}
+    }
+    section.time a{ 
+      top: calc(~"50% - -21px"); left: calc(~"50% - 210px");
+      &:before{ opacity: 0.6; }
+    }
+    section.carrossel > div dl dt{
+      h2{ font-size: 1.7625em; }
+      &:before{ opacity: 0; }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    section.carrossel{
+      > div dl dt h2{ font-size: 132%; }
+      p{ font-size: 201%; padding: 20px 15% 0; }
+      a{ margin: 23px auto; }
+    }
+    section.highlights ul{
+      li{ 
+        display: block; margin: 0 10px 14px; min-height: initial; width: calc(~"100% - 20px"); text-align: left;
+        a{
+          &:hover{ 
+            color: #FFF !important;
+            img{ opacity: 1; margin:0 -1px; width: 30%;  }
+          }
+          img{ width: 30%; float: left; margin-right: -1px;  }
+          h3, p{ padding: 10px !important; float: left; width: calc(~"70% - 20px"); }
+        }
+      }
+    }
+    section.infsSerBrain, section.comoInvestir article, section.time{ 
+      font-size: 80%;
+      strong{
+        font-size: 130% !important;
+      }
+    }
+    section.pilares{ 
+      font-size: 80%; 
+      ul{
+        li{
+          &:extend(main section.highlights ul li);
+          a{
+            img{ &:extend(main section.highlights ul li a img); }
+            strong{ &:extend(main section.highlights ul li a h3); }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
   main {
     header{
-      text-align: center;
+      padding: 27px 0;
+      ul li{ display: block; margin-bottom: 10px; }
+      h1 a{ width: 80%; }
     }
-  }
-  main {
-    header > *{
-      float: none !important; padding: 10px 0;
+    section.highlights ul{
+      li{ background: none !important; }
+    }
+    section.carrossel > div dl dt{
+      &:before{ opacity: 0.5; }
+    }
+    section.time a{
+      width: 90%; left: 5%; 
+    }
+    footer h2{
+      &:extend(main header h1 a);
     }
   }
 }
-@media screen and (max-width: 900px) {
-  main { 
 
-    article.infsSerBrain {
-      h2 {
-        letter-spacing: 3px;line-height: 66px;font-size: 62px;width: 100%;text-align: center;padding: 40px 0 0;
-      }
-      p {
-        padding: 25px 40px 80px;width: 100%;word-spacing: 0;
-      }
-    }
-  
-    footer {
-      address{
-      font-style: normal;margin: 50px 0 0 50px;display: inline-flex;
-         p{
-          width: 100%;font-size: 16px;text-transform: uppercase;color: #FFF;
-        }
-      }
-      div.bot-brain-comp {
-        margin: 67px 0 50px 50px;display: inline-block;width: 100%;
-      }
-      nav{
-        float: right;vertical-align: top;margin: -24px 35px 0px 0;
-        a{
-          color: #aea89d;font-size: 20px;text-transform: uppercase;line-height: 40px;
-        }
-        a:hover{
-          color: #FFF;-webkit-transition: color 0.3s; transition: color 0.3s;
-        }
-      }
-      nav:last-child{
-        margin-right: 60px;margin-left: 0;
-      }
-    }
-  }
-}
 @media screen and (max-width: 340px) {
   main {
-    header {
-      nav {
-        a{
-          display: block;
-        }
-      }
-    }
-    section.carrossel{ 
-      p{
-        font-size: 32px;line-height: 35px;
-      }
-    }
+
   }
 }
 

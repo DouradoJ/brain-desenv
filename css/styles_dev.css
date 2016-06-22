@@ -74,8 +74,8 @@ body * {
 }
 .lnks {
   color: #475047;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .lnks:hover {
   color: #f6861f;
@@ -88,15 +88,17 @@ main {
   width: 1000px;
   margin: 0 auto;
   background-color: #FFF;
-  /*HEADER*/
+  /* HEADER */
   /* SECTIONS CONTENTS */
-  /*FOOTER*/
+  /* FOOTER */
   /* ---------------------------- Ser Brain ---------------------------- */
   /* Footer Internals Navigation */
 }
 main header {
   text-transform: uppercase;
   padding: 10px 0 54px 0;
+  -webkit-transition: padding 0.3s;
+  transition: padding 0.3s;
   /*LOGO*/
 }
 main header ul {
@@ -109,8 +111,8 @@ main header ul li {
 }
 main header ul li a {
   color: #475047;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   display: inline-block;
 }
 main header ul li a:hover {
@@ -121,8 +123,8 @@ main header nav {
 }
 main header nav a {
   color: #475047;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   font-family: 'arquitecta_boldbold';
   margin: 0 0 0 40px;
   display: inline-block;
@@ -177,7 +179,7 @@ main section.carrossel {
 }
 main section.carrossel > div {
   width: 100%;
-  min-height: 606px;
+  padding-bottom: 17px;
   overflow: hidden;
 }
 main section.carrossel > div dl {
@@ -193,11 +195,18 @@ main section.carrossel > div dl dt {
   text-align: center;
 }
 main section.carrossel > div dl dt h2 {
+  z-index: 2;
   text-transform: uppercase;
   font-size: 2.0625em;
   color: #475047;
   margin: 0;
   padding: 3.5% 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+main section.carrossel > div dl dt:before {
+  position: absolute;
 }
 main section.carrossel > div dl dd img {
   width: 100%;
@@ -223,13 +232,15 @@ main section.carrossel p {
   text-transform: uppercase;
   text-align: center;
   padding: 35px 15% 0;
+  -webkit-transition: font-size 0.3s;
+  transition: font-size 0.3s;
 }
 main section.carrossel a,
 main#ser-brain section.featured a,
 main#ser-brain section.featured a:hover {
   color: #475047;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   font-family: 'arquitecta_boldbold';
   text-align: center;
   border: 3px solid #475047;
@@ -252,8 +263,10 @@ main section.highlights ul li {
   min-height: 448px;
   vertical-align: top;
   text-align: center;
-  margin: 0 10px 14px 0;
+  margin: 0 4px 14px;
   overflow: hidden;
+  -webkit-transition: margin 0.3s;
+  transition: margin 0.3s;
 }
 main section.highlights ul li a {
   color: inherit;
@@ -293,15 +306,21 @@ main section.highlights ul li.hg_01 a {
 }
 main section.highlights ul li.hg_01 h3 {
   padding: 30px 55px 10px;
+  background-color: #465047;
 }
 main section.highlights ul li.hg_01 p {
   padding: 0 35px;
+  background-color: #465047;
 }
 main section.highlights ul li.hg_02 {
   background-color: #a5a88d;
 }
 main section.highlights ul li.hg_02 a {
   color: #465047;
+}
+main section.highlights ul li.hg_02 h3,
+main section.highlights ul li.hg_02 p {
+  background-color: #a5a88d;
 }
 main section.highlights ul li.hg_03 {
   background-color: #8b9079;
@@ -310,10 +329,12 @@ main section.highlights ul li.hg_03 a {
   color: #e3e3d7;
 }
 main section.highlights ul li.hg_03 h3 {
-  padding: 30px 25px 10px ;
+  padding: 30px 25px 10px;
+  background-color: #8b9079;
 }
 main section.highlights ul li.hg_03 p {
   padding: 0 38px;
+  background-color: #8b9079;
 }
 main section.highlights ul li.hg_04 {
   background-color: #a4a095;
@@ -322,12 +343,18 @@ main section.highlights ul li.hg_04 {
 main section.highlights ul li.hg_04 a {
   color: #475148;
 }
+main section.highlights ul li.hg_04 h3,
+main section.highlights ul li.hg_04 p {
+  background-color: #a4a095;
+}
 main section.infsSerBrain {
   background: #7b836f;
   margin-top: 66px;
   padding-bottom: 66px;
 }
 main section.infsSerBrain h2 {
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
   letter-spacing: -2px;
   line-height: 60px;
   font-size: 4.125em;
@@ -336,8 +363,8 @@ main section.infsSerBrain h2 {
   color: #d9d9cb;
   display: inline-block;
   vertical-align: top;
-  width: 22%;
-  padding: 27px 0 0 30px;
+  width: calc(22% - 30px);
+  padding: 27px 30px 0;
   margin: 0;
 }
 main section.infsSerBrain a {
@@ -345,8 +372,8 @@ main section.infsSerBrain a {
   display: inline-block;
 }
 main section.infsSerBrain a p {
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   font-size: 1.6875em;
   word-spacing: 2px;
   margin: 0;
@@ -366,7 +393,7 @@ main section.infsSerBrain a p strong {
 main section.infsSerBrain a p:after,
 main section.comoInvestir article a p:after,
 main section.passoAPasso > a:after,
-main section.time a:after {
+main section.time a p:after {
   content: '';
   -webkit-transition: border 0.3s;
   transition: border 0.3s;
@@ -386,7 +413,7 @@ main section.time a:hover {
 main section.infsSerBrain a p:hover:after,
 main section.comoInvestir article a p:hover:after,
 main section.passoAPasso > a:hover:after,
-main section.time a:hover:after {
+main section.time a:hover p:after {
   border-left-color: #002f17;
 }
 main section.pilares {
@@ -409,7 +436,9 @@ main section.pilares ul li {
   overflow: hidden;
   display: inline-block;
   vertical-align: top;
-  margin: 0 14px 14px 0;
+  margin: 0 6px 14px;
+  -webkit-transition: margin 0.3s;
+  transition: margin 0.3s;
 }
 main section.pilares ul li a strong {
   -webkit-transition: color 0.3s;
@@ -456,14 +485,16 @@ main section.comoInvestir article {
   padding-bottom: 67px;
 }
 main section.comoInvestir article h2 {
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
   text-transform: uppercase;
   color: #475047;
-  margin: 0 0 0 28px;
+  padding: 0 28px;
   text-align: left;
   line-height: 3.75rem;
   display: inline-block;
   vertical-align: top;
-  width: 28%;
+  width: calc(28% - 28px);
   font-size: 4.1875em;
   letter-spacing: -2px;
 }
@@ -476,8 +507,8 @@ main section.comoInvestir article a {
 }
 main section.comoInvestir article a p {
   font-family: 'Times New Roman';
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   font-size: 1.6875em;
   line-height: 35px;
   color: #231f20;
@@ -496,7 +527,9 @@ main section.comoInvestir ul li {
   display: inline-block;
   vertical-align: top;
   border: 2px solid #7b836f;
-  margin: 0 13px 35px 0;
+  margin: 0 6px 35px;
+  -webkit-transition: margin 0.3s;
+  transition: margin 0.3s;
 }
 main section.comoInvestir ul li p {
   margin: 0;
@@ -662,7 +695,7 @@ main section.passoAPasso > div dl {
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  margin: 0 21.5px 21.5px 0;
+  margin: 0 9.5px 21.5px;
   padding: 0 0;
   box-sizing: border-box;
 }
@@ -723,11 +756,30 @@ main section.time a {
   width: 420px;
   line-height: 31px;
   text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+main section.time a:before,
+main section.carrossel > div dl dt:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  position: absolute;
+  z-index: 1;
 }
-main section.time a:after {
+main section.time a p {
+  z-index: 2;
+}
+main section.time a p:after {
   margin: 0 0 8px 14px;
+}
+main section.time img {
+  width: 100%;
+  height: 100%;
 }
 main footer {
   background: #475047;
@@ -744,7 +796,9 @@ main footer h2 a img {
   height: 100%;
 }
 main footer .socials {
-  padding: 48px 44px 0;
+  padding: 48px 35px 0;
+  -webkit-transition: padding 0.3s;
+  transition: padding 0.3s;
 }
 main footer .socials a {
   background-color: #687667;
@@ -752,7 +806,7 @@ main footer .socials a {
   width: 53px;
   height: 49px;
   text-align: center;
-  margin-right: 15px;
+  margin: 0 8px;
 }
 main footer .socials a p {
   text-indent: -9999em;
@@ -1101,13 +1155,6 @@ main nav.client-brain a {
   font-family: "arquitecta_boldbold";
   font-size: 1.1em;
   line-height: 20px;
-  /* &:first-child:after {
-          content: '';
-          background: url('../images/seta-left.jpg')no-repeat left top; position: absolute; width: 53px; height: 53px; left: 0; top: 0;
-        } */
-  /* &:last-child:after {
-          content: ''; background: url('../images/seta-right.jpg')no-repeat right top; position: absolute; width: 53px; height: 53px; right: 0; top: 0;
-        } */
 }
 main nav.client-brain a:first-child {
   float: left;
@@ -1149,7 +1196,10 @@ main nav.client-brain a:hover {
 /* MEDIA QUERIES */
 @media screen and (max-width: 1024px) {
   main {
-    /*HEADER*/
+    width: 100%;
+    /* HEADER */
+    /* SECTIONS CONTENTS */
+    /* FOOTER */
   }
   main header {
     padding: 37px 0;
@@ -1163,79 +1213,159 @@ main nav.client-brain a:hover {
   main header ul li {
     margin: 0 12px;
   }
+  main header nav {
+    margin-right: 0 !important;
+    text-align: center !important;
+  }
   main header nav a {
     margin: 0 19px !important;
+  }
+  main header nav:before {
+    margin: 0 auto 10px !important;
   }
   main header h1 {
     padding-top: 17px;
   }
-}
-@media screen and (max-width: 980px) {
-  main header {
+  main section.highlights ul li.hg_04,
+  main section.pilares ul li.pl_04,
+  main section.comoInvestir ul li.ci_04 {
+    margin-right: 4px;
+  }
+  main section.passoAPasso > div dl:last-child {
+    margin-right: 9.5px;
+  }
+  main footer {
+    padding-bottom: 33px;
+  }
+  main footer .socials {
+    padding: 48px 44px 0;
     text-align: center;
   }
-  main header > * {
-    float: none !important;
-    padding: 10px 0;
-  }
-}
-@media screen and (max-width: 900px) {
-  main article.infsSerBrain h2 {
-    letter-spacing: 3px;
-    line-height: 66px;
-    font-size: 62px;
-    width: 100%;
+  main footer nav,
+  main footer address {
+    display: block;
     text-align: center;
-    padding: 40px 0 0;
-  }
-  main article.infsSerBrain p {
-    padding: 25px 40px 80px;
-    width: 100%;
-    word-spacing: 0;
   }
   main footer address {
-    font-style: normal;
-    margin: 50px 0 0 50px;
-    display: inline-flex;
-  }
-  main footer address p {
-    width: 100%;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #FFF;
-  }
-  main footer div.bot-brain-comp {
-    margin: 67px 0 50px 50px;
-    display: inline-block;
-    width: 100%;
+    padding: 48px 47px 29px;
   }
   main footer nav {
-    float: right;
-    vertical-align: top;
-    margin: -24px 35px 0px 0;
+    margin-top: 0;
   }
   main footer nav a {
-    color: #aea89d;
-    font-size: 20px;
-    text-transform: uppercase;
-    line-height: 40px;
-  }
-  main footer nav a:hover {
-    color: #FFF;
-    -webkit-transition: color 0.3s;
-    transition: color 0.3s;
-  }
-  main footer nav:last-child {
-    margin-right: 60px;
-    margin-left: 0;
+    display: inline-block;
+    margin: 0 10px;
   }
 }
-@media screen and (max-width: 340px) {
-  main header nav a {
-    display: block;
+@media screen and (max-width: 890px) {
+  main {
+    /* SECTIONS CONTENTS */
+  }
+  main section.infsSerBrain h2,
+  main section.infsSerBrain a {
+    width: auto;
+  }
+  main section.infsSerBrain a p {
+    padding: 35px 30px 0;
+  }
+  main section.comoInvestir article h2,
+  main section.comoInvestir article a {
+    width: auto;
+  }
+  main section.comoInvestir article a p {
+    padding: 35px 12px 0;
+  }
+  main section.time a {
+    top: calc(50% - -21px);
+    left: calc(50% - 210px);
+  }
+  main section.time a:before,
+  main section.carrossel > div dl dt:before {
+    opacity: 0.6;
+  }
+  main section.carrossel > div dl dt h2 {
+    font-size: 1.7625em;
+  }
+  main section.carrossel > div dl dt:before {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  main section.carrossel > div dl dt h2 {
+    font-size: 132%;
   }
   main section.carrossel p {
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 201%;
+    padding: 20px 15% 0;
+  }
+  main section.carrossel a,
+  main#ser-brain section.featured a,
+  main#ser-brain section.featured a:hover {
+    margin: 23px auto;
+  }
+  main section.highlights ul li,
+  main section.pilares ul li {
+    display: block;
+    margin: 0 10px 14px;
+    min-height: initial;
+    width: calc(100% - 20px);
+    text-align: left;
+  }
+  main section.highlights ul li a:hover {
+    color: #FFF !important;
+  }
+  main section.highlights ul li a:hover img {
+    opacity: 1;
+    margin: 0 -1px;
+    width: 30%;
+  }
+  main section.highlights ul li a img,
+  main section.pilares ul li a img {
+    width: 30%;
+    float: left;
+    margin-right: -1px;
+  }
+  main section.highlights ul li a h3,
+  main section.highlights ul li a p,
+  main section.pilares ul li a strong {
+    padding: 10px !important;
+    float: left;
+    width: calc(70% - 20px);
+  }
+  main section.infsSerBrain,
+  main section.comoInvestir article,
+  main section.time {
+    font-size: 80%;
+  }
+  main section.infsSerBrain strong,
+  main section.comoInvestir article strong,
+  main section.time strong {
+    font-size: 130% !important;
+  }
+  main section.pilares {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main header {
+    padding: 27px 0;
+  }
+  main header ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  main header h1 a,
+  main footer h2 {
+    width: 80%;
+  }
+  main section.highlights ul li {
+    background: none !important;
+  }
+  main section.carrossel > div dl dt:before {
+    opacity: 0.5;
+  }
+  main section.time a {
+    width: 90%;
+    left: 5%;
   }
 }
