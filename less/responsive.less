@@ -246,5 +246,18 @@
     footer h2{
       &:extend(main header h1 a);
     }
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      > nav a{
+        &:first-child, &:last-child {
+          width:31%; font-size: 100%; line-height: 16px;
+        }
+        &:last-child {
+          &:before{ margin: 12px -152px 12px 25px; }
+        }
+      }
+    }
   }
 }
