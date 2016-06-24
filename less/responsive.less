@@ -2,15 +2,190 @@
           RESPONSIVE
 *******************************/
 
-@media (max-width:600px){
-	body{
-		font-size: 10px;
-	}
-	.content{
-		.viewport{
-			.col-sm-1{
-				width: 100%;
-			}
-		}
-	}
+@media screen and (max-width: 1024px) {
+  main{
+    width: 100%;
+    /* HEADER */
+    header{
+      &:not(.minus){
+        padding:37px 0; 
+        ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
+        ul li{ margin: 0 12px; }
+        nav{
+          margin-right: 0 !important; text-align: center !important;
+          a{ margin:0 19px !important; }
+          &:before{
+            margin: 0 auto 10px !important;
+          };
+        }
+        h1{ padding-top: 17px; }
+      }
+      &.minus{ width: 100%; }
+    }
+    /* SECTIONS CONTENTS */
+    section.highlights ul li.hg_04, section.pilares ul li.pl_04, section.comoInvestir ul li.ci_04{ margin-right: 4px; }
+    section.passoAPasso > div dl:last-child{ margin-right: 9.5px; }
+    /* FOOTER */
+    footer{
+      padding-bottom: 33px;
+      .socials{
+        padding: 48px 44px 0; text-align: center;
+      }
+      nav, address{ display: block; text-align: center; }
+      address{ padding: 48px 47px 29px; }
+      nav{
+        margin-top: 0;
+        a{
+          display: inline-block; margin:0 10px; 
+        }
+      }
+    }
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      &#ser-brain{
+        section{
+          &.featured{
+            img{  width: 100%; }
+          }
+          &.diferencial ul li{
+            *:not(p){ position: relative !important; left: 0; width: 100%; }
+            h4{ min-height: 134px;  }
+            img{ width: 80%; margin:0 auto; }
+            &:nth-child(2){
+              width: 100%; left:0;
+              span{
+                left:0; top:2.8%;
+              }
+            }
+            &:hover  {
+              h4, img { opacity: 1; }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 890px) {
+  main{
+    /* SECTIONS CONTENTS */
+    section.infsSerBrain{
+      h2, a{ width: auto; }
+      a p{ padding: 35px 30px 0; }
+    }
+    section.comoInvestir{
+      article{
+      h2, a{ width: auto; }
+      a p{ padding: 35px 12px 0; }}
+    }
+    section.time a{ 
+      top: calc(~"50% - -21px"); left: calc(~"50% - 210px");
+      &:before{ opacity: 0.6; }
+    }
+    section.carrossel > div dl dt{
+      h2{ font-size: 1.7625em; }
+      &:before{ opacity: 0; }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    section.carrossel{
+      > div dl dt h2{ font-size: 132%; }
+      p{ font-size: 201%; padding: 20px 15% 0; }
+      a{ margin: 23px auto; }
+    }
+    section.highlights ul{
+      li{ 
+        display: block; margin: 0 10px 14px; min-height: initial; width: calc(~"100% - 20px"); text-align: left;
+        a{
+          &:hover{ 
+            color: #FFF !important;
+            img{ opacity: 1; margin:0 -1px; width: 30%;  }
+          }
+          img{ width: 30%; float: left; margin-right: -1px;  }
+          h3, p{ padding: 10px !important; float: left; width: calc(~"70% - 20px"); }
+        }
+      }
+    }
+    section.infsSerBrain, section.comoInvestir article, section.time{ 
+      font-size: 80%;
+      strong{
+        font-size: 130% !important;
+      }
+    }
+    section.infsSerBrain{
+      margin-top: 0;
+    }
+    section.comoInvestir{
+      padding: 30px 0 0 0;
+    }
+    section.passoAPasso{
+      padding: 20px 0 0 0;
+      > div dl{
+        width: auto; margin: 0 9.5px 6px;
+        dt{ padding: .5em 0.5em; }
+      }
+    }
+    section.pilares{ 
+      font-size: 80%; padding-top: 28px;
+      ul{
+        li{
+          &:extend(main section.highlights ul li);
+          a{
+            img{ &:extend(main section.highlights ul li a img); }
+            strong{ &:extend(main section.highlights ul li a h3); }
+          }
+        }
+      }
+    }
+    footer{ margin-top: 0; }
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      &#ser-brain{
+        section{
+          &.diferencial ul li{
+            width: 100% !important;
+            h4{ width: 100% !important; top: initial !important; left: initial !important; }
+            img{ display: inline-block; vertical-align: top; width: 70% !important; }
+            p{ font-size: 180% !important; line-height: 1.1em !important; padding: 7%; }
+            &:nth-child(2){
+              z-index: 1000;
+              span{
+                position: relative; top: 0; left:0; line-height: 0
+              }
+            }
+            &:hover  {
+              h4, img { opacity: 1; }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  main {
+    header{
+      padding: 27px 0;
+      ul li{ display: block; margin-bottom: 10px; }
+      h1 a{ width: 80%; }
+    }
+    section.highlights ul{
+      li{ background: none !important; }
+    }
+    section.carrossel > div dl dt{
+      &:before{ opacity: 0.5; }
+    }
+    section.time a{
+      width: 90%; left: 5%; 
+    }
+    footer h2{
+      &:extend(main header h1 a);
+    }
+  }
 }
