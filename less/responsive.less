@@ -20,7 +20,10 @@
         }
         h1{ padding-top: 17px; }
       }
+<<<<<<< HEAD
       &.minus{ width: 100%; }
+=======
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
     }
     /* SECTIONS CONTENTS */
     section.highlights ul li.hg_04, section.pilares ul li.pl_04, section.comoInvestir ul li.ci_04{ margin-right: 4px; }
@@ -44,6 +47,12 @@
                 INTERNALS
     *******************************/    
     &.internal{
+<<<<<<< HEAD
+=======
+      header{
+        width: 100%;
+      }
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
       &#ser-brain{
         section{
           &.featured{
@@ -90,6 +99,66 @@
     }
   }
 }
+<<<<<<< HEAD
+=======
+@media screen and (max-width: 768px) {
+  main {
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      header{
+        padding:37px 0;  position: relative; box-shadow: 0 0 20px #888;
+        ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
+        ul{
+          margin: 0;
+          li{ margin: 0 12px; }
+        }
+        nav{
+          margin-right: 0 !important; text-align: center !important;
+          a{ margin:0 19px !important; }
+          &:before{
+            margin: 0 auto 10px !important;
+          };
+        }
+        h1{ 
+          padding-top: 17px; float: none; position: relative; text-align: center;
+          a{ margin:0 auto; width: 407px; }
+        }
+      }
+      &:before{ height:261px; opacity: 0; .transit; }
+      &#ser-brain{
+        section{
+          &.featured{ padding: 0; }
+          &.diferencial{
+            ul li{
+              width: 100% !important; margin: 0;
+              h4{ width: 100% !important; top: initial !important; left: initial !important; }
+              img{ display: inline-block; vertical-align: top; width: 70% !important; }
+              p{ font-size: 180% !important; line-height: 1.1em !important; padding: 7%; }
+              &:nth-child(2){
+                z-index: 1000;
+                span{
+                  position: relative; top: 0; left:0; line-height: 0
+                }
+              }
+              &:hover  {
+                h4, img { opacity: 1; }
+              }
+            }
+          }
+        }
+      }
+      > nav a{
+        display: none;
+        &:first-child, &:last-child {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 @media screen and (max-width: 600px) {
   main {
     section.carrossel{
@@ -173,7 +242,11 @@
     header{
       padding: 27px 0;
       ul li{ display: block; margin-bottom: 10px; }
+<<<<<<< HEAD
       h1 a{ width: 80%; }
+=======
+      h1 a{ width: 80% !important; }
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
     }
     section.highlights ul{
       li{ background: none !important; }
@@ -187,5 +260,21 @@
     footer h2{
       &:extend(main header h1 a);
     }
+<<<<<<< HEAD
+=======
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      > nav a{
+        &:first-child, &:last-child {
+          width:31%; font-size: 100%; line-height: 16px;
+        }
+        &:last-child {
+          &:before{ margin: 12px -152px 12px 25px; }
+        }
+      }
+    }
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   }
 }

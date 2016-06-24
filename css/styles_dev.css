@@ -80,6 +80,11 @@ body * {
 .lnks:hover {
   color: #f6861f;
 }
+.transit {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
 /*******************************
             MAIN
 *******************************/
@@ -885,6 +890,12 @@ main.internal:before {
   box-shadow: 0 0 20px #888;
   z-index: 1000;
   opacity: 1;
+<<<<<<< HEAD
+=======
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 }
 main.internal header {
   min-height: 34px;
@@ -917,6 +928,12 @@ main.internal#ser-brain section.featured {
   margin-top: -10px;
   z-index: 0;
   padding: 98px 0 0;
+<<<<<<< HEAD
+=======
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 }
 main.internal#ser-brain section.featured h2 {
   font-size: 5em;
@@ -974,7 +991,11 @@ main.internal#ser-brain section.diferencial ul li {
   vertical-align: top;
   display: inline-block;
   position: relative;
+<<<<<<< HEAD
   margin-right: -3px;
+=======
+  margin-left: -3px;
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 }
 main.internal#ser-brain section.diferencial ul li h4 {
   color: #eae9de;
@@ -1017,7 +1038,10 @@ main.internal#ser-brain section.diferencial ul li:first-child {
 main.internal#ser-brain section.diferencial ul li:nth-child(2) {
   position: absolute;
   width: 100%;
+<<<<<<< HEAD
   height: 100%;
+=======
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   left: 0;
   text-align: center;
 }
@@ -1206,9 +1230,22 @@ main.internal > nav {
   text-align: center;
   margin: 72px 0;
 }
+<<<<<<< HEAD
 main.internal > nav a {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+=======
+main.internal > nav:after {
+  content: '';
+  clear: both;
+  height: 0;
+  width: 100%;
+}
+main.internal > nav a {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   text-transform: uppercase;
   margin: 0 14px;
   color: #475047;
@@ -1225,7 +1262,11 @@ main.internal > nav a p {
 }
 main.internal > nav a:first-child {
   float: left;
+<<<<<<< HEAD
   width: 160px;
+=======
+  width: 140px;
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   text-align: left;
   margin: 0;
   color: #475047;
@@ -1253,10 +1294,17 @@ main.internal > nav a:first-child:after {
   position: absolute;
   top: 0;
   left: 0;
+<<<<<<< HEAD
 }
 main.internal > nav a:first-child:hover:before {
   border-right-color: #475047;
 }
+=======
+}
+main.internal > nav a:first-child:hover:before {
+  border-right-color: #475047;
+}
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 main.internal > nav a:last-child {
   float: right;
   width: 140px;
@@ -1371,6 +1419,12 @@ main.internal > nav a:hover {
     display: inline-block;
     margin: 0 10px;
   }
+<<<<<<< HEAD
+=======
+  main.internal header {
+    width: 100%;
+  }
+>>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   main.internal#ser-brain section.featured img {
     width: 100%;
   }
@@ -1430,6 +1484,99 @@ main.internal > nav a:hover {
   }
   main section.carrossel > div dl dt:before {
     opacity: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    /*******************************
+                INTERNALS
+    *******************************/
+  }
+  main.internal header {
+    padding: 37px 0;
+    position: relative;
+    box-shadow: 0 0 20px #888;
+  }
+  main.internal header ul,
+  main.internal header nav {
+    float: none;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  main.internal header ul {
+    margin: 0;
+  }
+  main.internal header ul li {
+    margin: 0 12px;
+  }
+  main.internal header nav {
+    margin-right: 0 !important;
+    text-align: center !important;
+  }
+  main.internal header nav a {
+    margin: 0 19px !important;
+  }
+  main.internal header nav:before {
+    margin: 0 auto 10px !important;
+  }
+  main.internal header h1 {
+    padding-top: 17px;
+    float: none;
+    position: relative;
+    text-align: center;
+  }
+  main.internal header h1 a {
+    margin: 0 auto;
+    width: 407px;
+  }
+  main.internal:before {
+    height: 261px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  main.internal#ser-brain section.featured {
+    padding: 0;
+  }
+  main.internal#ser-brain section.diferencial ul li {
+    width: 100% !important;
+    margin: 0;
+  }
+  main.internal#ser-brain section.diferencial ul li h4 {
+    width: 100% !important;
+    top: initial !important;
+    left: initial !important;
+  }
+  main.internal#ser-brain section.diferencial ul li img {
+    display: inline-block;
+    vertical-align: top;
+    width: 70% !important;
+  }
+  main.internal#ser-brain section.diferencial ul li p {
+    font-size: 180% !important;
+    line-height: 1.1em !important;
+    padding: 7%;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) {
+    z-index: 1000;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
+    position: relative;
+    top: 0;
+    left: 0;
+    line-height: 0;
+  }
+  main.internal#ser-brain section.diferencial ul li:hover h4,
+  main.internal#ser-brain section.diferencial ul li:hover img {
+    opacity: 1;
+  }
+  main.internal > nav a {
+    display: none;
+  }
+  main.internal > nav a:first-child,
+  main.internal > nav a:last-child {
+    display: inline-block;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1545,6 +1692,11 @@ main.internal > nav a:hover {
   }
 }
 @media screen and (max-width: 480px) {
+  main {
+    /*******************************
+                INTERNALS
+    *******************************/
+  }
   main header {
     padding: 27px 0;
   }
@@ -1554,7 +1706,7 @@ main.internal > nav a:hover {
   }
   main header h1 a,
   main footer h2 {
-    width: 80%;
+    width: 80% !important;
   }
   main section.highlights ul li {
     background: none !important;
@@ -1565,5 +1717,14 @@ main.internal > nav a:hover {
   main section.time a {
     width: 90%;
     left: 5%;
+  }
+  main.internal > nav a:first-child,
+  main.internal > nav a:last-child {
+    width: 31%;
+    font-size: 100%;
+    line-height: 16px;
+  }
+  main.internal > nav a:last-child:before {
+    margin: 12px -152px 12px 25px;
   }
 }
