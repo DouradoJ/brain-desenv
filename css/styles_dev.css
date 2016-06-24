@@ -80,6 +80,11 @@ body * {
 .lnks:hover {
   color: #f6861f;
 }
+.transit {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
 /*******************************
             MAIN
 *******************************/
@@ -883,12 +888,15 @@ main.internal:before {
   left: 0;
   width: 100%;
   box-shadow: 0 0 20px #888;
-  z-index: 1;
+  z-index: 1000;
   opacity: 1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main.internal header {
   min-height: 34px;
-  z-index: 1;
+  z-index: 1001;
   position: fixed;
   width: 1000px;
 }
@@ -917,6 +925,9 @@ main.internal#ser-brain section.featured {
   margin-top: -10px;
   z-index: 0;
   padding: 98px 0 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main.internal#ser-brain section.featured h2 {
   font-size: 5em;
@@ -1008,18 +1019,22 @@ main.internal#ser-brain section.diferencial ul li p {
   padding: 20% 18% 19.2%;
   font-size: 2.4em;
   line-height: 44px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main.internal#ser-brain section.diferencial ul li:first-child {
   background-color: #8b9178;
 }
 main.internal#ser-brain section.diferencial ul li:nth-child(2) {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  text-align: center;
 }
 main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
-  left: -39px;
-  top: 153px;
-  z-index: 999;
-  position: absolute;
+  top: calc(50% - 98px);
+  z-index: 1000;
   font-size: 10em;
   font-family: "arquitecta_blackblack";
   color: #002f17;
@@ -1203,8 +1218,10 @@ main.internal > nav {
   margin: 72px 0;
 }
 main.internal > nav a {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   text-transform: uppercase;
-  margin: 0 0 0 28px;
+  margin: 0 14px;
   color: #475047;
   display: inline-block;
   padding-top: 16px;
@@ -1219,7 +1236,7 @@ main.internal > nav a p {
 }
 main.internal > nav a:first-child {
   float: left;
-  width: 160px;
+  width: 140px;
   text-align: left;
   margin: 0;
   color: #475047;
@@ -1231,7 +1248,7 @@ main.internal > nav a:first-child:before {
   transition: border 0.3s;
   border: 0;
   border-top: 13px solid transparent;
-  border-left: 18px solid #f6861f;
+  border-right: 18px solid #E0DED1;
   border-bottom: 13px solid transparent;
   display: inline-block;
   vertical-align: middle;
@@ -1248,12 +1265,12 @@ main.internal > nav a:first-child:after {
   top: 0;
   left: 0;
 }
-main.internal > nav a:first-child:hover {
-  color: #475047;
+main.internal > nav a:first-child:hover:before {
+  border-right-color: #475047;
 }
 main.internal > nav a:last-child {
   float: right;
-  width: 160px;
+  width: 140px;
   text-align: left;
   margin: 0;
   color: #475047;
@@ -1266,7 +1283,7 @@ main.internal > nav a:last-child:before {
   transition: border 0.3s;
   border: 0;
   border-top: 13px solid transparent;
-  border-left: 18px solid #f6861f;
+  border-left: 18px solid #E0DED1;
   border-bottom: 13px solid transparent;
   display: inline-block;
   vertical-align: middle;
@@ -1283,8 +1300,11 @@ main.internal > nav a:last-child:after {
   top: 0;
   right: 0;
 }
-main.internal > nav a:last-child:hover {
-  color: #475047;
+main.internal > nav a:last-child:hover:before {
+  border-left-color: #475047;
+}
+main.internal > nav a:hover {
+  color: #f6861f !important;
 }
 /*@import "components.less";
 @import "elements.less";
@@ -1300,30 +1320,33 @@ main.internal > nav a:last-child:hover {
     /* HEADER */
     /* SECTIONS CONTENTS */
     /* FOOTER */
+    /*******************************
+                INTERNALS
+    *******************************/
   }
-  main header {
+  main header:not(.minus) {
     padding: 37px 0;
   }
-  main header ul,
-  main header nav {
+  main header:not(.minus) ul,
+  main header:not(.minus) nav {
     float: none;
     text-align: center;
     padding-bottom: 20px;
   }
-  main header ul li {
+  main header:not(.minus) ul li {
     margin: 0 12px;
   }
-  main header nav {
+  main header:not(.minus) nav {
     margin-right: 0 !important;
     text-align: center !important;
   }
-  main header nav a {
+  main header:not(.minus) nav a {
     margin: 0 19px !important;
   }
-  main header nav:before {
+  main header:not(.minus) nav:before {
     margin: 0 auto 10px !important;
   }
-  main header h1 {
+  main header:not(.minus) h1 {
     padding-top: 17px;
   }
   main section.highlights ul li.hg_04,
@@ -1355,6 +1378,36 @@ main.internal > nav a:last-child:hover {
   main footer nav a {
     display: inline-block;
     margin: 0 10px;
+  }
+  main.internal header {
+    width: 100%;
+  }
+  main.internal#ser-brain section.featured img {
+    width: 100%;
+  }
+  main.internal#ser-brain section.diferencial ul li *:not(p) {
+    position: relative !important;
+    left: 0;
+    width: 100%;
+  }
+  main.internal#ser-brain section.diferencial ul li h4 {
+    min-height: 134px;
+  }
+  main.internal#ser-brain section.diferencial ul li img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) {
+    width: 100%;
+    left: 0;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
+    left: 0;
+    top: 2.8%;
+  }
+  main.internal#ser-brain section.diferencial ul li:hover h4,
+  main.internal#ser-brain section.diferencial ul li:hover img {
+    opacity: 1;
   }
 }
 @media screen and (max-width: 890px) {
@@ -1390,7 +1443,97 @@ main.internal > nav a:last-child:hover {
     opacity: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  main {
+    /*******************************
+                INTERNALS
+    *******************************/
+  }
+  main.internal header {
+    padding: 37px 0;
+    position: relative;
+    box-shadow: 0 0 20px #888;
+  }
+  main.internal header ul,
+  main.internal header nav {
+    float: none;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  main.internal header ul {
+    margin: 0;
+  }
+  main.internal header ul li {
+    margin: 0 12px;
+  }
+  main.internal header nav {
+    margin-right: 0 !important;
+    text-align: center !important;
+  }
+  main.internal header nav a {
+    margin: 0 19px !important;
+  }
+  main.internal header nav:before {
+    margin: 0 auto 10px !important;
+  }
+  main.internal header h1 {
+    padding-top: 17px;
+    float: none;
+    position: relative;
+    text-align: center;
+  }
+  main.internal header h1 a {
+    margin: 0 auto;
+    width: 407px;
+  }
+  main.internal:before {
+    height: 261px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  main.internal#ser-brain section.featured {
+    padding: 0;
+  }
+  main.internal#ser-brain section.diferencial ul li {
+    width: 100% !important;
+  }
+  main.internal#ser-brain section.diferencial ul li h4 {
+    width: 100% !important;
+    top: initial !important;
+    left: initial !important;
+  }
+  main.internal#ser-brain section.diferencial ul li img {
+    display: inline-block;
+    vertical-align: top;
+    width: 70% !important;
+  }
+  main.internal#ser-brain section.diferencial ul li p {
+    font-size: 180% !important;
+    line-height: 1.1em !important;
+    padding: 7%;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) {
+    z-index: 1000;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
+    position: relative;
+    top: 0;
+    left: 0;
+    line-height: 0;
+  }
+  main.internal#ser-brain section.diferencial ul li:hover h4,
+  main.internal#ser-brain section.diferencial ul li:hover img {
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 600px) {
+  main {
+    /*******************************
+                INTERNALS
+    *******************************/
+  }
   main section.carrossel > div dl dt h2 {
     font-size: 132%;
   }
@@ -1465,6 +1608,37 @@ main.internal > nav a:last-child:hover {
   main footer {
     margin-top: 0;
   }
+  main.internal#ser-brain section.diferencial ul li {
+    width: 100% !important;
+  }
+  main.internal#ser-brain section.diferencial ul li h4 {
+    width: 100% !important;
+    top: initial !important;
+    left: initial !important;
+  }
+  main.internal#ser-brain section.diferencial ul li img {
+    display: inline-block;
+    vertical-align: top;
+    width: 70% !important;
+  }
+  main.internal#ser-brain section.diferencial ul li p {
+    font-size: 180% !important;
+    line-height: 1.1em !important;
+    padding: 7%;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) {
+    z-index: 1000;
+  }
+  main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
+    position: relative;
+    top: 0;
+    left: 0;
+    line-height: 0;
+  }
+  main.internal#ser-brain section.diferencial ul li:hover h4,
+  main.internal#ser-brain section.diferencial ul li:hover img {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 480px) {
   main header {
@@ -1476,7 +1650,7 @@ main.internal > nav a:last-child:hover {
   }
   main header h1 a,
   main footer h2 {
-    width: 80%;
+    width: 80% !important;
   }
   main section.highlights ul li {
     background: none !important;

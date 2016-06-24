@@ -7,17 +7,19 @@
     width: 100%;
     /* HEADER */
     header{
-      padding:37px 0; 
-      ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
-      ul li{ margin: 0 12px; }
-      nav{
-        margin-right: 0 !important; text-align: center !important;
-        a{ margin:0 19px !important; }
-        &:before{
-          margin: 0 auto 10px !important;
-        };
+      &:not(.minus){
+        padding:37px 0; 
+        ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
+        ul li{ margin: 0 12px; }
+        nav{
+          margin-right: 0 !important; text-align: center !important;
+          a{ margin:0 19px !important; }
+          &:before{
+            margin: 0 auto 10px !important;
+          };
+        }
+        h1{ padding-top: 17px; }
       }
-      h1{ padding-top: 17px; }
     }
     /* SECTIONS CONTENTS */
     section.highlights ul li.hg_04, section.pilares ul li.pl_04, section.comoInvestir ul li.ci_04{ margin-right: 4px; }
@@ -34,6 +36,35 @@
         margin-top: 0;
         a{
           display: inline-block; margin:0 10px; 
+        }
+      }
+    }
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      header{
+        width: 100%;
+      }
+      &#ser-brain{
+        section{
+          &.featured{
+            img{  width: 100%; }
+          }
+          &.diferencial ul li{
+            *:not(p){ position: relative !important; left: 0; width: 100%; }
+            h4{ min-height: 134px;  }
+            img{ width: 80%; margin:0 auto; }
+            &:nth-child(2){
+              width: 100%; left:0;
+              span{
+                left:0; top:2.8%;
+              }
+            }
+            &:hover  {
+              h4, img { opacity: 1; }
+            }
+          }
         }
       }
     }
@@ -58,6 +89,57 @@
     section.carrossel > div dl dt{
       h2{ font-size: 1.7625em; }
       &:before{ opacity: 0; }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      header{
+        padding:37px 0;  position: relative; box-shadow: 0 0 20px #888;
+        ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
+        ul{
+          margin: 0;
+          li{ margin: 0 12px; }
+        }
+        nav{
+          margin-right: 0 !important; text-align: center !important;
+          a{ margin:0 19px !important; }
+          &:before{
+            margin: 0 auto 10px !important;
+          };
+        }
+        h1{ 
+          padding-top: 17px; float: none; position: relative; text-align: center;
+          a{ margin:0 auto; width: 407px; }
+        }
+      }
+      &:before{ height:261px; opacity: 0; .transit; }
+      &#ser-brain{
+        section{
+          &.featured{ padding: 0; }
+          &.diferencial{
+            ul li{
+              width: 100% !important;
+              h4{ width: 100% !important; top: initial !important; left: initial !important; }
+              img{ display: inline-block; vertical-align: top; width: 70% !important; }
+              p{ font-size: 180% !important; line-height: 1.1em !important; padding: 7%; }
+              &:nth-child(2){
+                z-index: 1000;
+                span{
+                  position: relative; top: 0; left:0; line-height: 0
+                }
+              }
+              &:hover  {
+                h4, img { opacity: 1; }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -112,8 +194,30 @@
         }
       }
     }
-    footer{
-      margin-top: 0;
+    footer{ margin-top: 0; }
+    /*******************************
+                INTERNALS
+    *******************************/    
+    &.internal{
+      &#ser-brain{
+        section{
+          &.diferencial ul li{
+            width: 100% !important;
+            h4{ width: 100% !important; top: initial !important; left: initial !important; }
+            img{ display: inline-block; vertical-align: top; width: 70% !important; }
+            p{ font-size: 180% !important; line-height: 1.1em !important; padding: 7%; }
+            &:nth-child(2){
+              z-index: 1000;
+              span{
+                position: relative; top: 0; left:0; line-height: 0
+              }
+            }
+            &:hover  {
+              h4, img { opacity: 1; }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -122,7 +226,7 @@
     header{
       padding: 27px 0;
       ul li{ display: block; margin-bottom: 10px; }
-      h1 a{ width: 80%; }
+      h1 a{ width: 80% !important; }
     }
     section.highlights ul{
       li{ background: none !important; }
