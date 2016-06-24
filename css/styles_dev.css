@@ -888,14 +888,11 @@ main.internal:before {
   left: 0;
   width: 100%;
   box-shadow: 0 0 20px #888;
-  z-index: 1000;
+  z-index: 1001;
   opacity: 1;
-<<<<<<< HEAD
-=======
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 }
 main.internal header {
   min-height: 34px;
@@ -928,17 +925,17 @@ main.internal#ser-brain section.featured {
   margin-top: -10px;
   z-index: 0;
   padding: 98px 0 0;
-<<<<<<< HEAD
-=======
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 }
 main.internal#ser-brain section.featured h2 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   font-size: 5em;
   text-transform: uppercase;
-  padding: 3.4% 0 3.5% 3.2%;
+  padding: 3.4% 3.2% 3.5% 3.2%;
   line-height: 75px;
   margin: 6.5% 68% 0 0;
   color: #e9e8db;
@@ -947,6 +944,9 @@ main.internal#ser-brain section.featured h2 {
   font-family: "arquitectabook";
 }
 main.internal#ser-brain section.featured h3 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   margin: 4.4% 0 0;
   font-size: 2.72em;
   text-transform: uppercase;
@@ -991,11 +991,7 @@ main.internal#ser-brain section.diferencial ul li {
   vertical-align: top;
   display: inline-block;
   position: relative;
-<<<<<<< HEAD
-  margin-right: -3px;
-=======
   margin-left: -3px;
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 }
 main.internal#ser-brain section.diferencial ul li h4 {
   color: #eae9de;
@@ -1038,12 +1034,10 @@ main.internal#ser-brain section.diferencial ul li:first-child {
 main.internal#ser-brain section.diferencial ul li:nth-child(2) {
   position: absolute;
   width: 100%;
-<<<<<<< HEAD
-  height: 100%;
-=======
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   left: 0;
   text-align: center;
+  line-height: 0;
+  top: 50%;
 }
 main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
   top: calc(50% - 98px);
@@ -1230,11 +1224,6 @@ main.internal > nav {
   text-align: center;
   margin: 72px 0;
 }
-<<<<<<< HEAD
-main.internal > nav a {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-=======
 main.internal > nav:after {
   content: '';
   clear: both;
@@ -1245,7 +1234,6 @@ main.internal > nav a {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   text-transform: uppercase;
   margin: 0 14px;
   color: #475047;
@@ -1262,11 +1250,7 @@ main.internal > nav a p {
 }
 main.internal > nav a:first-child {
   float: left;
-<<<<<<< HEAD
-  width: 160px;
-=======
   width: 140px;
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   text-align: left;
   margin: 0;
   color: #475047;
@@ -1294,17 +1278,10 @@ main.internal > nav a:first-child:after {
   position: absolute;
   top: 0;
   left: 0;
-<<<<<<< HEAD
 }
 main.internal > nav a:first-child:hover:before {
   border-right-color: #475047;
 }
-=======
-}
-main.internal > nav a:first-child:hover:before {
-  border-right-color: #475047;
-}
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
 main.internal > nav a:last-child {
   float: right;
   width: 140px;
@@ -1386,9 +1363,6 @@ main.internal > nav a:hover {
   main header:not(.minus) h1 {
     padding-top: 17px;
   }
-  main header.minus {
-    width: 100%;
-  }
   main section.highlights ul li.hg_04,
   main section.pilares ul li.pl_04,
   main section.comoInvestir ul li.ci_04 {
@@ -1419,12 +1393,9 @@ main.internal > nav a:hover {
     display: inline-block;
     margin: 0 10px;
   }
-<<<<<<< HEAD
-=======
   main.internal header {
     width: 100%;
   }
->>>>>>> 664fcbe3695798716ab91ef505b4d99b9cb64744
   main.internal#ser-brain section.featured img {
     width: 100%;
   }
@@ -1443,6 +1414,7 @@ main.internal > nav a:hover {
   main.internal#ser-brain section.diferencial ul li:nth-child(2) {
     width: 100%;
     left: 0;
+    top: 12.5%;
   }
   main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
     left: 0;
@@ -1560,6 +1532,7 @@ main.internal > nav a:hover {
   }
   main.internal#ser-brain section.diferencial ul li:nth-child(2) {
     z-index: 1000;
+    top: initial;
   }
   main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
     position: relative;
@@ -1659,6 +1632,9 @@ main.internal > nav a:hover {
   main footer {
     margin-top: 0;
   }
+  main.internal#ser-brain section.diferencial h3 {
+    font-size: 3.19em;
+  }
   main.internal#ser-brain section.diferencial ul li {
     width: 100% !important;
   }
@@ -1690,6 +1666,31 @@ main.internal > nav a:hover {
   main.internal#ser-brain section.diferencial ul li:hover img {
     opacity: 1;
   }
+  main.internal#ser-brain section.featured h2 {
+    font-size: 241%;
+    line-height: 1.18em;
+  }
+  main.internal#ser-brain section.featured h3 {
+    font-size: 201%;
+    padding: 20px 15% 0;
+    line-height: 1.18em;
+    margin: 0;
+  }
+  main.internal#ser-brain section.featured a {
+    margin: 23px auto 35px !important;
+  }
+  main.internal#ser-brain section.featured article {
+    font-size: 80%;
+  }
+  main.internal#ser-brain section.featured article p {
+    letter-spacing: -0.03em;
+    font-size: 1.6875em;
+  }
+  main.internal#ser-brain section.featured article p strong {
+    font-size: 130% !important;
+    font-weight: normal;
+    letter-spacing: -0.01em;
+  }
 }
 @media screen and (max-width: 480px) {
   main {
@@ -1720,11 +1721,11 @@ main.internal > nav a:hover {
   }
   main.internal > nav a:first-child,
   main.internal > nav a:last-child {
-    width: 31%;
+    width: 91px;
     font-size: 100%;
     line-height: 16px;
   }
   main.internal > nav a:last-child:before {
-    margin: 12px -152px 12px 25px;
+    margin: 12px -136px 12px 25px;
   }
 }
