@@ -123,7 +123,7 @@
           &.featured{ padding: 0; }
           &.diferencial{
             ul li{
-              width: 100% !important;
+              width: 100% !important; margin: 0;
               h4{ width: 100% !important; top: initial !important; left: initial !important; }
               img{ display: inline-block; vertical-align: top; width: 70% !important; }
               p{ font-size: 180% !important; line-height: 1.1em !important; padding: 7%; }
@@ -138,6 +138,12 @@
               }
             }
           }
+        }
+      }
+      > nav a{
+        display: none;
+        &:first-child, &:last-child {
+          display: inline-block;
         }
       }
     }
