@@ -155,7 +155,8 @@ main header nav.s_language {
 }
 main header nav.s_menu:before,
 main header nav.s_language:before,
-main section.passoAPasso > div dl dt:after {
+main section.passoAPasso > div dl dt:after,
+main.internal#como-investir section.passos article dl dt:after {
   content: "";
   display: block;
   margin-left: 80%;
@@ -248,7 +249,9 @@ main section.carrossel p {
 }
 main section.carrossel a,
 main.internal#ser-brain section.featured a,
-main.internal#ser-brain section.featured a:hover {
+main.internal#ser-brain section.featured a:hover,
+main.internal#como-investir section.featured a,
+main.internal#como-investir section.featured a:hover {
   color: #475047;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -262,7 +265,8 @@ main.internal#ser-brain section.featured a:hover {
   box-sizing: border-box;
 }
 main section.carrossel a:hover,
-main.internal#ser-brain section.featured a:hover {
+main.internal#ser-brain section.featured a:hover,
+main.internal#como-investir section.featured a:hover {
   color: #f6861f;
 }
 main section.highlights ul {
@@ -706,7 +710,10 @@ main section.passoAPasso > div dl {
   padding: 0 0;
   box-sizing: border-box;
 }
-main section.passoAPasso > div dl dt {
+main section.passoAPasso > div dl dt,
+main.internal#como-investir section.passos article dl dt,
+main.internal#como-investir section.passos article dl dt:before,
+main.internal#como-investir section.passos article dl dt:after {
   font-size: 1.4375em;
   padding: 1.5em 0.5em;
   color: #fffff0;
@@ -720,7 +727,8 @@ main section.passoAPasso > div dl dt strong {
   color: #c5bcb0;
   font-weight: normal;
 }
-main section.passoAPasso > div dl dt:after {
+main section.passoAPasso > div dl dt:after,
+main.internal#como-investir section.passos article dl dt:after {
   margin: 0;
   border-top-color: #475047;
   border-top-width: 9px;
@@ -872,9 +880,11 @@ main footer nav a:hover {
   color: #FFF;
 }
 main.internal {
+  background: url('../images/base/03_COMO-INVESTIR-WITH-BRAIN.jpg') no-repeat top center;
   /* Minus Header */
-  /* ---------------------------- Ser Brain ---------------------------- */
-  /* ---------------------------- Pilares ---------------------------- */
+  /* ---------------------------- Ser Brain */
+  /* ---------------------------- Pilares */
+  /* ---------------------------- Como Investir */
   /* Footer Internals Navigation */
 }
 main.internal:before {
@@ -918,7 +928,8 @@ main.internal header ul {
   float: right;
   margin: 21px 0px 8px;
 }
-main.internal#ser-brain section.featured {
+main.internal#ser-brain section.featured,
+main.internal#como-investir section.featured {
   margin-top: -10px;
   z-index: 0;
   padding: 98px 0 0;
@@ -926,7 +937,8 @@ main.internal#ser-brain section.featured {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-main.internal#ser-brain section.featured h2 {
+main.internal#ser-brain section.featured h2,
+main.internal#como-investir section.featured h2 {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -940,7 +952,8 @@ main.internal#ser-brain section.featured h2 {
   background-color: #7B836E;
   font-family: "arquitectabook";
 }
-main.internal#ser-brain section.featured h3 {
+main.internal#ser-brain section.featured h3,
+main.internal#como-investir section.featured h3 {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -951,14 +964,17 @@ main.internal#ser-brain section.featured h3 {
   line-height: 3rem;
   font-family: "arquitecta_lightlight";
 }
-main.internal#ser-brain section.featured a {
+main.internal#ser-brain section.featured a,
+main.internal#como-investir section.featured a {
   margin: 46px auto 55px !important;
 }
-main.internal#ser-brain section.featured article {
+main.internal#ser-brain section.featured article,
+main.internal#como-investir section.featured article {
   padding: 5.9% 7.3% 2.5%;
   background: #7b836f;
 }
-main.internal#ser-brain section.featured article p {
+main.internal#ser-brain section.featured article p,
+main.internal#como-investir section.featured article p {
   color: #FFF;
   font-family: "Times New Roman";
   font-size: 1.6em;
@@ -967,7 +983,8 @@ main.internal#ser-brain section.featured article p {
   word-spacing: 3px;
   letter-spacing: 0.3px;
 }
-main.internal#ser-brain section.featured article p strong {
+main.internal#ser-brain section.featured article p strong,
+main.internal#como-investir section.featured article p strong {
   text-transform: uppercase;
   color: #dfded1;
   font-size: 2rem;
@@ -1313,6 +1330,97 @@ main.internal#pilares section.conheca article ul li:nth-child(9) h4 {
 main.internal#pilares section.conheca article ul li:nth-child(3n+3) {
   margin: 0 0 9px 0;
 }
+main.internal#como-investir section.featured h3 {
+  padding: 0 15%;
+}
+main.internal#como-investir section.passos {
+  /*background: #eae8dc; */
+  margin: 83px 35px;
+}
+main.internal#como-investir section.passos article {
+  min-height: 735px;
+}
+main.internal#como-investir section.passos article dl {
+  display: inline-block;
+  vertical-align: top;
+  width: 53.4%;
+}
+main.internal#como-investir section.passos article dl dt {
+  margin: 0 84px;
+  width: 146px;
+  height: 149px;
+  font-size: 2em;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+main.internal#como-investir section.passos article dl dt:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  height: 100%;
+  margin-left: -3px;
+}
+main.internal#como-investir section.passos article dl dt:after {
+  bottom: -11px;
+  background: none;
+  padding: 0;
+}
+main.internal#como-investir section.passos article dl dt p {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.4em;
+}
+main.internal#como-investir section.passos article dl dt strong {
+  display: block;
+  font-size: 2.2em;
+  font-weight: normal;
+}
+main.internal#como-investir section.passos article dl dd {
+  padding: 2em 2em 2em 5.3em;
+}
+main.internal#como-investir section.passos article dl dd h3 {
+  text-transform: uppercase;
+  font-size: 4em;
+  line-height: 0.98em;
+  padding-bottom: 0.28em;
+}
+main.internal#como-investir section.passos article dl dd p {
+  font-family: 'Times New Roman';
+  font-size: 1.77em;
+  line-height: 1.3em;
+  word-spacing: -0.03em;
+}
+main.internal#como-investir section.passos article dl dd p strong {
+  font-family: 'arquitectaregular';
+  text-transform: uppercase;
+  line-height: 1em;
+  display: block;
+  padding-bottom: 0.3em;
+  font-size: 2rem;
+}
+main.internal#como-investir section.passos article aside {
+  display: inline-block;
+  vertical-align: top;
+  width: 37%;
+}
+main.internal#como-investir section.passos article aside > p {
+  text-transform: uppercase;
+}
+main.internal#como-investir section.passos article aside > div {
+  background: #fff;
+  padding: 0.5em;
+}
+main.internal#como-investir section.passos article.passo-01 aside {
+  padding-top: 3em;
+}
+main.internal#como-investir section.passos article.passo-01 aside > p {
+  text-transform: uppercase;
+  font-size: 1.45em;
+  text-align: center;
+  line-height: 1.2em;
+}
 main.internal > nav {
   position: relative;
   text-align: center;
@@ -1628,7 +1736,8 @@ main.internal > nav a:hover {
     -o-transition: all 0.3s;
     transition: all 0.3s;
   }
-  main.internal#ser-brain section.featured {
+  main.internal#ser-brain section.featured,
+  main.internal#como-investir section.featured {
     padding: 0;
   }
   main.internal#ser-brain section.diferencial ul li {
@@ -1749,7 +1858,9 @@ main.internal > nav a:hover {
   }
   main section.carrossel a,
   main.internal#ser-brain section.featured a,
-  main.internal#ser-brain section.featured a:hover {
+  main.internal#ser-brain section.featured a:hover,
+  main.internal#como-investir section.featured a,
+  main.internal#como-investir section.featured a:hover {
     margin: 23px auto;
   }
   main section.highlights ul li,
@@ -1804,7 +1915,10 @@ main.internal > nav a:hover {
     width: auto;
     margin: 0 9.5px 6px;
   }
-  main section.passoAPasso > div dl dt {
+  main section.passoAPasso > div dl dt,
+  main.internal#como-investir section.passos article dl dt,
+  main.internal#como-investir section.passos article dl dt:before,
+  main.internal#como-investir section.passos article dl dt:after {
     padding: .5em 0.5em;
   }
   main section.pilares {
@@ -1848,27 +1962,33 @@ main.internal > nav a:hover {
   main.internal#ser-brain section.diferencial ul li:hover img {
     opacity: 1;
   }
-  main.internal#ser-brain section.featured h2 {
+  main.internal#ser-brain section.featured h2,
+  main.internal#como-investir section.featured h2 {
     font-size: 241%;
     line-height: 1.18em;
   }
-  main.internal#ser-brain section.featured h3 {
+  main.internal#ser-brain section.featured h3,
+  main.internal#como-investir section.featured h3 {
     font-size: 201%;
     padding: 20px 15% 0;
     line-height: 1.18em;
     margin: 0;
   }
-  main.internal#ser-brain section.featured a {
+  main.internal#ser-brain section.featured a,
+  main.internal#como-investir section.featured a {
     margin: 23px auto 35px !important;
   }
-  main.internal#ser-brain section.featured article {
+  main.internal#ser-brain section.featured article,
+  main.internal#como-investir section.featured article {
     font-size: 80%;
   }
-  main.internal#ser-brain section.featured article p {
+  main.internal#ser-brain section.featured article p,
+  main.internal#como-investir section.featured article p {
     letter-spacing: -0.03em;
     font-size: 1.6875em;
   }
-  main.internal#ser-brain section.featured article p strong {
+  main.internal#ser-brain section.featured article p strong,
+  main.internal#como-investir section.featured article p strong {
     font-size: 130% !important;
     font-weight: normal;
     letter-spacing: -0.01em;

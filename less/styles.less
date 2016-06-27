@@ -379,6 +379,7 @@ main{
               INTERNALS
   *******************************/
   &.internal{
+    background: url('../images/base/03_COMO-INVESTIR-WITH-BRAIN.jpg') no-repeat top center;
     &:before{
       content: '';
       height: 98px;
@@ -404,49 +405,51 @@ main{
       }
       ul{ float: right; margin: 21px 0px 8px; }
     }
-    /* ---------------------------- Ser Brain ---------------------------- */
+    /* ---------------------------- Ser Brain */
     &#ser-brain {    
-      section.featured{
-        margin-top: -10px;  z-index: 0; padding: 98px 0 0; .transit;
-        h2 { .transit; font-size: 5em; text-transform: uppercase; padding: 3.4% 3.2% 3.5% 3.2%; line-height: 75px; margin: 6.5% 68% 0 0; color: #e9e8db; position: absolute; background-color: #7B836E; font-family: "arquitectabook"; }
-        h3 { .transit; margin: 4.4% 0 0; font-size: 2.72em; text-transform: uppercase; text-align: center; line-height: 3rem; font-family: "arquitecta_lightlight"; }
-        a:extend(main section.carrossel a){
-          margin: 46px auto 55px !important;
-          &:hover{
-            &:extend(main section.carrossel a:hover);
-          }
-        }
-        article {
-          padding: 5.9% 7.3% 2.5%; background: #7b836f;
-          p{
-            color: #FFF; font-family: "Times New Roman"; font-size: 1.6em; padding: 0 0 3.3%; line-height: 2.2rem; word-spacing: 3px; letter-spacing: 0.3px;
-            strong{ text-transform: uppercase; color: #dfded1; font-size: 2rem; letter-spacing: 1px; }
-          }
-        }
-      }
-      section.diferencial {
-        h3{ text-align: center; text-transform: uppercase; font-size: 4em; color: #002f17; margin: 6% 0 2.2%; }
-        ul {
-          text-align: center;
-          li{
-            width: 50%; vertical-align: top; display: inline-block; position: relative; margin-left: -3px;
-            h4 { color: #eae9de; position: absolute; z-index: 999;; padding: 7% 6% 6%; width: 285px; top:calc(~"50% - 77px"); left:calc(~"50% - 142px"); text-transform: uppercase; font-size: 1.69em; background-color: inherit; box-sizing: border-box; line-height: 30px; letter-spacing: -0.6px; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; }
-            img { z-index: 99; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; position: absolute; left: 0; width: 100%; }            
-            p{ color: #f4f3f2; padding: 20% 18% 19.2%; font-size: 2.4em; line-height: 44px; -webkit-transition: all 0.3s; transition: all 0.3s; }
-            &:first-child{ background-color: #8b9178; }
-            &:nth-child(2) {
-                  position: absolute; width: 100%; left: 0; text-align: center; line-height: 0; top: 50%;
-                  span { top: calc(~"50% - 98px"); z-index: 1000; font-size: 10em; font-family: "arquitecta_blackblack"; color: #002f17; }
+      section{
+        &.featured{
+          margin-top: -10px;  z-index: 0; padding: 98px 0 0; .transit;
+          h2 { .transit; font-size: 5em; text-transform: uppercase; padding: 3.4% 3.2% 3.5% 3.2%; line-height: 75px; margin: 6.5% 68% 0 0; color: #e9e8db; position: absolute; background-color: #7B836E; font-family: "arquitectabook"; }
+          h3 { .transit; margin: 4.4% 0 0; font-size: 2.72em; text-transform: uppercase; text-align: center; line-height: 3rem; font-family: "arquitecta_lightlight"; }
+          a:extend(main section.carrossel a){
+            margin: 46px auto 55px !important;
+            &:hover{
+              &:extend(main section.carrossel a:hover);
             }
-            &:last-child { background: #a5a095; }
-            &:hover  {
-              h4, img { opacity: 0; }
+          }
+          article {
+            padding: 5.9% 7.3% 2.5%; background: #7b836f;
+            p{
+              color: #FFF; font-family: "Times New Roman"; font-size: 1.6em; padding: 0 0 3.3%; line-height: 2.2rem; word-spacing: 3px; letter-spacing: 0.3px;
+              strong{ text-transform: uppercase; color: #dfded1; font-size: 2rem; letter-spacing: 1px; }
+            }
+          }
+        }
+        &.diferencial {
+          h3{ text-align: center; text-transform: uppercase; font-size: 4em; color: #002f17; margin: 6% 0 2.2%; }
+          ul {
+            text-align: center;
+            li{
+              width: 50%; vertical-align: top; display: inline-block; position: relative; margin-left: -3px;
+              h4 { color: #eae9de; position: absolute; z-index: 999;; padding: 7% 6% 6%; width: 285px; top:calc(~"50% - 77px"); left:calc(~"50% - 142px"); text-transform: uppercase; font-size: 1.69em; background-color: inherit; box-sizing: border-box; line-height: 30px; letter-spacing: -0.6px; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; }
+              img { z-index: 99; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; position: absolute; left: 0; width: 100%; }            
+              p{ color: #f4f3f2; padding: 20% 18% 19.2%; font-size: 2.4em; line-height: 44px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+              &:first-child{ background-color: #8b9178; }
+              &:nth-child(2) {
+                    position: absolute; width: 100%; left: 0; text-align: center; line-height: 0; top: 50%;
+                    span { top: calc(~"50% - 98px"); z-index: 1000; font-size: 10em; font-family: "arquitecta_blackblack"; color: #002f17; }
+              }
+              &:last-child { background: #a5a095; }
+              &:hover  {
+                h4, img { opacity: 0; }
+              }
             }
           }
         }
       }
     }
-    /* ---------------------------- Pilares ---------------------------- */
+    /* ---------------------------- Pilares */
     &#pilares {
       section{
         &.pilares-info{
@@ -554,6 +557,68 @@ main{
                   h4{ background-color: #a5a78d; }
                 }
                 &:nth-child(3n+3){ margin:0 0 9px 0; }
+              }
+            }
+          }
+        }
+      }
+    }
+    /* ---------------------------- Como Investir */
+    &#como-investir{
+      section{
+        &.featured{
+          &:extend(main.internal#ser-brain section.featured); 
+          h2{ &:extend(main.internal#ser-brain section.featured h2); }
+          h3{ &:extend(main.internal#ser-brain section.featured h3); padding:0 15%;  }
+          a{ 
+            &:extend(main.internal#ser-brain section.featured a);
+            &:hover{
+              &:extend(main.internal#ser-brain section.featured a:hover);
+            }
+          }
+          article{
+            &:extend(main.internal#ser-brain section.featured article);
+            p{ 
+              &:extend(main.internal#ser-brain section.featured article p); 
+              strong{
+                &:extend(main.internal#ser-brain section.featured article p strong);
+              }
+            }
+          }
+        }
+        &.passos{
+          /*background: #eae8dc; */margin:83px 35px;
+          article{
+            min-height: 735px;
+            dl{
+              display: inline-block; vertical-align: top; width: 53.4%;
+              dt:extend(main section.passoAPasso > div dl dt){
+                margin: 0 84px; width: 146px; height: 149px; font-size: 2em; padding: 0; box-sizing: border-box; text-align: center; 
+                &:before{ content:""; display: inline-block; vertical-align: middle; padding: 0; height: 100%; margin-left:-3px; }
+                &:after{
+                  &:extend(main section.passoAPasso > div dl dt:after); bottom: -11px; background: none; padding: 0;
+                }
+                p{ display: inline-block; vertical-align: middle; line-height: 1.4em; }
+                strong{ display: block; font-size: 2.2em; font-weight: normal; }
+              }
+              dd{
+                padding: 2em 2em 2em 5.3em;
+                h3{ text-transform: uppercase; font-size: 4em; line-height: 0.98em; padding-bottom: 0.28em; }
+                p{ 
+                  .f-times; font-size: 1.77em; line-height: 1.3em; word-spacing: -0.03em;
+                  strong{ .f-weight-regular; text-transform: uppercase; line-height: 1em; display: block; padding-bottom: 0.3em; font-size: 2rem; }
+                }
+              }
+            }
+            aside{
+              display: inline-block; vertical-align: top; width: 37%;
+              > p{ text-transform: uppercase; }
+              > div{ background: #fff; padding: 0.5em; }
+            }
+            &.passo-01{
+              aside{ 
+                padding-top: 3em; 
+                > p{ text-transform: uppercase; font-size: 1.45em; text-align: center; line-height: 1.2em; }
               }
             }
           }
