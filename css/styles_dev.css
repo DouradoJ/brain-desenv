@@ -117,7 +117,7 @@ main {
               INICIO
   *******************************/
   /*******************************
-              INTERNALS
+              INTERNALS[class^="span"] div[id*="post"] https://css-tricks.com/attribute-selectors/
   *******************************/
 }
 main:before {
@@ -126,13 +126,14 @@ main:before {
   background: #fff;
   position: fixed;
   left: 0;
+  top: 0;
   width: 100%;
   box-shadow: 0 0 20px #888;
   z-index: 1001;
   opacity: 0;
-  -webkit-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main header {
   text-transform: uppercase;
@@ -140,15 +141,22 @@ main header {
   -webkit-transition: padding 0.6s;
   transition: padding 0.6s;
   margin-bottom: 10px;
+  z-index: 1001;
+  position: fixed;
+  width: 1000px;
+  box-sizing: border-box;
+  top: 0;
   /*LOGO*/
 }
 main header * {
-  -webkit-transition: all 0.6s;
-  -o-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 main header ul {
-  float: left;
+  position: absolute;
+  right: 565px;
+  width: 425px;
 }
 main header ul li {
   margin: 0 12px 0 0;
@@ -166,7 +174,9 @@ main header ul li a:hover {
   color: #f6861f;
 }
 main header nav {
-  float: right;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 main header nav a {
   color: #475047;
@@ -226,20 +236,23 @@ main header nav.s_others a {
   margin: 0 5px 2px 15px;
 }
 main header nav.s_language {
-  right: 318px;
+  right: 330px;
 }
 main header nav.s_menu {
-  right: 66px;
+  right: 68px;
 }
 main header nav.s_navg {
   right: 70px;
 }
 main header h1 {
   padding: 47px 0 0 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main header h1 a {
   display: block;
-  margin: 0 auto;
+  margin: 0 calc(50% - 153px);
   width: 307px;
   /*407px*/
 }
@@ -249,6 +262,7 @@ main header h1 a img {
 }
 main section.carrossel {
   padding-bottom: 12px;
+  margin-top: 190px;
 }
 main section.carrossel > div {
   width: 100%;
@@ -280,7 +294,6 @@ main section.carrossel > div dl dt h2 {
 }
 main section.carrossel > div dl dt h2:before {
   position: absolute;
-  opacity: 0.6 !important;
   z-index: -1 !important;
   top: 0;
   border-radius: 5px;
@@ -1017,14 +1030,14 @@ main.internal header {
   z-index: 1001;
   position: fixed;
   width: 1000px;
+  /* float: right; margin: 14px 10px 8px; 21px 10px 8px; */
 }
 main.internal header nav {
-  clear: both;
-  background: #fff;
-  padding: 0 10px 0;
+  /*clear: both; padding: 0 10px 0;*/
+  top: 55px;
 }
-main.internal header nav a {
-  margin-right: 12px;
+main.internal header nav:not(.menu) {
+  background: #fff;
 }
 main.internal header nav.s_menu,
 main.internal header nav.s_language,
@@ -1032,23 +1045,22 @@ main.internal header nav.s_navg {
   top: 82px;
 }
 main.internal header nav.s_menu {
-  right: 84px;
+  right: 69px;
 }
 main.internal header nav.s_language {
-  right: 360px;
+  right: 330px;
 }
 main.internal header h1 {
-  float: left;
-  padding-top: 0;
-  position: absolute;
+  /*float: left; padding-top: 0; position: absolute;*/
+  margin-top: -46px;
 }
 main.internal header h1 a {
-  width: 47%;
-  margin: 7px 32px 10px 10px;
+  width: 198px;
+  margin: 7px 32px 10px 0;
 }
 main.internal header ul {
-  float: right;
-  margin: 21px 10px 8px;
+  right: -5px;
+  top: 15px;
 }
 main.internal#ser-brain section.featured,
 main.internal#como-investir section.featured {
@@ -2259,7 +2271,6 @@ main.internal > nav a p {
   vertical-align: middle;
   font-family: 'arquitecta_boldbold';
   font-weight: normal;
-  width: 140px;
 }
 main.internal > nav a:first-child {
   float: left;
@@ -2343,6 +2354,13 @@ main.inicial ul li a:hover {
   html.full main {
     width: 100%;
   }
+  html.full main header {
+    width: 100%;
+  }
+  html.full main header ul {
+    left: 10px;
+    right: initial;
+  }
   html.full main header nav a.s_fullscreen {
     opacity: 0.3;
   }
@@ -2384,11 +2402,11 @@ main.inicial ul li a:hover {
     height: auto;
     margin-top: -6%;
   }
-  html.full main.internal header {
-    width: 100%;
-  }
   html.full main.internal header ul {
-    margin: 21px 10px 8px;
+    right: -5px;
+    top: 15px;
+    left: initial;
+    width: auto;
   }
   html.full main.internal#ser-brain section.featured img {
     width: 100%;
@@ -2465,7 +2483,9 @@ main.inicial ul li a:hover {
     *******************************/
   }
   main header:not(.minus) {
-    padding: 37px 0;
+    /*padding:37px 0; */
+    width: 100%;
+    position: relative;
   }
   main header:not(.minus) ul,
   main header:not(.minus) nav {
@@ -2473,17 +2493,21 @@ main.inicial ul li a:hover {
     text-align: center;
     padding-bottom: 20px;
   }
+  main header:not(.minus) ul {
+    /**/
+    width: auto;
+    left: 10px;
+    right: initial;
+  }
   main header:not(.minus) ul li {
-    margin: 0 12px;
+    /*margin: 0 12px;*/
   }
   main header:not(.minus) nav {
     margin-right: 0 !important;
     text-align: center !important;
   }
   main header:not(.minus) nav a {
-    margin: 0 !important;
-    width: 32%;
-    vertical-align: top;
+    /*margin:0 !important; width: 32%; vertical-align: top;*/
   }
   main header:not(.minus) nav a.s_fullscreen {
     display: none;
@@ -2503,7 +2527,10 @@ main.inicial ul li a:hover {
     width: 100%;
   }
   main header:not(.minus) h1 {
-    padding-top: 17px;
+    /*padding-top: 17px;*/
+  }
+  main section.carrossel {
+    margin-top: 0;
   }
   main section.highlights ul li.hg_04,
   main section.pilares ul li.pl_04,
@@ -2512,6 +2539,10 @@ main.inicial ul li a:hover {
   }
   main section.passoAPasso > div dl:last-child {
     margin-right: 9.5px;
+  }
+  main section.time span {
+    overflow: initial;
+    height: initial;
   }
   main footer {
     padding-bottom: 33px;
@@ -2599,10 +2630,42 @@ main.inicial ul li a:hover {
     width: 100%;
     left: 0;
   }
+  main.internal#time > div {
+    padding-top: 25px !important;
+  }
+  main.internal#time > div h2 {
+    line-height: 47px;
+  }
 }
 @media screen and (max-width: 890px) {
   main {
     /* SECTIONS CONTENTS */
+  }
+  main header:not(.minus) ul {
+    text-align: center;
+    width: 100%;
+    left: initial;
+    position: relative;
+  }
+  main header:not(.minus) ul li {
+    margin: 0 6px;
+  }
+  main header:not(.minus) nav {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    right: initial;
+    top: initial;
+  }
+  main header:not(.minus) nav a {
+    margin: 0 20px;
+  }
+  main header:not(.minus) h1 {
+    padding-top: 7px;
+  }
+  main header:not(.minus) h1 a {
+    width: 207px;
+    margin: 0 calc(50% - 103px);
   }
   main section.infsSerBrain h2,
   main section.infsSerBrain a {
@@ -2701,7 +2764,7 @@ main.inicial ul li a:hover {
     display: none;
   }
   main.internal header {
-    padding: 37px 0;
+    /*padding:37px 0;*/
     position: relative;
     box-shadow: 0 0 20px #888;
   }
@@ -2728,14 +2791,11 @@ main.inicial ul li a:hover {
     margin: 0 auto 10px !important;
   }
   main.internal header h1 {
-    padding-top: 17px;
-    float: none;
-    position: relative;
-    text-align: center;
+    /*padding-top: 17px; float: none; position: relative; text-align: center;*/
+    margin-top: 0;
   }
   main.internal header h1 a {
-    margin: 0 auto;
-    width: 407px;
+    /*margin:0 auto; width: 407px;*/
   }
   main.internal:before {
     height: 261px;
@@ -3143,7 +3203,7 @@ main.inicial ul li a:hover {
   }
   main header h1 a,
   main footer h2 {
-    width: 80% !important;
+    /*width: 80% !important;*/
   }
   main section.highlights ul li {
     background: none !important;
@@ -3188,5 +3248,19 @@ main.inicial ul li a:hover {
   }
   main.internal#time section.quem-e > div.team dl dd img {
     width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  main header nav.menu a {
+    margin: 0 20px 10px;
+  }
+  main header nav.menu a.s_menu {
+    /*margin-bottom: 0;*/
+  }
+  main header:not(.minus) h1 {
+    margin-top: -10px;
+  }
+  main header:not(.minus) nav:not(.menu) a {
+    margin: 0;
   }
 }

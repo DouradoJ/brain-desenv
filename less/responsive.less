@@ -7,13 +7,16 @@
     /* HEADER */
     header{
       &:not(.minus){
-        padding:37px 0; 
+        /*padding:37px 0; */width: 100%; position: relative;
         ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
-        ul li{ margin: 0 12px; }
+        ul{ 
+          /**/ width: auto; left: 10px; right: initial;
+          li{ /*margin: 0 12px;*/ }
+        }
         nav{
           margin-right: 0 !important; text-align: center !important;
           a{ 
-            margin:0 !important; width: 32%; vertical-align: top;
+            /*margin:0 !important; width: 32%; vertical-align: top;*/
             &.s_fullscreen{ display: none; }
           }
           &:before{
@@ -24,12 +27,19 @@
             a{ width: 100%; }
           }
         }
-        h1{ padding-top: 17px; }
+        h1{ /*padding-top: 17px;*/ }
       }
     }
     /* SECTIONS CONTENTS */
+    section.carrossel{
+      margin-top: 0;
+    }
     section.highlights ul li.hg_04, section.pilares ul li.pl_04, section.comoInvestir ul li.ci_04{ margin-right: 4px; }
     section.passoAPasso > div dl:last-child{ margin-right: 9.5px; }
+    section.time span{
+      overflow:initial;
+      height: initial;
+    }
     /* FOOTER */
     footer{
       padding-bottom: 33px;
@@ -112,11 +122,33 @@
           }
         }
       }
+      &#time{
+        > div{
+          padding-top: 25px !important;
+          h2{ line-height: 47px; }
+        }
+      }
     }
   }
 }
 @media screen and (max-width: 890px) {
   main{
+    header{
+      &:not(.minus){
+        ul{ 
+          text-align: center; width: 100%; left: initial; position: relative; 
+          li{ margin:0 6px;  }
+        }
+        nav{ 
+          text-align: center; width: 100%; position: relative; right: initial; top: initial; 
+          a{ margin:0 20px; }
+        }
+        h1{ 
+          padding-top: 7px; 
+          a{ width: 207px; margin: 0 calc(~'50% - 103px'); }
+        }
+      }
+    }
     /* SECTIONS CONTENTS */
     section.infsSerBrain{
       h2, a{ width: auto; }
@@ -196,7 +228,7 @@
     &.internal{
       &:before{ display:none; }
       header{
-        padding:37px 0;  position: relative; box-shadow: 0 0 20px #888;
+        /*padding:37px 0;*/  position: relative; box-shadow: 0 0 20px #888;
         ul, nav{ float: none; text-align: center; padding-bottom: 20px; }
         ul{
           margin: 0;
@@ -210,8 +242,8 @@
           };
         }
         h1{ 
-          padding-top: 17px; float: none; position: relative; text-align: center;
-          a{ margin:0 auto; width: 407px; }
+          /*padding-top: 17px; float: none; position: relative; text-align: center;*/ margin-top: 0;
+          a{ /*margin:0 auto; width: 407px;*/ }
         }
       }
       &:before{ height:261px; opacity: 0; .transit; }
@@ -486,13 +518,15 @@
     header{
       padding: 27px 0;
       ul li{ display: block; margin-bottom: 10px; }
-      h1 a{ width: 80% !important; }
+      h1 a{ /*width: 80% !important;*/ }
     }
     section.highlights ul{
       li{ background: none !important; }
     }
-    section.carrossel > div dl dt{
-      &:before{ opacity: 0; } 
+    section.carrossel{
+      > div dl dt{
+        &:before{ opacity: 0; } 
+      }
     }
     section.time a{ width: 90%; left: 5%; }
     footer h2{
@@ -552,6 +586,28 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  main{
+    header{
+      nav{
+        &.menu{
+          a{ 
+            margin: 0 20px 10px; 
+            &.s_menu{
+              /*margin-bottom: 0;*/
+            }
+          }
+        }
+      }
+      &:not(.minus){
+        h1{ margin-top: -10px }
+        nav:not(.menu){
+          a{margin:0; }
         }
       }
     }

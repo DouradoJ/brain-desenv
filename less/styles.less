@@ -44,24 +44,25 @@ main{
     height: 0;
     background: #fff;
     position: fixed;
-    left: 0;
+    left: 0; top: 0;
     width: 100%; 
     box-shadow: 0 0 20px #888;
-    z-index: 1001; opacity: 0; -webkit-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s;
+    z-index: 1001; opacity: 0; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;
   }
   /* HEADER */
   header{
     text-transform: uppercase; padding: 10px 10px 24px; -webkit-transition: padding 0.6s; transition: padding 0.6s; margin-bottom: 10px;
-    *{ -webkit-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; }
+    z-index: 1001; position: fixed; width: 1000px; box-sizing: border-box; top: 0;
+    *{ -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
     ul{
-      float: left;
+      position: absolute; right: 565px; width: 425px;
       li{
         margin: 0 12px 0 0; font-size: 1.1em; display: inline-block;
         a { .lnks; display: inline-block; }
       }
     }
     nav { 
-      float: right;
+      position: absolute; right: 10px; top:10px;
       a{
         .lnks; .f-weight-bold; 
         margin: 0 0 0 40px; display: inline-block; font-size: 1.1em;
@@ -92,22 +93,22 @@ main{
         }
         a{ display: block; margin:0 5px 2px 15px; }
       }
-      &.s_language{ right: 318px; }
-      &.s_menu{ right: 66px; }
+      &.s_language{ right: 330px; }
+      &.s_menu{ right: 68px; }
       &.s_navg{ right: 70px; }
     }
     /*LOGO*/
     h1 {
-      padding: 47px 0 0 0;
+      padding: 47px 0 0 0; .transit;
       a{ 
-        display: block; margin: 0 auto; width: 307px; /*407px*/
+        display: block; margin: 0 calc(~'50% - 153px'); width: 307px; /*407px*/
         img{ width: 100%; height: 100%; }
       }
     }
   }
   /* SECTIONS CONTENTS */
   section.carrossel {
-    padding-bottom:12px;
+    padding-bottom:12px; margin-top: 190px;
     > div{
       width:100%; padding-bottom: 17px; overflow: hidden;
       dl{
@@ -117,7 +118,7 @@ main{
           h2{ 
             z-index:2; text-transform: uppercase; font-size: 2.0625em; color: @gray-1; margin: 3% 10%; padding: 0.5% 0; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; 
             &:before{
-              position: absolute; &:extend(main section.time a:before); opacity: 0.6 !important; z-index: -1 !important; top:0; border-radius: 5px;
+              position: absolute; &:extend(main section.time a:before); z-index: -1 !important; top:0; border-radius: 5px;
             }
           }
           &:before{
@@ -424,7 +425,7 @@ main{
   }
 
   /*******************************
-              INTERNALS
+              INTERNALS[class^="span"] div[id*="post"] https://css-tricks.com/attribute-selectors/
   *******************************/
   &.internal{
     &:before{ height: 98px; opacity: 1; }
@@ -432,20 +433,20 @@ main{
     header{
       min-height: 34px; z-index: 1001; position: fixed; width: 1000px;
       nav{ 
-        clear: both; background: #fff; padding: 0 10px 0;
-        a{ margin-right: 12px; }
+        /*clear: both; padding: 0 10px 0;*/ top:55px;
+        &:not(.menu){ background: #fff; }
         &.s_menu, &.s_language, &.s_navg{ top: 82px; }
-        &.s_menu{ right: 84px; }
-        &.s_language{ right: 360px; }
+        &.s_menu{ right: 69px; }
+        &.s_language{ right: 330px; }
         &.s_navg{ }
       }
       h1{ 
-        float: left; padding-top: 0; position: absolute;
+        /*float: left; padding-top: 0; position: absolute;*/ margin-top: -46px;
         a{
-          width: 47%; margin: 7px 32px 10px 10px; 
+          width: 198px; margin: 7px 32px 10px 0; 
         }
       }
-      ul{ float: right; margin: 21px 10px 8px; }
+      ul{ right: -5px; top:15px; }/* float: right; margin: 14px 10px 8px; 21px 10px 8px; */
     }
     /* ---------------------------- Ser Brain */
     &#ser-brain {    
@@ -953,7 +954,7 @@ main{
       }
       a {
         .transit; text-transform: uppercase; margin: 0 14px; color: #475047; display: inline-block; padding-top: 16px; font-family: "arquitecta_boldbold"; font-size: 1.1em; line-height: 20px;
-        p{ display: inline-block; vertical-align: middle; .f-weight-bold; width: 140px; }
+        p{ display: inline-block; vertical-align: middle; .f-weight-bold; }
         &:first-child {
           float: left; width: 140px; text-align: left; margin: 0; color: #475047; padding:0 0 0 60px;
           &:before{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-right: 18px solid #E0DED1; border-bottom: 13px solid transparent; display: inline-block; vertical-align: middle; margin: 12px 25px 12px -43px; z-index: 9; position: relative; }
@@ -984,6 +985,8 @@ main{
       main{ 
         width: 100%;
         header{
+          width: 100%;
+          ul{ left: 10px; right: initial; }
           nav{
             a.s_fullscreen{ opacity: 0.3; }
           }
@@ -1038,10 +1041,9 @@ main{
         section.time span img{ height: auto; margin-top: -6%; }
         &.internal{
           header{
-            width: 100%;
             ul{
-              margin: 21px 10px 8px;
-            }
+              right: -5px; top:15px; left: initial; width: auto;
+            };
           }
           &#ser-brain section.featured{
             img{ width: 100%; margin-top: -5%; }

@@ -66,13 +66,17 @@ $(function(){
 	        	)
 	        },
 	        toTop : function(elem){
-		        var offset = 20;
+		        var offset = 1;
 		        var duration = 500;
 		        jQuery(window).scroll(function() {
-							if( !$('body main').attr('id') ){
+							if( !$('body main').attr('id') && $(window).width() > 1024 ){
 								if (jQuery(this).scrollTop() > offset) {
 									$('body main').addClass('internal');
 								} else {
+									$('body main').removeClass('internal');
+								}
+							}else{
+								if( !$('body main').attr('id').length > 0 ){
 									$('body main').removeClass('internal');
 								}
 							}
@@ -88,8 +92,8 @@ $(function(){
 					  owl.owlCarousel({
 							slideSpeed : 1500,
 							paginationSpeed : 1000,
-							singleItem:true/*,
-							autoPlay:4000*/
+							singleItem:true,
+							autoPlay:4000
 					  }); 
 	        },
 	        navgComoinvestir : function(p,b){
