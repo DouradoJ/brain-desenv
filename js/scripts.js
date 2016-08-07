@@ -2,13 +2,15 @@ $(function(){
 	(function() {
 		var brainvest = {
 	        init: function() {
-	        	this.firstaccess();
+	        this.firstaccess();
             this.menu();
+            this.setDate();
             this.toTop('.toTop');
             this.carrossel();
             this.navgComoinvestir(1,$());
             this.nicescroll();
             this.fullscreen();
+            this.rszWindow();
 	        },
 	        firstaccess : function(){
 	        	$('main.inicial ul li a').click(function(e){
@@ -26,8 +28,11 @@ $(function(){
 	            }else{
 	            	$('html').removeClass('full');
 	            }
-							$("section.carrossel > div").data('owlCarousel').destroy();
-							setTimeout(function(){brainvest.carrossel();},500);
+				$("section.carrossel > div").data('owlCarousel').destroy();
+				setTimeout(function(){brainvest.carrossel();},500);
+	        },
+	        setDate : function(){
+	        	$('main section.comoInvestir ul li span.as').html( 'a partir de '+ brainvest.currDate() );
 	        },
 	        menu: function() {
         		var _opnd, _c;
@@ -69,22 +74,22 @@ $(function(){
 		        var offset = 1;
 		        var duration = 500;
 		        jQuery(window).scroll(function() {
-							if( !$('body main').attr('id') && $(window).width() > 1024 ){
-								if (jQuery(this).scrollTop() > offset) {
-									$('body main').addClass('internal');
-								} else {
-									$('body main').removeClass('internal');
-								}
-							}else{
-								if( !$('body main').attr('id').length > 0 ){
-									$('body main').removeClass('internal');
-								}
-							}
-						});
+					if( !$('body main').attr('id') && $(window).width() > 1024 ){
+						if (jQuery(this).scrollTop() > offset) {
+							$('body main').addClass('internal');
+						} else {
+							$('body main').removeClass('internal');
+						}
+					}else{
+						if( !$('body main').attr('id') ){
+							$('body main').removeClass('internal');
+						}
+					}
+				});
 		        jQuery(elem).click(function(event) {
-		          event.preventDefault();
-		          jQuery('html, body').animate({scrollTop: 0}, duration);
-		          return false;
+					event.preventDefault();
+					jQuery('html, body').animate({scrollTop: 0}, duration);
+					return false;
 		        })
 	        },
 	        carrossel: function() {
@@ -151,6 +156,25 @@ $(function(){
 				      scrollspeed: 100
 				    });
 				}
+	        },
+	        rszWindow : function () {
+				$(window).resize(function() {
+					if ($(window).width() < 1024){
+						$('html').removeClass('full').find('main').removeClass('internal');
+					}else{
+						brainvest.fullscreen();
+					}
+				});
+	        },
+	        currDate : function(){
+				var today = new Date();
+				var dd = today.getDate();
+				var mm = today.getMonth()+1; //January is 0!
+				var yyyy = today.getFullYear();
+				if(dd<10) { dd='0'+dd } 
+				if(mm<10) { mm='0'+mm } 
+				today = dd+'/'+mm+'/'+yyyy;
+				return today;
 	        }
     	}
 		brainvest.init();

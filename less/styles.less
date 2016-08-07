@@ -67,7 +67,7 @@ main{
         .lnks; .f-weight-bold; 
         margin: 0 0 0 40px; display: inline-block; font-size: 1.1em;
         &.s_fullscreen{
-          width: 24px; margin: 0 0 -3px 35px;
+          width: 24px; margin: 0 0 -3px 35px; display: none;
           img{ width: 100%; }
         }
       }
@@ -93,8 +93,8 @@ main{
         }
         a{ display: block; margin:0 5px 2px 15px; }
       }
-      &.s_language{ right: 330px; }
-      &.s_menu{ right: 68px; }
+      &.s_language{ /*right: 330px;*/ right: 267px; }
+      &.s_menu{ /*right: 68px;*/ right: 4px; }
       &.s_navg{ right: 70px; }
     }
     /*LOGO*/
@@ -116,7 +116,7 @@ main{
         dt{
           position: absolute; left: 0; top: 0; z-index: 3; width: 100%; text-align: center;
           h2{ 
-            z-index:2; text-transform: uppercase; font-size: 2.0625em; color: @gray-1; margin: 3% 10%; padding: 0.5% 0; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; 
+            z-index:2; text-transform: uppercase; font-size: 2.0625em; color: #fff; margin: 3% 10%; padding: 0.5% 0; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; text-shadow: 0 0 2px @gray-1;
             &:before{
               position: absolute; &:extend(main section.time a:before); z-index: -1 !important; top:0; border-radius: 5px;
             }
@@ -400,6 +400,11 @@ main{
         }
       }
     }
+    >p{
+      background: #fff; padding: 1em; text-align: center;
+      img{ width: 100px; display: block; margin:0 auto .5em; }
+      span{ display: block; width: 38%; margin:0 auto; }
+    }
   }
   /*******************************
               INICIO
@@ -436,8 +441,8 @@ main{
         /*clear: both; padding: 0 10px 0;*/ top:55px;
         &:not(.menu){ background: #fff; }
         &.s_menu, &.s_language, &.s_navg{ top: 82px; }
-        &.s_menu{ right: 69px; }
-        &.s_language{ right: 330px; }
+        &.s_menu{ /*right: 69px;*/ }
+        &.s_language{ /*right: 330px;*/ }
         &.s_navg{ }
       }
       h1{ 
@@ -446,7 +451,7 @@ main{
           width: 198px; margin: 7px 32px 10px 0; 
         }
       }
-      ul{ right: -5px; top:15px; }/* float: right; margin: 14px 10px 8px; 21px 10px 8px; */
+      ul{ right: -5px; }/* float: right; margin: 14px 10px 8px; 21px 10px 8px; */ 
     }
     /* ---------------------------- Ser Brain */
     &#ser-brain {    
@@ -474,14 +479,15 @@ main{
           ul {
             text-align: center;
             li{
-              width: 50%; vertical-align: top; display: inline-block; position: relative; margin-left: -3px;
+              width: 50%; vertical-align: top; display: inline-block; position: relative; margin-left: -3px; min-height: 505px;
               h4 { color: #eae9de; position: absolute; z-index: 999;; padding: 7% 6% 6%; width: 285px; top:calc(~"50% - 77px"); left:calc(~"50% - 142px"); text-transform: uppercase; font-size: 1.69em; background-color: inherit; box-sizing: border-box; line-height: 30px; letter-spacing: -0.6px; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; }
-              img { z-index: 99; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; position: absolute; left: 0; width: 100%; }            
-              p{ color: #f4f3f2; padding: 20% 18% 19.2%; font-size: 2.4em; line-height: 44px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+              img { z-index: 99; -webkit-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s; position: absolute; left: 0; top:0; width: 100%; }            
+              &:before{ content: ''; display: inline-block; vertical-align: middle; min-height: 505px; margin-right: -4px; }
+              p{ color: #f4f3f2; padding: 20% 18% 19.2%; font-size: 2.4em; display: inline-block; vertical-align: middle; line-height: 44px; -webkit-transition: all 0.3s; transition: all 0.3s; }
               &:first-child{ background-color: #8b9178; }
               &:nth-child(2) {
-                    position: absolute; width: 100%; left: 0; text-align: center; line-height: 0; top: 50%;
-                    span { top: calc(~"50% - 98px"); z-index: 1000; font-size: 10em; font-family: "arquitecta_blackblack"; color: #002f17; }
+                position: absolute; width: 100%; left: 0; text-align: center; line-height: 0; top: -50%;
+                span { top: calc(~"50% - 98px"); z-index: 1000; font-size: 10em; font-family: "arquitecta_blackblack"; color: #002f17; }
               }
               &:last-child { background: #a5a095; }
               &:hover  {
@@ -638,13 +644,11 @@ main{
               &:before{
                 content:''; display: inline-block; vertical-align: middle; height: 100%;
               }
-              &:after{ &:extend(main.internal > nav a:first-child:before); margin: 0 !important; }
+              &:after{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-right: 18px solid #E0DED1; border-bottom: 13px solid transparent; display: inline-block; vertical-align: middle; margin: 12px 25px 12px -43px; z-index: 9; position: relative; margin: 0 !important; }
               &:first-child{ left: -25px; }
               &:last-child{
                 right: -25px;
-                &:after{
-                  &:extend(main.internal > nav a:last-child:before); margin: 0 !important;
-                }
+                &:after{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-left: 18px solid #E0DED1; border-bottom: 13px solid transparent; display: inline-block; vertical-align: middle; margin: 12px -189px 12px 25px; z-index: 9; position: relative; margin: 0 !important; }
               }
             }
           }
@@ -729,6 +733,52 @@ main{
               aside{ 
                 padding-top: 4.3em; position: relative; text-align: center;
                 > div{
+                  text-align: center; padding: 1em 0 1em; margin:0.7em 0 2.8em 0;
+                  > span{ 
+                    background: #737D6B; border-radius: 50px; color: #ebe7db; display: inline-block; width: 60px; height: 60px; margin: 2.6em 0 0.6em;
+                    &:before{ content:''; height: 100%; display: inline-block; vertical-align: middle; }
+                    i{ font-size: 2em; vertical-align: middle; }
+                  }
+                  > p{ 
+                    font-size: 1.5em; text-transform: uppercase; padding: 0.3em 1.2em 0; line-height: 1em; letter-spacing: -0.02em; color: #929377; 
+                    small{ &:extend(main.internal#como-investir section.passos article.passo-01 aside > div > p small); }
+                  }
+                  &:first-child{
+                    span{ 
+                      background: #737D6B; border-radius: 50px; position: absolute; right: 36%; width: 60px; height: 60px; margin: -3.6em 0 0.6em; opacity: 0.7; 
+                      &:first-child{ background: #B7B598; left: 35%; opacity:1; }
+                    }
+                  }
+                  &:last-child{
+                    span{ 
+                      background: #737D6B; border-radius: 50px; position: absolute; width: 70px; height: 70px; margin: -4em 0 0.6em; left: calc(~"50% - 35px");
+                      i{
+                        background: url('../images/como-investir/ico-tree.png') center center no-repeat; background-size: 85%; width: 100%; height: 100%; display: inline-block; vertical-align: middle; }
+                    }
+                  }
+                  &.newcontent{
+                    margin-top: -1.8em;
+                    p{
+                      small{ padding-bottom: .3em; }
+                    }
+                  }
+                }
+                > span{ content: ''; border-top: 26px solid #4d5347; border-left: 18px solid transparent; border-right: 18px solid transparent; display: inline-block; left: calc(~"50% - 18px"); margin-bottom: 2.8em; }
+              }
+            }
+            &.passo-04{
+              > dl{
+                dd{
+                  p{
+                    padding-right: 1.1em;
+                    strong{ padding-right: 4.1em; }
+                  }
+                }
+              }
+              aside{ 
+                padding-top: 4.3em; position: relative; text-align: center;
+                > p{ text-transform: uppercase; font-size: 1.45em; text-align: center; line-height: 1.2em; }
+                > div{
                   text-align: center; padding: 1em 0 1em; margin:0.7em 0 1.8em 0;
                   > span{ 
                     background: #737D6B; border-radius: 50px; color: #ebe7db; display: inline-block; width: 60px; height: 60px; margin: 2.6em 0 0.6em;
@@ -754,46 +804,6 @@ main{
                   }
                 }
                 > span{ content: ''; border-top: 26px solid #4d5347; border-left: 18px solid transparent; border-right: 18px solid transparent; display: inline-block; left: calc(~"50% - 18px"); margin-bottom: 2.8em; }
-              }
-            }
-            &.passo-04{
-              > dl{
-                dd{
-                  p{
-                    padding-right: 1.1em;
-                    strong{ padding-right: 4.1em; }
-                  }
-                }
-              }
-              aside{ 
-                padding-top: 2em; 
-                > p{ text-transform: uppercase; font-size: 1.45em; text-align: center; line-height: 1.2em; }
-                > div{
-                  text-align: center; padding: 1em 0.5em 3em;
-                  .content-info-01, .content-info-02{ 
-                    display: none; background: #eae8dc; position: absolute; top: 0; left: 0; width: calc(~"100% + 4.1em"); height: 100%; margin: 0 -2em; padding: 4.4em 6.8em; box-sizing: border-box; z-index: 9;
-                    > a{ position: absolute; right: 0.5em; top: 0.5em; font-size: 1.4em;
-                      i{ color:#4b5145; }
-                    }
-                    p{ &:extend(main.internal#como-investir section.passos article.passo-01 aside > div > p); font-size: 1.8em; padding: 0; text-align: left; .f-weight-bold; letter-spacing: -0.03em; line-height: 0.9em; }
-                    dl{
-                      text-align: left; margin: 1.6em 0;
-                      dt{ &:extend(main.internal#como-investir section.passos article.passo-01 aside > div > p); padding:0; }
-                      dd{ &:extend(main.internal#como-investir section.passos article.passo-01 aside > div > p small); font-size: 1.4em; line-height: 1.12em; }
-                    }
-                  }
-                  > span{ 
-                    &:extend(main.internal#como-investir section.passos article.passo-01 aside > div > span);
-                    &:first-child{ margin-top: 1em; }
-                    &:before{ content:''; height: 100%; display: inline-block; vertical-align: middle; }
-                    i{ font-size: 2.2em; vertical-align: middle;  font-style: normal; .f-weight-bold; }
-                  }
-                  > p{ 
-                    font-size: 1.5em; text-transform: uppercase; padding: 0 0.4em; line-height: 1em; letter-spacing: -0.02em; color: #929377; 
-                    small{ font-size: 1.1em; text-transform: initial; display: block; margin: 0.2em 0; line-height: 0.95em; .f-weight-light; color: #50524d; }
-                    a{ font-size: 1em; text-transform: initial; color: #003219; }
-                  }
-                }
               }
             }
             &.passo-05{
@@ -836,7 +846,7 @@ main{
           text-align: center; width: 103%; left: -1.5%;
           h2{ .transit; text-transform: uppercase; font-size: 4em; line-height: 0.5em; color: #003118; padding:0 0.7em 0.7em; line-height: 0.9em; }
           dl{ 
-            box-sizing: border-box; display: inline-block; vertical-align: top; font-size: 1em;  width: 22.9%;  margin: 0 0.5em 1em; .transit;
+            box-sizing: border-box; display: inline-block; vertical-align: top; font-size: 1em;  width: 22.9%;  margin: 0 0.5em 1em; .transit; min-height: 294px;
             &:nth-child(2){
               background:#4C5246; color:#b9b592;
             }
@@ -926,6 +936,25 @@ main{
               &.empty{ background: none; }
               &:before{ content: ''; height: 100%; width: 0; display: inline-block; vertical-align: middle; }
               p{ display: inline-block; vertical-align: middle; font-size: 1.25em; }
+              a{ color:#dfe0d2; }
+            }
+          }
+          &.downloads{
+            padding-bottom: 50px; margin-top:60px;
+            ul{
+              li{
+                height: 15em; width: 15em; border-radius: 10em; margin: 0 1.3em 1.3em;
+                &:nth-child(2){ background: #4C5246; }
+                &:nth-child(3){ background: #B6B597; }
+                &:nth-child(4){ background: #949576; }
+                &:nth-child(5){ background: #AEA498; }
+                &:nth-child(6){ background: #003219; }
+                &:nth-child(7){ background: #4C5246; }
+                a{ 
+                  padding:.6em; .transit;
+                  &:hover{ color:#fff; }
+                }
+              }
             }
           }
           > p{
@@ -954,19 +983,19 @@ main{
       }
       a {
         .transit; text-transform: uppercase; margin: 0 14px; color: #475047; display: inline-block; padding-top: 16px; font-family: "arquitecta_boldbold"; font-size: 1.1em; line-height: 20px;
-        p{ display: inline-block; vertical-align: middle; .f-weight-bold; }
+        p{ display: inline-block; vertical-align: middle; .f-weight-bold; padding: 0 10px; }
         &:first-child {
-          float: left; width: 140px; text-align: left; margin: 0; color: #475047; padding:0 0 0 60px;
-          &:before{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-right: 18px solid #E0DED1; border-bottom: 13px solid transparent; display: inline-block; vertical-align: middle; margin: 12px 25px 12px -43px; z-index: 9; position: relative; }
-          &:after{ content:''; width: 50px; height: 50px; background: #aea498; position: absolute; top: 0; left: 0; }
+          float: left; text-align: left; margin: 0; color: #475047; padding:0;
+          &:before{ content:''; width: 50px; height: 50px; background: #aea498; display: inline-block; vertical-align: middle; }
+          &:after{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-right: 18px solid #E0DED1; border-bottom: 13px solid transparent; position: absolute; left: 14px; top: 12px; }
           &:hover{ 
             &:before{ border-right-color: #475047; }
           }
         }
         &:last-child {
-          float: right; width: 140px; text-align: left; margin: 0; color: #475047; padding:0 60px 0 0; text-align: right;
-          &:before{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-left: 18px solid #E0DED1; border-bottom: 13px solid transparent; display: inline-block; vertical-align: middle; margin: 12px -189px 12px 25px; z-index: 9; position: relative; }
-          &:after{ content:''; width: 50px; height: 50px; background: #aea498; position: absolute; top: 0; right: 0; }
+          float: right; text-align: left; margin: 0; color: #475047; padding:0; text-align: right;
+          &:before{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-left: 18px solid #E0DED1; border-bottom: 13px solid transparent; z-index: 9; position: absolute; right: 14px; top: 12px; }
+          &:after{ content:''; width: 50px; height: 50px; background: #aea498; display: inline-block; vertical-align: middle; }
           &:hover{ 
             &:before{ border-left-color: #475047; }
           }

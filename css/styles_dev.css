@@ -195,6 +195,7 @@ main header nav a:hover {
 main header nav a.s_fullscreen {
   width: 24px;
   margin: 0 0 -3px 35px;
+  display: none;
 }
 main header nav a.s_fullscreen img {
   width: 100%;
@@ -236,10 +237,12 @@ main header nav.s_others a {
   margin: 0 5px 2px 15px;
 }
 main header nav.s_language {
-  right: 330px;
+  /*right: 330px;*/
+  right: 267px;
 }
 main header nav.s_menu {
-  right: 68px;
+  /*right: 68px;*/
+  right: 4px;
 }
 main header nav.s_navg {
   right: 70px;
@@ -285,12 +288,13 @@ main section.carrossel > div dl dt h2 {
   z-index: 2;
   text-transform: uppercase;
   font-size: 2.0625em;
-  color: #475047;
+  color: #fff;
   margin: 3% 10%;
   padding: 0.5% 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
+  text-shadow: 0 0 2px #475047;
 }
 main section.carrossel > div dl dt h2:before {
   position: absolute;
@@ -982,6 +986,21 @@ main footer nav a {
 main footer nav a:hover {
   color: #FFF;
 }
+main footer > p {
+  background: #fff;
+  padding: 1em;
+  text-align: center;
+}
+main footer > p img {
+  width: 100px;
+  display: block;
+  margin: 0 auto .5em;
+}
+main footer > p span {
+  display: block;
+  width: 38%;
+  margin: 0 auto;
+}
 main.inicial {
   height: 100%;
   text-align: center;
@@ -1045,10 +1064,10 @@ main.internal header nav.s_navg {
   top: 82px;
 }
 main.internal header nav.s_menu {
-  right: 69px;
+  /*right: 69px;*/
 }
 main.internal header nav.s_language {
-  right: 330px;
+  /*right: 330px;*/
 }
 main.internal header h1 {
   /*float: left; padding-top: 0; position: absolute;*/
@@ -1060,7 +1079,6 @@ main.internal header h1 a {
 }
 main.internal header ul {
   right: -5px;
-  top: 15px;
 }
 main.internal#ser-brain section.featured,
 main.internal#como-investir section.featured {
@@ -1142,6 +1160,7 @@ main.internal#ser-brain section.diferencial ul li {
   display: inline-block;
   position: relative;
   margin-left: -3px;
+  min-height: 505px;
 }
 main.internal#ser-brain section.diferencial ul li h4 {
   color: #eae9de;
@@ -1168,12 +1187,22 @@ main.internal#ser-brain section.diferencial ul li img {
   transition: opacity 0.6s;
   position: absolute;
   left: 0;
+  top: 0;
   width: 100%;
+}
+main.internal#ser-brain section.diferencial ul li:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 505px;
+  margin-right: -4px;
 }
 main.internal#ser-brain section.diferencial ul li p {
   color: #f4f3f2;
   padding: 20% 18% 19.2%;
   font-size: 2.4em;
+  display: inline-block;
+  vertical-align: middle;
   line-height: 44px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1187,7 +1216,7 @@ main.internal#ser-brain section.diferencial ul li:nth-child(2) {
   left: 0;
   text-align: center;
   line-height: 0;
-  top: 50%;
+  top: -50%;
 }
 main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
   top: calc(50% - 98px);
@@ -1493,6 +1522,18 @@ main.internal#como-investir section.passos > nav a:before {
   height: 100%;
 }
 main.internal#como-investir section.passos > nav a:after {
+  content: '';
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+  border: 0;
+  border-top: 13px solid transparent;
+  border-right: 18px solid #E0DED1;
+  border-bottom: 13px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 12px 25px 12px -43px;
+  z-index: 9;
+  position: relative;
   margin: 0 !important;
 }
 main.internal#como-investir section.passos > nav a:first-child {
@@ -1502,6 +1543,18 @@ main.internal#como-investir section.passos > nav a:last-child {
   right: -25px;
 }
 main.internal#como-investir section.passos > nav a:last-child:after {
+  content: '';
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+  border: 0;
+  border-top: 13px solid transparent;
+  border-left: 18px solid #E0DED1;
+  border-bottom: 13px solid transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 12px -189px 12px 25px;
+  z-index: 9;
+  position: relative;
   margin: 0 !important;
 }
 main.internal#como-investir section.passos article {
@@ -1608,8 +1661,7 @@ main.internal#como-investir section.passos article.passo-01 aside > div {
   text-align: center;
   padding: 1em 0.5em 3em;
 }
-main.internal#como-investir section.passos article.passo-01 aside > div > span,
-main.internal#como-investir section.passos article.passo-04 aside > div > span {
+main.internal#como-investir section.passos article.passo-01 aside > div > span {
   background: #727d6c;
   border-radius: 26px;
   color: #ebe7db;
@@ -1632,11 +1684,7 @@ main.internal#como-investir section.passos article.passo-01 aside > div > span i
   vertical-align: middle;
 }
 main.internal#como-investir section.passos article.passo-01 aside > div > p,
-main.internal#como-investir section.passos article.passo-02 aside ul li p,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 p,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 p,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 dl dt,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 dl dt {
+main.internal#como-investir section.passos article.passo-02 aside ul li p {
   font-size: 1.5em;
   text-transform: uppercase;
   padding: 0 1.2em;
@@ -1647,8 +1695,7 @@ main.internal#como-investir section.passos article.passo-04 aside > div .content
 main.internal#como-investir section.passos article.passo-01 aside > div > p small,
 main.internal#como-investir section.passos article.passo-02 aside ul li p small,
 main.internal#como-investir section.passos article.passo-03 aside > div > p small,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 dl dd,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 dl dd {
+main.internal#como-investir section.passos article.passo-04 aside > div > p small {
   font-size: 1.1em;
   text-transform: initial;
   display: block;
@@ -1707,7 +1754,7 @@ main.internal#como-investir section.passos article.passo-03 aside {
 main.internal#como-investir section.passos article.passo-03 aside > div {
   text-align: center;
   padding: 1em 0 1em;
-  margin: 0.7em 0 1.8em 0;
+  margin: 0.7em 0 2.8em 0;
 }
 main.internal#como-investir section.passos article.passo-03 aside > div > span {
   background: #737D6B;
@@ -1768,6 +1815,12 @@ main.internal#como-investir section.passos article.passo-03 aside > div:last-chi
   display: inline-block;
   vertical-align: middle;
 }
+main.internal#como-investir section.passos article.passo-03 aside > div.newcontent {
+  margin-top: -1.8em;
+}
+main.internal#como-investir section.passos article.passo-03 aside > div.newcontent p small {
+  padding-bottom: .3em;
+}
 main.internal#como-investir section.passos article.passo-03 aside > span {
   content: '';
   border-top: 26px solid #4d5347;
@@ -1784,7 +1837,9 @@ main.internal#como-investir section.passos article.passo-04 > dl dd p strong {
   padding-right: 4.1em;
 }
 main.internal#como-investir section.passos article.passo-04 aside {
-  padding-top: 2em;
+  padding-top: 4.3em;
+  position: relative;
+  text-align: center;
 }
 main.internal#como-investir section.passos article.passo-04 aside > p {
   text-transform: uppercase;
@@ -1794,59 +1849,17 @@ main.internal#como-investir section.passos article.passo-04 aside > p {
 }
 main.internal#como-investir section.passos article.passo-04 aside > div {
   text-align: center;
-  padding: 1em 0.5em 3em;
+  padding: 1em 0 1em;
+  margin: 0.7em 0 1.8em 0;
 }
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 {
-  display: none;
-  background: #eae8dc;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% + 4.1em);
-  height: 100%;
-  margin: 0 -2em;
-  padding: 4.4em 6.8em;
-  box-sizing: border-box;
-  z-index: 9;
-}
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 > a,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 > a {
-  position: absolute;
-  right: 0.5em;
-  top: 0.5em;
-  font-size: 1.4em;
-}
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 > a i,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 > a i {
-  color: #4b5145;
-}
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 p,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 p {
-  font-size: 1.8em;
-  padding: 0;
-  text-align: left;
-  font-family: 'arquitecta_boldbold';
-  font-weight: normal;
-  letter-spacing: -0.03em;
-  line-height: 0.9em;
-}
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 dl,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 dl {
-  text-align: left;
-  margin: 1.6em 0;
-}
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 dl dt,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 dl dt {
-  padding: 0;
-}
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-01 dl dd,
-main.internal#como-investir section.passos article.passo-04 aside > div .content-info-02 dl dd {
-  font-size: 1.4em;
-  line-height: 1.12em;
-}
-main.internal#como-investir section.passos article.passo-04 aside > div > span:first-child {
-  margin-top: 1em;
+main.internal#como-investir section.passos article.passo-04 aside > div > span {
+  background: #737D6B;
+  border-radius: 50px;
+  color: #ebe7db;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 2.6em 0 0.6em;
 }
 main.internal#como-investir section.passos article.passo-04 aside > div > span:before {
   content: '';
@@ -1855,33 +1868,57 @@ main.internal#como-investir section.passos article.passo-04 aside > div > span:b
   vertical-align: middle;
 }
 main.internal#como-investir section.passos article.passo-04 aside > div > span i {
-  font-size: 2.2em;
+  font-size: 2em;
   vertical-align: middle;
-  font-style: normal;
-  font-family: 'arquitecta_boldbold';
-  font-weight: normal;
 }
 main.internal#como-investir section.passos article.passo-04 aside > div > p {
   font-size: 1.5em;
   text-transform: uppercase;
-  padding: 0 0.4em;
+  padding: 0.3em 1.2em 0;
   line-height: 1em;
   letter-spacing: -0.02em;
   color: #929377;
 }
-main.internal#como-investir section.passos article.passo-04 aside > div > p small {
-  font-size: 1.1em;
-  text-transform: initial;
-  display: block;
-  margin: 0.2em 0;
-  line-height: 0.95em;
-  font-family: 'arquitecta_lightlight';
-  color: #50524d;
+main.internal#como-investir section.passos article.passo-04 aside > div:first-child span {
+  background: #737D6B;
+  border-radius: 50px;
+  position: absolute;
+  right: 36%;
+  width: 60px;
+  height: 60px;
+  margin: -3.6em 0 0.6em;
+  opacity: 0.7;
 }
-main.internal#como-investir section.passos article.passo-04 aside > div > p a {
-  font-size: 1em;
-  text-transform: initial;
-  color: #003219;
+main.internal#como-investir section.passos article.passo-04 aside > div:first-child span:first-child {
+  background: #B7B598;
+  left: 35%;
+  opacity: 1;
+}
+main.internal#como-investir section.passos article.passo-04 aside > div:last-child span {
+  background: #737D6B;
+  border-radius: 50px;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin: -4em 0 0.6em;
+  left: calc(50% - 35px);
+}
+main.internal#como-investir section.passos article.passo-04 aside > div:last-child span i {
+  background: url('../images/como-investir/ico-tree.png') center center no-repeat;
+  background-size: 85%;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+main.internal#como-investir section.passos article.passo-04 aside > span {
+  content: '';
+  border-top: 26px solid #4d5347;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  display: inline-block;
+  left: calc(50% - 18px);
+  margin-bottom: 2.8em;
 }
 main.internal#como-investir section.passos article.passo-05 dl dd h3 {
   font-size: 3.5em;
@@ -1992,6 +2029,7 @@ main.internal#como-investir section.porque dl {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+  min-height: 294px;
 }
 main.internal#como-investir section.porque dl:nth-child(2) {
   background: #4C5246;
@@ -2208,6 +2246,46 @@ main.internal#time section.ser-brainvest ul li p {
   vertical-align: middle;
   font-size: 1.25em;
 }
+main.internal#time section.ser-brainvest ul li a {
+  color: #dfe0d2;
+}
+main.internal#time section.ser-brainvest.downloads {
+  padding-bottom: 50px;
+  margin-top: 60px;
+}
+main.internal#time section.ser-brainvest.downloads ul li {
+  height: 15em;
+  width: 15em;
+  border-radius: 10em;
+  margin: 0 1.3em 1.3em;
+}
+main.internal#time section.ser-brainvest.downloads ul li:nth-child(2) {
+  background: #4C5246;
+}
+main.internal#time section.ser-brainvest.downloads ul li:nth-child(3) {
+  background: #B6B597;
+}
+main.internal#time section.ser-brainvest.downloads ul li:nth-child(4) {
+  background: #949576;
+}
+main.internal#time section.ser-brainvest.downloads ul li:nth-child(5) {
+  background: #AEA498;
+}
+main.internal#time section.ser-brainvest.downloads ul li:nth-child(6) {
+  background: #003219;
+}
+main.internal#time section.ser-brainvest.downloads ul li:nth-child(7) {
+  background: #4C5246;
+}
+main.internal#time section.ser-brainvest.downloads ul li a {
+  padding: .6em;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+main.internal#time section.ser-brainvest.downloads ul li a:hover {
+  color: #fff;
+}
 main.internal#time section.ser-brainvest > p {
   font-family: 'arquitecta_lightlight';
   font-size: 2.5em;
@@ -2271,17 +2349,24 @@ main.internal > nav a p {
   vertical-align: middle;
   font-family: 'arquitecta_boldbold';
   font-weight: normal;
+  padding: 0 10px;
 }
 main.internal > nav a:first-child {
   float: left;
-  width: 140px;
   text-align: left;
   margin: 0;
   color: #475047;
-  padding: 0 0 0 60px;
+  padding: 0;
 }
-main.internal > nav a:first-child:before,
-main.internal#como-investir section.passos > nav a:after {
+main.internal > nav a:first-child:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background: #aea498;
+  display: inline-block;
+  vertical-align: middle;
+}
+main.internal > nav a:first-child:after {
   content: '';
   -webkit-transition: border 0.3s;
   transition: border 0.3s;
@@ -2289,35 +2374,22 @@ main.internal#como-investir section.passos > nav a:after {
   border-top: 13px solid transparent;
   border-right: 18px solid #E0DED1;
   border-bottom: 13px solid transparent;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 12px 25px 12px -43px;
-  z-index: 9;
-  position: relative;
-}
-main.internal > nav a:first-child:after {
-  content: '';
-  width: 50px;
-  height: 50px;
-  background: #aea498;
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 14px;
+  top: 12px;
 }
 main.internal > nav a:first-child:hover:before {
   border-right-color: #475047;
 }
 main.internal > nav a:last-child {
   float: right;
-  width: 140px;
   text-align: left;
   margin: 0;
   color: #475047;
-  padding: 0 60px 0 0;
+  padding: 0;
   text-align: right;
 }
-main.internal > nav a:last-child:before,
-main.internal#como-investir section.passos > nav a:last-child:after {
+main.internal > nav a:last-child:before {
   content: '';
   -webkit-transition: border 0.3s;
   transition: border 0.3s;
@@ -2325,20 +2397,18 @@ main.internal#como-investir section.passos > nav a:last-child:after {
   border-top: 13px solid transparent;
   border-left: 18px solid #E0DED1;
   border-bottom: 13px solid transparent;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 12px -189px 12px 25px;
   z-index: 9;
-  position: relative;
+  position: absolute;
+  right: 14px;
+  top: 12px;
 }
 main.internal > nav a:last-child:after {
   content: '';
   width: 50px;
   height: 50px;
   background: #aea498;
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 main.internal > nav a:last-child:hover:before {
   border-left-color: #475047;
@@ -2483,31 +2553,21 @@ main.inicial ul li a:hover {
     *******************************/
   }
   main header:not(.minus) {
-    /*padding:37px 0; */
     width: 100%;
     position: relative;
   }
   main header:not(.minus) ul,
   main header:not(.minus) nav {
     float: none;
-    text-align: center;
     padding-bottom: 20px;
   }
   main header:not(.minus) ul {
-    /**/
     width: auto;
     left: 10px;
     right: initial;
   }
-  main header:not(.minus) ul li {
-    /*margin: 0 12px;*/
-  }
   main header:not(.minus) nav {
-    margin-right: 0 !important;
-    text-align: center !important;
-  }
-  main header:not(.minus) nav a {
-    /*margin:0 !important; width: 32%; vertical-align: top;*/
+    /*margin-right: 0 !important; text-align: center !important;*/
   }
   main header:not(.minus) nav a.s_fullscreen {
     display: none;
@@ -2515,19 +2575,14 @@ main.inicial ul li a:hover {
   main header:not(.minus) nav:before {
     margin: 0 auto 10px !important;
   }
-  main header:not(.minus) nav.s_language,
+  main header:not(.minus) nav.s_language {
+    right: 267px;
+  }
   main header:not(.minus) nav.s_menu {
-    position: relative;
-    right: initial;
-    top: -10px;
-    padding-bottom: 0;
+    right: 4px;
   }
-  main header:not(.minus) nav.s_language a,
-  main header:not(.minus) nav.s_menu a {
-    width: 100%;
-  }
-  main header:not(.minus) h1 {
-    /*padding-top: 17px;*/
+  main header:not(.minus) nav.s_navg {
+    right: 70px;
   }
   main section.carrossel {
     margin-top: 0;
@@ -2566,6 +2621,9 @@ main.inicial ul li a:hover {
     display: inline-block;
     margin: 0 10px;
   }
+  main footer > p {
+    margin-bottom: -33px;
+  }
   main.inicial ul li a {
     display: inline-block !important;
   }
@@ -2579,6 +2637,9 @@ main.inicial ul li a:hover {
     position: relative !important;
     left: 0;
     width: 100%;
+  }
+  main.internal#ser-brain section.diferencial ul li:before {
+    display: none;
   }
   main.internal#ser-brain section.diferencial ul li h4 {
     min-height: 134px;
@@ -2658,7 +2719,20 @@ main.inicial ul li a:hover {
     top: initial;
   }
   main header:not(.minus) nav a {
-    margin: 0 20px;
+    /*margin:0 20px;*/
+  }
+  main header:not(.minus) nav.s_language,
+  main header:not(.minus) nav.s_menu {
+    position: absolute;
+    right: initial;
+    top: 75px;
+    left: 0;
+    background: #fff;
+    padding-bottom: 0;
+  }
+  main header:not(.minus) nav.s_language a,
+  main header:not(.minus) nav.s_menu a {
+    width: 100%;
   }
   main header:not(.minus) h1 {
     padding-top: 7px;
@@ -2695,6 +2769,9 @@ main.inicial ul li a:hover {
   }
   main section.carrossel > div dl dt:before {
     opacity: 0;
+  }
+  main footer > p span {
+    width: 50%;
   }
   main.internal#como-investir section.passos > nav {
     display: none !important;
@@ -2735,6 +2812,7 @@ main.inicial ul li a:hover {
   }
   main.internal#como-investir section.porque dl {
     width: 80%;
+    min-height: initial;
   }
   main.internal#time section.quem-e > div.team dl {
     font-size: 125%;
@@ -2785,7 +2863,7 @@ main.inicial ul li a:hover {
     text-align: center !important;
   }
   main.internal header nav a {
-    margin: 0 19px !important;
+    /*margin:0 19px !important;*/
   }
   main.internal header nav:before {
     margin: 0 auto 10px !important;
@@ -3054,6 +3132,9 @@ main.inicial ul li a:hover {
   main footer {
     margin-top: 0;
   }
+  main footer h2 {
+    width: 67%;
+  }
   main.inicial img {
     width: 270px;
     top: calc(50% - 93px);
@@ -3127,6 +3208,7 @@ main.inicial ul li a:hover {
     font-size: 130% !important;
     font-weight: normal;
     letter-spacing: -0.01em;
+    display: inline-block;
   }
   main.internal#pilares section.pilares-info article h2 {
     font-size: 3.19em;
@@ -3201,6 +3283,19 @@ main.inicial ul li a:hover {
     display: block;
     margin-bottom: 10px;
   }
+  main header nav:not(.minus) h1 {
+    margin-top: -10px;
+  }
+  main header nav:not(.minus).s_language,
+  main header nav:not(.minus).s_menu {
+    top: 115px;
+  }
+  main header nav:not(.minus) nav:not(.menu) a {
+    margin: 0;
+  }
+  main header nav.menu a {
+    margin: 0 20px 10px;
+  }
   main header h1 a,
   main footer h2 {
     /*width: 80% !important;*/
@@ -3215,15 +3310,13 @@ main.inicial ul li a:hover {
     width: 90%;
     left: 5%;
   }
+  main footer > p span {
+    width: 90%;
+  }
   main.internal > nav a:first-child,
   main.internal > nav a:last-child {
-    width: 91px;
     font-size: 100%;
     line-height: 16px;
-  }
-  main.internal > nav a:last-child:before,
-  main.internal#como-investir section.passos > nav a:last-child:after {
-    margin: 12px -136px 12px 25px;
   }
   main.internal#como-investir section.passos article dl dd h3 {
     font-size: 2.5em !important;
@@ -3248,19 +3341,5 @@ main.inicial ul li a:hover {
   }
   main.internal#time section.quem-e > div.team dl dd img {
     width: 50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  main header nav.menu a {
-    margin: 0 20px 10px;
-  }
-  main header nav.menu a.s_menu {
-    /*margin-bottom: 0;*/
-  }
-  main header:not(.minus) h1 {
-    margin-top: -10px;
-  }
-  main header:not(.minus) nav:not(.menu) a {
-    margin: 0;
   }
 }

@@ -31,7 +31,7 @@ var pt_br = {
          position: 1,
          modified: "2016/04/12 18:11:09",
          title: "O que é ser brain?",
-         resume: "Somos um Multi Family Office 100% independentes. Temos um único foco: você.",
+         resume: "Somos um Multi-Family Office 100% independentes. Temos um único foco: você.",
          image: [{
             src : "src", 
             alt : "alt"
