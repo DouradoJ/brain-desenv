@@ -3,6 +3,7 @@ $(function(){
 		var brainvest = {
 	        init: function() {
 	        this.firstaccess();
+	        //this.loadJson();
             this.menu();
             this.setDate();
             this.toTop('.toTop');
@@ -13,14 +14,37 @@ $(function(){
             this.rszWindow();
 	        },
 	        firstaccess : function(){
-	        	$('main.inicial ul li a').click(function(e){
-							$.cookie("language", $(this).attr('href').replace('.html',''), {expires:15, path:"/"});
+	        	var _host = (location.hostname.indexOf('www') > -1) ? location.hostname+'/' : location.hostname+'/brainvest/' ;
+	        	var _path = location.pathname.substring(location.pathname.lastIndexOf('/'));
+
+	        	//Click Event
+	        	$('main.inicial ul li a, main header nav.s_language a').click(function(e){
+					$.cookie("language", $(this).attr('lang'), {expires:15, path:"/"});
+		        	window.location.href = 'http://'+_host+$.cookie('language') +_path;
 	        	});
-	        	if( $('main.inicial').length > 0 ){
-		        	if( $.cookie('language') != undefined && $.cookie('language') != "undefined"){
-		        		window.location.href = $.cookie('language')+'.html';
-		        	}
-	        	}
+				//Redirect Event
+		        if( $.cookie('language') != undefined && $.cookie('language') != "undefined" && $('main.inicial').length > 0){
+		        	//console.log('asdas');
+		        	window.location.href = 'http://'+_host+$.cookie('language') +'/';
+			        //window.location.href = 'http://'+_host+'pt_br/';
+					$.cookie("language", 'pt_br', {expires:15, path:"/"});
+		        }
+	        },
+	        loadJson : function () {
+				$.ajax({
+					url : 'js/'+$.cookie("language")+'.js',
+					dataType : 'json',
+					success : function(json) { 
+						console.log('Foi ' + json[0].home.highlight);
+						brainvest.loadJsonContent();
+					},
+					error : function(r) { 
+						console.log('Deu Erro');
+					}
+				});
+	        },
+	        loadJsonContent : function (argument) {
+	        	
 	        },
 	        fullscreen : function(){
 	            if( $.cookie('fullscreen') == "true" ){
@@ -28,15 +52,32 @@ $(function(){
 	            }else{
 	            	$('html').removeClass('full');
 	            }
-				$("section.carrossel > div").data('owlCarousel').destroy();
-				setTimeout(function(){brainvest.carrossel();},500);
+	            if( $("section.carrossel > div").lenght > 0 ){
+					$("section.carrossel > div").data('owlCarousel').destroy();
+					setTimeout(function(){brainvest.carrossel();},500);
+				}
 	        },
 	        setDate : function(){
-	        	$('main section.comoInvestir ul li span.as').html( 'a partir de '+ brainvest.currDate() );
+	        	var _lng = $('html').attr('lang');
+				switch (_lng)
+				{
+                 case "pt_pt":
+             		$('main section.comoInvestir ul li span.as').html( 'dados de '+ brainvest.currDate() );
+                    break;
+                 case "en":
+             		$('main section.comoInvestir ul li span.as').html( 'data from '+ brainvest.currDate() );
+                    break;
+                 case "fr":
+             		$('main section.comoInvestir ul li span.as').html( 'informations de  '+ brainvest.currDate() );
+                    break;
+                 default:
+             		$('main section.comoInvestir ul li span.as').html( 'from '+ brainvest.currDate() );
+                    break;
+             }
 	        },
 	        menu: function() {
         		var _opnd, _c;
-	        	$('main header nav.menu a').unbind('click').click(function(){
+	        	$('main header nav.menu a').unbind('click').unbind('hover').click(function(){
 	        		//To Full Screen Mode
 	        		if($(this).hasClass('s_fullscreen')){
 	        			if( $('html').hasClass('full') ){
@@ -46,27 +87,55 @@ $(function(){
 	        				$('html').addClass('full');
 	        				$.cookie("fullscreen", true, {expires:1, path:"/"});
 	        			}
-								$("section.carrossel > div").data('owlCarousel').destroy();
-								setTimeout(function(){brainvest.carrossel();},500);
+						$("section.carrossel > div").data('owlCarousel').destroy();
+						setTimeout(function(){brainvest.carrossel();},500);
+	        		}
+	        		// less than 600 pixels width
+	        		if( $(window).width() <= 600 ){
+	        			$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg, main header nav.s_acesso').hide();
+	        			
+	        			if( $(this).hasClass('active') ){
+			        		$(this).removeClass('active');
+			        		return;
+		        		}else{
+			        		$('main header nav a').removeClass('active');
+			        		$(this).addClass('active');
+							$('main header nav.'+$(this).attr('data-menu')).show();
+		        		}
 	        		}
 	        	}).hover(
-	        		function(){
-	        			clearInterval(_c);
-	        			$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg').hide();
-	        			$('main header nav.'+$(this).attr('data-menu')).show();
+	        		function(){	        			
+	        			if( $(window).width() > 600 ){
+		        			clearInterval(_c);
+		        			$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg, main header nav.s_acesso').hide();
+			        		$('main header nav a').removeClass('active');
+		        			$('main header nav.'+$(this).attr('data-menu')).show();
+	        				$(this).addClass('active');
+        				}
 	        		},
 	        		function(){
-	        			_c = setInterval(function(){
-	        				$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg').hide();
-	        			}, 500);
+	        			if( $(window).width() > 600 ){
+		        			_c = setInterval(function(){
+				        		$('main header nav a').removeClass('active');
+		        				$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg, main header nav.s_acesso').hide();
+		        			}, 500);
+	        			}
 	        		}
 	        	);
 	        	$('main header nav').not('.menu').hover(
-	        		function(){ clearInterval(_c); },
+	        		function(){ 
+	        			$(this).find('a').hover(function(){$(this).addClass('active');},function(){$(this).removeClass('active');})
+	        			if( $(window).width() > 600 ){
+	        				clearInterval(_c);
+	        			}
+	        		},
 	        		function(){
-	        			_c = setInterval(function(){
-	        				$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg').hide();
-	        			}, 500);
+	        			if( $(window).width() > 600 ){
+		        			_c = setTimeout(function(){
+		        				$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg, main header nav.s_acesso').hide();
+								$('main header nav a').removeClass('active');
+		        			}, 500);
+	        			}
 	        		}
 	        	)
 	        },
@@ -74,14 +143,10 @@ $(function(){
 		        var offset = 1;
 		        var duration = 500;
 		        jQuery(window).scroll(function() {
-					if( !$('body main').attr('id') && $(window).width() > 1024 ){
+					if( !$('body main').attr('id') ){ //&& $(window).width() > 1024 
 						if (jQuery(this).scrollTop() > offset) {
 							$('body main').addClass('internal');
 						} else {
-							$('body main').removeClass('internal');
-						}
-					}else{
-						if( !$('body main').attr('id') ){
 							$('body main').removeClass('internal');
 						}
 					}
@@ -93,13 +158,14 @@ $(function(){
 		        })
 	        },
 	        carrossel: function() {
-					  var owl = $("section.carrossel > div"); 
-					  owl.owlCarousel({
-							slideSpeed : 1500,
-							paginationSpeed : 1000,
-							singleItem:true,
-							autoPlay:4000
-					  }); 
+				var owl = $("section.carrossel > div"); 
+				if(!owl.length) return -1;
+				owl.owlCarousel({
+					slideSpeed : 1500,
+					paginationSpeed : 1000,
+					singleItem:true,
+					autoPlay:4000
+				}); 
 	        },
 	        navgComoinvestir : function(p,b){
 	        	var _curr = p;
@@ -108,7 +174,7 @@ $(function(){
 	        		var els = $('main.internal#como-investir section.passos article');
 						els.hide();
 	        		var total = els.length;
-	        		var curr = els.parent().find('.passo-0'+p);
+	        		var curr = els.parent().find('#passo-0'+p);
 	        		if(total > 0  && _curr <= total){
 	        			curr.fadeIn('fast', function(){ 
 		        			( _curr == 1 ) ? $('main.internal#como-investir section.passos > nav a:first-child').hide() : $('main.internal#como-investir section.passos > nav a:first-child').show();
@@ -160,10 +226,14 @@ $(function(){
 	        rszWindow : function () {
 				$(window).resize(function() {
 					if ($(window).width() < 1024){
-						$('html').removeClass('full').find('main').removeClass('internal');
+						//$('html').removeClass('full').find('main').removeClass('internal');
+						//$('html main').removeClass('internal');
 					}else{
 						brainvest.fullscreen();
 					}
+		        	$('main header nav.s_menu, main header nav.s_language, main header nav.s_navg, main header nav.s_acesso').hide();
+					$('main header nav a').removeClass('active');
+					brainvest.menu();
 				});
 	        },
 	        currDate : function(){

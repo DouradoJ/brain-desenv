@@ -55,7 +55,7 @@ body {
   font-size: 100%;
 }
 body * {
-  font-family: 'arquitectaregular';
+  font-family: 'Arquitecta';
 }
 /*******************************
             GLOBAL
@@ -67,19 +67,19 @@ body * {
   font-family: 'BemboStd';
 }
 .f-bembo-semibold {
-  font-family: 'BemboStd-Semibold';
+  font-family: 'BemboSemibold';
 }
 .f-weight-book {
-  font-family: 'arquitectabook';
+  font-family: 'ArquitectaBook';
 }
 .f-weight-light {
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
 }
 .f-weight-regular {
-  font-family: 'arquitectaregular';
+  font-family: 'Arquitecta';
 }
 .f-weight-bold {
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
 }
 .lnks {
@@ -88,7 +88,7 @@ body * {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.lnks:hover {
+.lnks.active {
   color: #f6861f;
 }
 .transit {
@@ -170,7 +170,7 @@ main header ul li a {
   transition: all 0.3s;
   display: inline-block;
 }
-main header ul li a:hover {
+main header ul li a.active {
   color: #f6861f;
 }
 main header nav {
@@ -183,27 +183,34 @@ main header nav a {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
   margin: 0 0 0 40px;
   display: inline-block;
   font-size: 1.1em;
 }
-main header nav a:hover {
+main header nav a.active,
+main section.carrossel a:hover,
+main.internal#time > div a:hover {
   color: #f6861f;
 }
+main header nav a.s_fullscreen,
+main header nav a.s_fullscreen,
 main header nav a.s_fullscreen {
   width: 24px;
   margin: 0 0 -3px 35px;
   display: none;
 }
+main header nav a.s_fullscreen img,
+main header nav a.s_fullscreen img,
 main header nav a.s_fullscreen img {
   width: 100%;
 }
 main header nav.s_menu,
 main header nav.s_language,
 main header nav.s_navg,
-main header nav.s_others {
+main header nav.s_others,
+main header nav.s_acesso {
   display: none;
   position: absolute;
   z-index: 9;
@@ -218,6 +225,7 @@ main header nav.s_menu:before,
 main header nav.s_language:before,
 main header nav.s_navg:before,
 main header nav.s_others:before,
+main header nav.s_acesso:before,
 main section.passoAPasso > div dl dt:after,
 main.internal#como-investir section.passos article > dl dt:after {
   content: "";
@@ -232,7 +240,8 @@ main.internal#como-investir section.passos article > dl dt:after {
 main header nav.s_menu a,
 main header nav.s_language a,
 main header nav.s_navg a,
-main header nav.s_others a {
+main header nav.s_others a,
+main header nav.s_acesso a {
   display: block;
   margin: 0 5px 2px 15px;
 }
@@ -246,6 +255,9 @@ main header nav.s_menu {
 }
 main header nav.s_navg {
   right: 70px;
+}
+main header nav.s_acesso {
+  right: 95px;
 }
 main header h1 {
   padding: 47px 0 0 0;
@@ -288,13 +300,13 @@ main section.carrossel > div dl dt h2 {
   z-index: 2;
   text-transform: uppercase;
   font-size: 2.0625em;
-  color: #fff;
+  color: #475047;
   margin: 3% 10%;
   padding: 0.5% 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
-  text-shadow: 0 0 2px #475047;
+  text-shadow: 0 0 5px #fff;
 }
 main section.carrossel > div dl dt h2:before {
   position: absolute;
@@ -325,7 +337,7 @@ main section.carrossel > div div.owl-controls .owl-page.active span {
   background: #f6861f;
 }
 main section.carrossel p {
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
   color: #475047;
   font-size: 2.6875em;
   line-height: 1.18em;
@@ -345,20 +357,17 @@ main.internal#como-investir section.featured a:hover {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
   text-align: center;
   border: 3px solid #475047;
   padding: 6px;
   margin: 43px auto;
-  width: 135px;
+  width: 145px;
   font-size: 1.0625em;
   box-sizing: border-box;
 }
-main section.carrossel a:hover,
-main.internal#ser-brain section.featured a:hover,
-main.internal#time > div a:hover,
-main.internal#como-investir section.featured a:hover {
+main section.carrossel a.active {
   color: #f6861f;
 }
 main section.highlights ul {
@@ -460,7 +469,7 @@ main section.infsSerBrain {
   padding-bottom: 66px;
 }
 main section.infsSerBrain h2 {
-  font-family: 'arquitectabook';
+  font-family: 'ArquitectaBook';
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
   letter-spacing: -2px;
@@ -493,7 +502,7 @@ main section.infsSerBrain a p {
   letter-spacing: -0.01em;
 }
 main section.infsSerBrain a p strong {
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   color: #d9d9cb;
   font-size: 2.0625rem;
   font-weight: normal;
@@ -594,7 +603,7 @@ main section.comoInvestir article {
   padding-bottom: 67px;
 }
 main section.comoInvestir article h2 {
-  font-family: 'arquitectabook';
+  font-family: 'ArquitectaBook';
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
   text-transform: uppercase;
@@ -624,7 +633,7 @@ main section.comoInvestir article a p {
   color: #231f20;
 }
 main section.comoInvestir article a p strong {
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
   color: #8b9178;
   font-size: 2.1875rem;
@@ -690,7 +699,7 @@ main section.comoInvestir ul li.ci_02 p {
   line-height: 20px;
   text-align: center;
   width: 100%;
-  padding: 38px 33px 0;
+  padding: 38px 32px 0;
   font-size: 22px;
   box-sizing: border-box;
 }
@@ -788,7 +797,7 @@ main section.passoAPasso {
   text-align: center;
 }
 main section.passoAPasso > a {
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
   font-size: 31px;
   color: #8b9178;
@@ -816,7 +825,7 @@ main.internal#como-investir section.passos article > dl dt,
 main.internal#como-investir section.passos article > dl dt:before,
 main.internal#como-investir section.passos article > dl dt:after {
   font-size: 1.4375em;
-  padding: 1.5em 0.5em;
+  padding: 1.5em 0.2em;
   color: #fffff0;
   background: #475047;
   text-transform: uppercase;
@@ -870,7 +879,7 @@ main section.time a {
   color: #465047;
   margin: 0 0;
   text-transform: uppercase;
-  width: 420px;
+  width: 425px;
   line-height: 31px;
   text-align: center;
   -webkit-transition: all 0.3s;
@@ -973,15 +982,17 @@ main footer nav {
   display: inline-block;
   vertical-align: top;
   margin: -25px 20px 0;
+  width: 19%;
 }
 main footer nav a {
   display: table;
   color: #ADA598;
   font-size: 17px;
   text-transform: uppercase;
-  line-height: 33px;
+  line-height: 17px;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
+  margin-bottom: 9px;
 }
 main footer nav a:hover {
   color: #FFF;
@@ -990,8 +1001,10 @@ main footer > p {
   background: #fff;
   padding: 1em;
   text-align: center;
+  margin-top: 33px;
+  font-size: 15px;
 }
-main footer > p img {
+main footer > p > img {
   width: 100px;
   display: block;
   margin: 0 auto .5em;
@@ -1000,6 +1013,14 @@ main footer > p span {
   display: block;
   width: 38%;
   margin: 0 auto;
+}
+main footer > p a {
+  padding: 10px 0;
+  width: 100px;
+  margin: 0 auto 0;
+}
+main footer > p em {
+  font-style: normal;
 }
 main.inicial {
   height: 100%;
@@ -1060,7 +1081,8 @@ main.internal header nav:not(.menu) {
 }
 main.internal header nav.s_menu,
 main.internal header nav.s_language,
-main.internal header nav.s_navg {
+main.internal header nav.s_navg,
+main.internal header nav.s_acesso {
   top: 82px;
 }
 main.internal header nav.s_menu {
@@ -1102,7 +1124,7 @@ main.internal#como-investir section.featured h2 {
   color: #e9e8db;
   position: absolute;
   background-color: #7B836E;
-  font-family: "arquitectabook";
+  font-family: 'ArquitectaBook';
 }
 main.internal#ser-brain section.featured h3,
 main.internal#como-investir section.featured h3 {
@@ -1114,11 +1136,15 @@ main.internal#como-investir section.featured h3 {
   text-transform: uppercase;
   text-align: center;
   line-height: 3rem;
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
 }
 main.internal#ser-brain section.featured a,
 main.internal#como-investir section.featured a {
   margin: 46px auto 55px !important;
+}
+main.internal#ser-brain section.featured a:hover,
+main.internal#como-investir section.featured a:hover {
+  color: #f6861f !important;
 }
 main.internal#ser-brain section.featured article,
 main.internal#como-investir section.featured article {
@@ -1141,7 +1167,7 @@ main.internal#como-investir section.featured article p strong {
   color: #dfded1;
   font-size: 2rem;
   letter-spacing: 1px;
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
 }
 main.internal#ser-brain section.diferencial h3 {
@@ -1222,7 +1248,8 @@ main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
   top: calc(50% - 98px);
   z-index: 1000;
   font-size: 10em;
-  font-family: "arquitecta_blackblack";
+  font-family: 'ArquitectaBold';
+  font-weight: normal;
   color: #002f17;
 }
 main.internal#ser-brain section.diferencial ul li:last-child {
@@ -1341,12 +1368,12 @@ main.internal#pilares section.pilares-info article ul li:nth-child(3) {
 main.internal#pilares section.pilares-info article ul li:nth-child(3) p {
   font-size: 1.7em;
   line-height: 1.2em;
-  font-family: 'BemboStd-Semibold';
+  font-family: 'BemboSemibold';
   text-transform: initial;
   color: #fff;
 }
 main.internal#pilares section.pilares-info article ul li:nth-child(3) p strong {
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   text-transform: uppercase;
   font-weight: normal;
   color: #dfded1;
@@ -1607,7 +1634,7 @@ main.internal#como-investir section.passos article > dl dd {
   padding: 2em 2em 2em 5.3em;
 }
 main.internal#como-investir section.passos article > dl dd h3 {
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
   text-transform: uppercase;
   font-size: 4em;
   line-height: 0.98em;
@@ -1622,7 +1649,7 @@ main.internal#como-investir section.passos article > dl dd p {
   color: #040203;
 }
 main.internal#como-investir section.passos article > dl dd p strong {
-  font-family: 'arquitectaregular';
+  font-family: 'Arquitecta';
   text-transform: uppercase;
   line-height: 1em;
   display: block;
@@ -1701,8 +1728,11 @@ main.internal#como-investir section.passos article.passo-04 aside > div > p smal
   display: block;
   margin: 0.2em 0;
   line-height: 0.95em;
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
   color: #50524d;
+}
+main.internal#como-investir section.passos article.passo-02 > dl {
+  width: auto;
 }
 main.internal#como-investir section.passos article.passo-02 aside {
   padding-top: 4.6em;
@@ -1712,7 +1742,7 @@ main.internal#como-investir section.passos article.passo-02 aside > p {
   font-size: 1.45em;
   text-align: center;
   line-height: 1.2em;
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
   margin-bottom: 0.5em;
 }
@@ -1995,7 +2025,7 @@ main.internal#como-investir section.passos article.passo-05 aside > div:last-chi
   display: block;
   margin: 0.4em 0 0;
   line-height: 1.15em;
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
   color: #50524d;
 }
 main.internal#como-investir section.passos article.passo-05 aside > div:last-child > p a {
@@ -2007,6 +2037,7 @@ main.internal#como-investir section.porque {
   text-align: center;
   width: 103%;
   left: -1.5%;
+  display: none;
 }
 main.internal#como-investir section.porque h2 {
   -webkit-transition: all 0.3s;
@@ -2070,7 +2101,7 @@ main.internal#time section.quem-e {
   background: #e1dfd2;
 }
 main.internal#time section.quem-e h2 {
-  font-family: 'arquitectabook';
+  font-family: 'ArquitectaBook';
   background: #4c5246;
   color: #bab598;
   font-size: 4.9em;
@@ -2082,7 +2113,7 @@ main.internal#time section.quem-e article {
   border-top: 5.15em #fff solid;
 }
 main.internal#time section.quem-e article h3 {
-  font-family: 'arquitectabook';
+  font-family: 'ArquitectaBook';
   text-transform: uppercase;
   font-size: 4em;
   color: #878E7C;
@@ -2107,7 +2138,7 @@ main.internal#time section.quem-e article p strong {
   font-size: 1.2em;
   line-height: 1.02em;
   color: #878E7C;
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
 }
 main.internal#time section.quem-e > div.team dl {
@@ -2180,7 +2211,7 @@ main.internal#time section.ser-brainvest h3 {
   text-align: center;
   text-transform: uppercase;
   font-size: 3.9em;
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
   color: #8b8e7d;
   padding: 1.1em 0 1.1em 9.2px;
   letter-spacing: -0.01em;
@@ -2287,7 +2318,7 @@ main.internal#time section.ser-brainvest.downloads ul li a:hover {
   color: #fff;
 }
 main.internal#time section.ser-brainvest > p {
-  font-family: 'arquitecta_lightlight';
+  font-family: 'ArquitectaLight';
   font-size: 2.5em;
   padding: 0.9em 2.7em 0.65em;
   color: #4e5146;
@@ -2299,7 +2330,7 @@ main.internal#time section.ser-brainvest > p strong {
   color: #898d7c;
   font-size: 0.95em;
   text-transform: uppercase;
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
 }
 main.internal#time > div {
@@ -2340,14 +2371,14 @@ main.inicial ul li a {
   color: #475047;
   display: inline-block;
   padding-top: 16px;
-  font-family: "arquitecta_boldbold";
+  font-family: "ArquitectaBold";
   font-size: 1.1em;
   line-height: 20px;
 }
 main.internal > nav a p {
   display: inline-block;
   vertical-align: middle;
-  font-family: 'arquitecta_boldbold';
+  font-family: 'ArquitectaBold';
   font-weight: normal;
   padding: 0 10px;
 }
@@ -2378,7 +2409,7 @@ main.internal > nav a:first-child:after {
   left: 14px;
   top: 12px;
 }
-main.internal > nav a:first-child:hover:before {
+main.internal > nav a:first-child:hover:after {
   border-right-color: #475047;
 }
 main.internal > nav a:last-child {
@@ -2552,40 +2583,35 @@ main.inicial ul li a:hover {
                 INTERNALS
     *******************************/
   }
-  main header:not(.minus) {
+  main header {
     width: 100%;
     position: relative;
   }
-  main header:not(.minus) ul,
-  main header:not(.minus) nav {
+  main header ul {
+    right: initial;
+  }
+  main header ul,
+  main header nav {
     float: none;
     padding-bottom: 20px;
   }
-  main header:not(.minus) ul {
-    width: auto;
-    left: 10px;
-    right: initial;
-  }
-  main header:not(.minus) nav {
-    /*margin-right: 0 !important; text-align: center !important;*/
-  }
-  main header:not(.minus) nav a.s_fullscreen {
+  main header nav a.s_fullscreen {
     display: none;
   }
-  main header:not(.minus) nav:before {
+  main header nav:before {
     margin: 0 auto 10px !important;
   }
-  main header:not(.minus) nav.s_language {
+  main header nav.s_language {
     right: 267px;
   }
-  main header:not(.minus) nav.s_menu {
+  main header nav.s_menu {
     right: 4px;
   }
-  main header:not(.minus) nav.s_navg {
+  main header nav.s_navg {
     right: 70px;
   }
   main section.carrossel {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
   main section.highlights ul li.hg_04,
   main section.pilares ul li.pl_04,
@@ -2616,10 +2642,12 @@ main.inicial ul li a:hover {
   }
   main footer nav {
     margin-top: 0;
+    width: auto;
+    padding: 10px;
   }
   main footer nav a {
     display: inline-block;
-    margin: 0 10px;
+    margin: 5px 10px;
   }
   main footer > p {
     margin-bottom: -33px;
@@ -2692,7 +2720,7 @@ main.inicial ul li a:hover {
     left: 0;
   }
   main.internal#time > div {
-    padding-top: 25px !important;
+    /*padding-top: 25px !important;*/
   }
   main.internal#time > div h2 {
     line-height: 47px;
@@ -2702,14 +2730,19 @@ main.inicial ul li a:hover {
   main {
     /* SECTIONS CONTENTS */
   }
+  main header:not(.minus) {
+    position: relative;
+    box-shadow: 0 0 20px #888;
+  }
   main header:not(.minus) ul {
     text-align: center;
     width: 100%;
     left: initial;
+    right: initial;
     position: relative;
   }
   main header:not(.minus) ul li {
-    margin: 0 6px;
+    margin: 0 12px;
   }
   main header:not(.minus) nav {
     text-align: center;
@@ -2719,10 +2752,11 @@ main.inicial ul li a:hover {
     top: initial;
   }
   main header:not(.minus) nav a {
-    /*margin:0 20px;*/
+    margin: 0 20px 10px;
   }
   main header:not(.minus) nav.s_language,
-  main header:not(.minus) nav.s_menu {
+  main header:not(.minus) nav.s_menu,
+  main header:not(.minus) nav.s_acesso {
     position: absolute;
     right: initial;
     top: 75px;
@@ -2731,11 +2765,14 @@ main.inicial ul li a:hover {
     padding-bottom: 0;
   }
   main header:not(.minus) nav.s_language a,
-  main header:not(.minus) nav.s_menu a {
+  main header:not(.minus) nav.s_menu a,
+  main header:not(.minus) nav.s_acesso a {
     width: 100%;
+    margin: 0;
   }
   main header:not(.minus) h1 {
     padding-top: 7px;
+    margin-top: 0;
   }
   main header:not(.minus) h1 a {
     width: 207px;
@@ -2764,6 +2801,9 @@ main.inicial ul li a:hover {
   main section.carrossel > div dl dt:before {
     opacity: 0.6;
   }
+  main section.carrossel {
+    margin-top: -10px !important;
+  }
   main section.carrossel > div dl dt h2 {
     font-size: 1.7625em;
   }
@@ -2772,6 +2812,9 @@ main.inicial ul li a:hover {
   }
   main footer > p span {
     width: 50%;
+  }
+  main.internal:before {
+    display: none;
   }
   main.internal#como-investir section.passos > nav {
     display: none !important;
@@ -2814,6 +2857,13 @@ main.inicial ul li a:hover {
     width: 80%;
     min-height: initial;
   }
+  main.internal#time > div {
+    padding-top: 25px !important;
+  }
+  main.internal#time section.quem-e {
+    padding-top: 0;
+    margin-top: -10px;
+  }
   main.internal#time section.quem-e > div.team dl {
     font-size: 125%;
     width: calc(100% - 1.6em);
@@ -2825,11 +2875,22 @@ main.inicial ul li a:hover {
     /*width: 50%;*/
   }
   main.internal#time section.quem-e > div.team dl dd p {
-    font-family: 'arquitecta_lightlight';
+    font-family: 'ArquitectaLight';
     height: auto;
   }
   main.internal#time section.ser-brainvest {
     font-size: 80%;
+  }
+  main.internal#time section.ser-brainvest.downloads {
+    margin-top: -10px;
+  }
+  main.internal#ser-brain section.featured,
+  main.internal#como-investir section.featured {
+    padding: 0;
+  }
+  main.internal#pilares section.pilares-info {
+    padding: 0;
+    margin-top: -10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2921,7 +2982,6 @@ main.inicial ul li a:hover {
   }
   main.internal#pilares section.pilares-info {
     padding-top: 0;
-    margin-top: -10px;
   }
   main.internal#pilares section.pilares-info article h2 {
     font-size: 4em;
@@ -3000,7 +3060,6 @@ main.inicial ul li a:hover {
   }
   main.internal#time section.quem-e {
     padding: 0;
-    margin-top: -0.8em;
   }
   main.internal#time section.quem-e h2 {
     font-size: 3em;
@@ -3045,12 +3104,76 @@ main.inicial ul li a:hover {
 }
 @media screen and (max-width: 600px) {
   main {
+    padding-top: 78px;
     /*******************************
               INICIO
   *******************************/
     /*******************************
                 INTERNALS
     *******************************/
+  }
+  main header {
+    padding: 10px;
+    background: #fff;
+    position: fixed !important;
+  }
+  main header ul {
+    display: none;
+    width: 50% !important;
+    right: 0 !important;
+    position: absolute !important;
+    text-align: right !important;
+  }
+  main header nav {
+    /*&:before{ margin: 0 27px 10px !important; float: right; }*/
+  }
+  main header nav.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: initial;
+    padding: 0 10px 0 0;
+  }
+  main header nav:not(.menu) {
+    top: 63px !important;
+    padding-bottom: 10px !important;
+  }
+  main header nav a {
+    clear: both;
+  }
+  main header nav a.s_language {
+    font-size: 0;
+    padding: 21px 10px;
+    margin: 0;
+  }
+  main header nav a.s_language:before {
+    content: "\f1ab";
+    font: normal normal normal 25px/1 FontAwesome;
+  }
+  main header nav a.s_acesso {
+    font-size: 0;
+    padding: 21px 10px;
+    margin: 0;
+  }
+  main header nav a.s_acesso:before {
+    content: "\f023";
+    font: normal normal normal 25px/1 FontAwesome;
+  }
+  main header nav a.s_menu {
+    font-size: 0;
+    padding: 21px 10px;
+    margin: 0;
+  }
+  main header nav a.s_menu:before {
+    content: "\f03a";
+    font: normal normal normal 25px/1 FontAwesome;
+  }
+  main header h1 {
+    padding-top: 0 !important;
+  }
+  main header h1 a {
+    margin: 0 !important;
+    width: 150px !important;
   }
   main section.carrossel > div dl dt h2 {
     font-size: 132%;
@@ -3170,7 +3293,7 @@ main.inicial ul li a:hover {
   }
   main.internal#ser-brain section.diferencial ul li:nth-child(2) span {
     position: relative;
-    top: 0;
+    top: -6px;
     left: 0;
     line-height: 0;
   }
@@ -3276,9 +3399,6 @@ main.inicial ul li a:hover {
                 INTERNALS
     *******************************/
   }
-  main header {
-    padding: 27px 0;
-  }
   main header ul li {
     display: block;
     margin-bottom: 10px;
@@ -3286,15 +3406,8 @@ main.inicial ul li a:hover {
   main header nav:not(.minus) h1 {
     margin-top: -10px;
   }
-  main header nav:not(.minus).s_language,
-  main header nav:not(.minus).s_menu {
-    top: 115px;
-  }
   main header nav:not(.minus) nav:not(.menu) a {
     margin: 0;
-  }
-  main header nav.menu a {
-    margin: 0 20px 10px;
   }
   main header h1 a,
   main footer h2 {
@@ -3320,26 +3433,36 @@ main.inicial ul li a:hover {
   }
   main.internal#como-investir section.passos article dl dd h3 {
     font-size: 2.5em !important;
-    font-family: 'arquitecta_boldbold';
+    font-family: 'ArquitectaBold';
     font-weight: normal;
   }
   main.internal#como-investir section.passos article dl dd p {
     font-size: 1.8em;
   }
   main.internal#como-investir section.passos article dl dd p strong {
-    font-family: 'arquitecta_lightlight';
+    font-family: 'ArquitectaLight';
     font-size: 1em;
   }
   main.internal#como-investir section.porque h2 {
     font-size: 2.7em;
   }
   main.internal#time section.ser-brainvest ul li {
-    font-size: 80%;
+    font-size: 108%;
   }
   main.internal#time section.ser-brainvest > p {
     padding: 0.9em 1em 0.65em;
   }
   main.internal#time section.quem-e > div.team dl dd img {
     width: 50%;
+  }
+}
+@media screen and (max-width: 425px) {
+  main {
+    /*******************************
+                INTERNALS
+    *******************************/
+  }
+  main.internal#time section.ser-brainvest ul li {
+    font-size: 83%;
   }
 }

@@ -5,7 +5,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal !important; margin: 0}
 html object{ display: none; }
 body{ 
   font-size:100%;
-  *{ font-family: 'arquitectaregular'; }
+  *{ font-family: 'Arquitecta'; }
 }
 
 /*******************************
@@ -20,16 +20,16 @@ body{
 //Fonts Weights
 .f-times{ font-family: 'Times New Roman'; }
 .f-bembo{ font-family: 'BemboStd'; }
-.f-bembo-semibold{ font-family: 'BemboStd-Semibold'; }
-.f-weight-book{ font-family: 'arquitectabook'; }
-.f-weight-light{ font-family: 'arquitecta_lightlight'; }
-.f-weight-regular{ font-family: 'arquitectaregular'; }
-.f-weight-bold{ font-family: 'arquitecta_boldbold'; font-weight: normal; }
+.f-bembo-semibold{ font-family: 'BemboSemibold'; }
+.f-weight-book{ font-family: 'ArquitectaBook'; }
+.f-weight-light{ font-family: 'ArquitectaLight'; }
+.f-weight-regular{ font-family: 'Arquitecta'; }
+.f-weight-bold{ font-family: 'ArquitectaBold'; font-weight: normal; }
 
 //Link Hover
 .lnks{
   color: @gray-1; .transit; 
-  &:hover{ color:@orange; }
+  &.active{ color:@orange; } 
 }
 .transit{ -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
 
@@ -66,12 +66,12 @@ main{
       a{
         .lnks; .f-weight-bold; 
         margin: 0 0 0 40px; display: inline-block; font-size: 1.1em;
-        &.s_fullscreen{
+        &.s_fullscreen, &.s_fullscreen, &.s_fullscreen{
           width: 24px; margin: 0 0 -3px 35px; display: none;
           img{ width: 100%; }
         }
       }
-      &.s_menu, &.s_language, &.s_navg, &.s_others{
+      &.s_menu, &.s_language, &.s_navg, &.s_others, &.s_acesso{
         display: none;
         position: absolute;
         z-index: 9;
@@ -96,6 +96,7 @@ main{
       &.s_language{ /*right: 330px;*/ right: 267px; }
       &.s_menu{ /*right: 68px;*/ right: 4px; }
       &.s_navg{ right: 70px; }
+      &.s_acesso{ right: 95px; }
     }
     /*LOGO*/
     h1 {
@@ -116,7 +117,7 @@ main{
         dt{
           position: absolute; left: 0; top: 0; z-index: 3; width: 100%; text-align: center;
           h2{ 
-            z-index:2; text-transform: uppercase; font-size: 2.0625em; color: #fff; margin: 3% 10%; padding: 0.5% 0; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; text-shadow: 0 0 2px @gray-1;
+            z-index:2; text-transform: uppercase; font-size: 2.0625em; color: @gray-1; margin: 3% 10%; padding: 0.5% 0; -webkit-transition: all 0.3s; transition: all 0.3s; position: relative; text-shadow: 0 0 5px #fff;
             &:before{
               position: absolute; &:extend(main section.time a:before); z-index: -1 !important; top:0; border-radius: 5px;
             }
@@ -142,7 +143,12 @@ main{
       }
     }
     p{ .f-weight-light; color:@gray-1; font-size: 2.6875em; line-height: 1.18em; text-transform: uppercase; text-align: center; padding: 35px 15% 0; -webkit-transition: font-size 0.3s; transition: font-size 0.3s;  }
-    a{ .lnks; .f-weight-bold; text-align: center; border: 3px solid #475047; padding: 6px; margin: 43px auto; width: 135px; font-size: 1.0625em; box-sizing: border-box; }
+    a{ 
+      .lnks; .f-weight-bold; text-align: center; border: 3px solid #475047; padding: 6px; margin: 43px auto; width: 145px; font-size: 1.0625em; box-sizing: border-box; 
+      &:hover{
+        &:extend(main header nav a.active);
+      }
+    }
   } 
   section.highlights{
     ul{
@@ -264,10 +270,10 @@ main{
         }
         &.ci_02{
           p{
-            letter-spacing: -1px; text-transform: uppercase; line-height: 20px; text-align: center; width: 100%; padding: 38px 33px 0; font-size: 22px; box-sizing: border-box;
+            letter-spacing: -1px; text-transform: uppercase; line-height: 20px; text-align: center; width: 100%; padding: 38px 32px 0; font-size: 22px; box-sizing: border-box;
             strong { letter-spacing: 1px; font-size: 72px; display: block; width: 100%; line-height: 62px; color: #475047; }
             span{
-              &:nth-child(2){ margin: 0; font-size: 61px; line-height: 43px; font-weight: normal; color: #7b836f; vertical-align: top; }
+              &:nth-child(2){ margin: 0; font-size: 61px; line-height: 43px; font-weight: normal; color: #7b836f; vertical-align: top; } 
               &:nth-child(3){ margin: 6px 0 5px 0; font-size: 24px; color: #7b836f; }
             }
           }
@@ -316,7 +322,7 @@ main{
       dl{
         width: 180px; display: inline-block; vertical-align: top; text-align: center; margin: 0 9.5px 21.5px; padding: 0 0; box-sizing: border-box;
         dt{
-          font-size: 1.4375em; padding:1.5em 0.5em; color: #fffff0; background: #475047; text-transform: uppercase; text-align: center; line-height: 1.0375em;
+          font-size: 1.4375em; padding:1.5em 0.2em; color: #fffff0; background: #475047; text-transform: uppercase; text-align: center; line-height: 1.0375em;
           strong { display: block; color: #c5bcb0; font-weight: normal; }
           &:after{
             &:extend(main header nav.s_language:before); 
@@ -339,7 +345,7 @@ main{
     padding: 24px 0 0;
     h2{ text-align: center; color: @gray-2; text-transform: uppercase; font-size: 3.9375em; margin: 0 0 11px; }
     a{ 
-      position: absolute; z-index: 9; top:174px; left: 64px; font-size: 1.875em; letter-spacing: -0.01em; color: @gray-2; margin: 0 0; text-transform: uppercase; width: 420px; line-height: 31px; text-align: center;
+      position: absolute; z-index: 9; top:174px; left: 64px; font-size: 1.875em; letter-spacing: -0.01em; color: @gray-2; margin: 0 0; text-transform: uppercase; width: 425px; line-height: 31px; text-align: center;
       -webkit-transition: all 0.3s; transition: all 0.3s;
       &:before{
         content:'';
@@ -392,18 +398,20 @@ main{
       }
     }
     nav{
-      display: inline-block; vertical-align: top; margin: -25px 20px 0;
+      display: inline-block; vertical-align: top; margin: -25px 20px 0; width: 19%;
       a{
-        display:table; color: #ADA598; font-size: 17px; text-transform: uppercase; line-height: 33px; -webkit-transition: color 0.3s; transition: color 0.3s;
+        display:table; color: #ADA598; font-size: 17px; text-transform: uppercase; line-height: 17px; -webkit-transition: color 0.3s; transition: color 0.3s; margin-bottom: 9px;
         &:hover{
           color: #FFF;
         }
       }
     }
     >p{
-      background: #fff; padding: 1em; text-align: center;
-      img{ width: 100px; display: block; margin:0 auto .5em; }
+      background: #fff; padding: 1em; text-align: center; margin-top: 33px; font-size: 15px;
+      > img{ width: 100px; display: block; margin:0 auto .5em; }
       span{ display: block; width: 38%; margin:0 auto; }
+      a{ padding: 10px 0; width:100px; margin: 0 auto 0; }
+      em{ font-style: normal; }
     }
   }
   /*******************************
@@ -440,7 +448,7 @@ main{
       nav{ 
         /*clear: both; padding: 0 10px 0;*/ top:55px;
         &:not(.menu){ background: #fff; }
-        &.s_menu, &.s_language, &.s_navg{ top: 82px; }
+        &.s_menu, &.s_language, &.s_navg, &.s_acesso{ top: 82px; }
         &.s_menu{ /*right: 69px;*/ }
         &.s_language{ /*right: 330px;*/ }
         &.s_navg{ }
@@ -458,12 +466,12 @@ main{
       section{
         &.featured{
           margin-top: -10px;  z-index: 0; padding: 98px 0 0; .transit;
-          h2 { .transit; font-size: 5em; text-transform: uppercase; padding: 3.4% 3.2% 3.5% 3.2%; line-height: 75px; margin: 6.5% 68% 0 0; color: #e9e8db; position: absolute; background-color: #7B836E; font-family: "arquitectabook"; }
+          h2 { .transit; font-size: 5em; text-transform: uppercase; padding: 3.4% 3.2% 3.5% 3.2%; line-height: 75px; margin: 6.5% 68% 0 0; color: #e9e8db; position: absolute; background-color: #7B836E; .f-weight-book; }
           h3 { .transit; margin: 4.4% 0 0; font-size: 2.72em; text-transform: uppercase; text-align: center; line-height: 3rem; .f-weight-light; }
           a:extend(main section.carrossel a){
             margin: 46px auto 55px !important;
             &:hover{
-              &:extend(main section.carrossel a:hover);
+              color: #f6861f !important;
             }
           }
           article {
@@ -487,7 +495,7 @@ main{
               &:first-child{ background-color: #8b9178; }
               &:nth-child(2) {
                 position: absolute; width: 100%; left: 0; text-align: center; line-height: 0; top: -50%;
-                span { top: calc(~"50% - 98px"); z-index: 1000; font-size: 10em; font-family: "arquitecta_blackblack"; color: #002f17; }
+                span { top: calc(~"50% - 98px"); z-index: 1000; font-size: 10em; .f-weight-bold; color: #002f17; }
               }
               &:last-child { background: #a5a095; }
               &:hover  {
@@ -701,6 +709,7 @@ main{
               }
             }
             &.passo-02{
+              > dl{ width: auto; }
               aside{ 
                 padding-top: 4.6em; 
                 > p{ text-transform: uppercase; font-size: 1.45em; text-align: center; line-height: 1.2em; .f-weight-bold; margin-bottom: 0.5em; }
@@ -843,7 +852,7 @@ main{
           }
         }
         &.porque{
-          text-align: center; width: 103%; left: -1.5%;
+          text-align: center; width: 103%; left: -1.5%; display: none; 
           h2{ .transit; text-transform: uppercase; font-size: 4em; line-height: 0.5em; color: #003118; padding:0 0.7em 0.7em; line-height: 0.9em; }
           dl{ 
             box-sizing: border-box; display: inline-block; vertical-align: top; font-size: 1em;  width: 22.9%;  margin: 0 0.5em 1em; .transit; min-height: 294px;
@@ -966,8 +975,8 @@ main{
       > div{
         /*background: #fff;*/
         a{ 
-          &:extend(main section.carrossel a); margin: 3.2em auto;
-          &:hover{&:extend(main section.carrossel a:hover);}
+          &:extend(main section.carrossel a); margin: 3.2em auto; 
+          &:hover{&:extend(main header nav a.active);}
         }
         h2{ text-align: center; text-transform: uppercase; font-size: 4em; line-height: 0.7em; color: #898D7C; padding-bottom: 0.6em; .transit; }
       }
@@ -982,14 +991,14 @@ main{
         width: 100%;
       }
       a {
-        .transit; text-transform: uppercase; margin: 0 14px; color: #475047; display: inline-block; padding-top: 16px; font-family: "arquitecta_boldbold"; font-size: 1.1em; line-height: 20px;
+        .transit; text-transform: uppercase; margin: 0 14px; color: #475047; display: inline-block; padding-top: 16px; font-family: "ArquitectaBold"; font-size: 1.1em; line-height: 20px;
         p{ display: inline-block; vertical-align: middle; .f-weight-bold; padding: 0 10px; }
         &:first-child {
           float: left; text-align: left; margin: 0; color: #475047; padding:0;
           &:before{ content:''; width: 50px; height: 50px; background: #aea498; display: inline-block; vertical-align: middle; }
           &:after{ content: ''; -webkit-transition: border 0.3s; transition: border 0.3s; border: 0; border-top: 13px solid transparent; border-right: 18px solid #E0DED1; border-bottom: 13px solid transparent; position: absolute; left: 14px; top: 12px; }
           &:hover{ 
-            &:before{ border-right-color: #475047; }
+            &:after{ border-right-color: #475047; }
           }
         }
         &:last-child {

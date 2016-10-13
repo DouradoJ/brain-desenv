@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Arquitecta";
+    src: url("Arquitecta.eot");
+    src: url("Arquitecta.eot?#iefix") format("embedded-opentype"),
+    url("Arquitecta.woff") format("woff"),
+    url("Arquitecta.ttf") format("truetype"),
+    url("Arquitecta.svg#Arquitecta") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "ArquitectaBold";
+  src: url("ArquitectaBold.eot");
+  src: url("ArquitectaBold.eot?#iefix") format("embedded-opentype"),
+  url("ArquitectaBold.woff") format("woff"),
+  url("ArquitectaBold.ttf") format("truetype"),
+  url("ArquitectaBold.svg#ArquitectaBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "ArquitectaBook";
+  src: url("ArquitectaBook.eot");
+  src: url("ArquitectaBook.eot?#iefix") format("embedded-opentype"),
+  url("ArquitectaBook.woff") format("woff"),
+  url("ArquitectaBook.ttf") format("truetype"),
+  url("ArquitectaBook.svg#ArquitectaBook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "ArquitectaLight";
+  src: url("ArquitectaLight.eot");
+  src: url("ArquitectaLight.eot?#iefix") format("embedded-opentype"),
+  url("ArquitectaLight.woff") format("woff"),
+  url("ArquitectaLight.ttf") format("truetype"),
+  url("ArquitectaLight.svg#ArquitectaLight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: "BemboStd";
+    src: url("BemboStd.eot");
+    src: url("BemboStd.eot?#iefix") format("embedded-opentype"),
+    url("BemboStd.woff") format("woff"),
+    url("BemboStd.ttf") format("truetype"),
+    url("BemboStd.svg#BemboStd") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: "BemboSemibold";
+    src: url("BemboStd-Semibold.eot");
+    src: url("BemboStd-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("BemboStd-Semibold.woff") format("woff"),
+    url("BemboStd-Semibold.ttf") format("truetype"),
+    url("BemboStd-Semibold.svg#BemboStd-Semibold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
